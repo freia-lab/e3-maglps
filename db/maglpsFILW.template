@@ -1,0 +1,205 @@
+record(bo, "$(PREFIX):$(SGNL)-FRC")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=2" )
+	field(DISP, "1")
+}
+
+record(bo, "$(PREFIX):$(SGNL)-IRAMPON")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=7" )
+	field(DISP, "1")
+}
+
+record(bo, "$(PREFIX):$(SGNL)-VRAMPON")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+1 T=INT8 B=0" )
+	field(DISP, "1")
+}
+
+# I - warm time set-points
+record(ao, "$(PREFIX):$(SGNL)-TWARMSP1")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+14 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):$(SGNL)-TWARMSP2")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+18 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):$(SGNL)-TWARMSP3")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+22 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+# I - cold time set-points
+record(ao, "$(PREFIX):$(SGNL)-TCOLDSP1")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+2 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):$(SGNL)-TCOLDSP2")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+6 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):$(SGNL)-TCOLDSP3")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+10 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+# I - set-points
+record(ao, "$(PREFIX):$(SGNL)-ISP1")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+26 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):$(SGNL)-ISP2")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+30 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):$(SGNL)-ISP3")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+34 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):$(SGNL)-VSVAL")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+50 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):$(SGNL)-ISVAL")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+54 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):$(SGNL)-WSVAL")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+58 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+# I - threshold interlock levels
+record(ao, "$(PREFIX):$(SGNL)-IHIHI")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+70 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):$(SGNL)-ILOLO")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+74 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):$(SGNL)-IHIGH")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+78 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):$(SGNL)-ILOW")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+82 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+# W - threshold interlock levels
+record(ao, "$(PREFIX):$(SGNL)-WHIHI")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+86 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):$(SGNL)-WLOLO")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+90 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):$(SGNL)-WHIGH")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+94 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):$(SGNL)-WLOW")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+98 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):$(SGNL)-TOLInWARMUP")
+{
+        field(DTYP, "S7plc")
+        field(OUT, "@$(PLC)/$(SOFF)+102 T=REAL32" )
+        field(DISP, "1")
+        field(PREC, "2")
+}
+
+
+#record(ao, "$(PREFIX):$(SGNL)-SVALV")
+#{
+#	field(DTYP, "S7plc")
+#	field(SCAN, "I/O Intr")
+#	field(INP, "@$(PLC)/$(SOFF)+18 T=REAL32" )
+#	field(PREC, "$(PREC)")
+#	field(FLNK, "$(PREFIX):$(SGNL)-HIGH-INT")
+#}
+
+

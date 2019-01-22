@@ -1,0 +1,269 @@
+record(seq, "$(PREFIX):$(SGNL)-FRC-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):$(SGNL)-FRC-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):$(SGNL)-FRC.DISP")
+	field(LNK1, "$(PREFIX):$(SGNL)-FRC PP")
+	field(LNK3, "$(PREFIX):$(SGNL)-FRC-INT.DISA")
+}
+
+record(seq, "$(PREFIX):$(SGNL)-IRAMPON-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):$(SGNL)-IRAMPON-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):$(SGNL)-IRAMPON.DISP")
+	field(LNK1, "$(PREFIX):$(SGNL)-IRAMPON PP")
+	field(LNK3, "$(PREFIX):$(SGNL)-IRAMPON-INT.DISA")
+}
+
+record(seq, "$(PREFIX):$(SGNL)-VRAMPON-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):$(SGNL)-VRAMPON-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):$(SGNL)-VRAMPON.DISP")
+	field(LNK1, "$(PREFIX):$(SGNL)-VRAMPON PP")
+	field(LNK3, "$(PREFIX):$(SGNL)-VRAMPON-INT.DISA")
+}
+
+# I - warm time set-points
+record(seq, "$(PREFIX):$(SGNL)-TWARMSP1-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):$(SGNL)-TWARMSP1-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):$(SGNL)-TWARMSP1.DISP")
+	field(LNK1, "$(PREFIX):$(SGNL)-TWARMSP1 PP")
+	field(LNK3, "$(PREFIX):$(SGNL)-TWARMSP1-INT.DISA")
+}
+
+record(seq, "$(PREFIX):$(SGNL)-TWARMSP2-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):$(SGNL)-TWARMSP2-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):$(SGNL)-TWARMSP2.DISP")
+	field(LNK1, "$(PREFIX):$(SGNL)-TWARMSP2 PP")
+	field(LNK3, "$(PREFIX):$(SGNL)-TWARMSP2-INT.DISA")
+}
+
+record(seq, "$(PREFIX):$(SGNL)-TWARMSP3-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):$(SGNL)-TWARMSP3-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):$(SGNL)-TWARMSP3.DISP")
+	field(LNK1, "$(PREFIX):$(SGNL)-TWARMSP3 PP")
+	field(LNK3, "$(PREFIX):$(SGNL)-TWARMSP3-INT.DISA")
+}
+
+# I - cold time set-points
+record(seq, "$(PREFIX):$(SGNL)-TCOLDSP1-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):$(SGNL)-TCOLDSP1-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):$(SGNL)-TCOLDSP1.DISP")
+	field(LNK1, "$(PREFIX):$(SGNL)-TCOLDSP1 PP")
+	field(LNK3, "$(PREFIX):$(SGNL)-TCOLDSP1-INT.DISA")
+}
+
+record(seq, "$(PREFIX):$(SGNL)-TCOLDSP2-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):$(SGNL)-TCOLDSP2-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):$(SGNL)-TCOLDSP2.DISP")
+	field(LNK1, "$(PREFIX):$(SGNL)-TCOLDSP2 PP")
+	field(LNK3, "$(PREFIX):$(SGNL)-TCOLDSP2-INT.DISA")
+}
+
+record(seq, "$(PREFIX):$(SGNL)-TCOLDSP3-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):$(SGNL)-TCOLDSP3-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):$(SGNL)-TCOLDSP3.DISP")
+	field(LNK1, "$(PREFIX):$(SGNL)-TCOLDSP3 PP")
+	field(LNK3, "$(PREFIX):$(SGNL)-TCOLDSP3-INT.DISA")
+}
+
+# I - set-points
+record(seq, "$(PREFIX):$(SGNL)-ISP1-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):$(SGNL)-ISP1-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):$(SGNL)-ISP1.DISP")
+	field(LNK1, "$(PREFIX):$(SGNL)-ISP1 PP")
+	field(LNK3, "$(PREFIX):$(SGNL)-ISP1-INT.DISA")
+}
+
+record(seq, "$(PREFIX):$(SGNL)-ISP2-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):$(SGNL)-ISP2-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):$(SGNL)-ISP2.DISP")
+	field(LNK1, "$(PREFIX):$(SGNL)-ISP2 PP")
+	field(LNK3, "$(PREFIX):$(SGNL)-ISP2-INT.DISA")
+}
+
+record(seq, "$(PREFIX):$(SGNL)-ISP3-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):$(SGNL)-ISP3-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):$(SGNL)-ISP3.DISP")
+	field(LNK1, "$(PREFIX):$(SGNL)-ISP3 PP")
+	field(LNK3, "$(PREFIX):$(SGNL)-ISP3-INT.DISA")
+}
+
+record(seq, "$(PREFIX):$(SGNL)-VSVAL-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):$(SGNL)-VSVAL-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):$(SGNL)-VSVAL.DISP")
+	field(LNK1, "$(PREFIX):$(SGNL)-VSVAL PP")
+	field(LNK3, "$(PREFIX):$(SGNL)-VSVAL-INT.DISA")
+}
+
+record(seq, "$(PREFIX):$(SGNL)-ISVAL-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):$(SGNL)-ISVAL-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):$(SGNL)-ISVAL.DISP")
+	field(LNK1, "$(PREFIX):$(SGNL)-ISVAL PP")
+	field(LNK3, "$(PREFIX):$(SGNL)-ISVAL-INT.DISA")
+}
+
+record(seq, "$(PREFIX):$(SGNL)-WSVAL-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):$(SGNL)-WSVAL-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):$(SGNL)-WSVAL.DISP")
+	field(LNK1, "$(PREFIX):$(SGNL)-WSVAL PP")
+	field(LNK3, "$(PREFIX):$(SGNL)-WSVAL-INT.DISA")
+}
+
+# I - threshold interlock levels
+record(seq, "$(PREFIX):$(SGNL)-IHIHI-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):$(SGNL)-IHIHI-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):$(SGNL)-IHIHI.DISP")
+	field(LNK1, "$(PREFIX):$(SGNL)-IHIHI PP")
+	field(LNK3, "$(PREFIX):$(SGNL)-IHIHI-INT.DISA")
+}
+
+record(seq, "$(PREFIX):$(SGNL)-ILOLO-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):$(SGNL)-ILOLO-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):$(SGNL)-ILOLO.DISP")
+	field(LNK1, "$(PREFIX):$(SGNL)-ILOLO PP")
+	field(LNK3, "$(PREFIX):$(SGNL)-ILOLO-INT.DISA")
+}
+
+record(seq, "$(PREFIX):$(SGNL)-IHIGH-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):$(SGNL)-IHIGH-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):$(SGNL)-IHIGH.DISP")
+	field(LNK1, "$(PREFIX):$(SGNL)-IHIGH PP")
+	field(LNK3, "$(PREFIX):$(SGNL)-IHIGH-INT.DISA")
+}
+
+record(seq, "$(PREFIX):$(SGNL)-ILOW-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):$(SGNL)-ILOW-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):$(SGNL)-ILOW.DISP")
+	field(LNK1, "$(PREFIX):$(SGNL)-ILOW PP")
+	field(LNK3, "$(PREFIX):$(SGNL)-ILOW-INT.DISA")
+}
+
+# W - threshold interlock levels
+record(seq, "$(PREFIX):$(SGNL)-WHIHI-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):$(SGNL)-WHIHI-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):$(SGNL)-WHIHI.DISP")
+	field(LNK1, "$(PREFIX):$(SGNL)-WHIHI PP")
+	field(LNK3, "$(PREFIX):$(SGNL)-WHIHI-INT.DISA")
+}
+
+record(seq, "$(PREFIX):$(SGNL)-WLOLO-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):$(SGNL)-WLOLO-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):$(SGNL)-WLOLO.DISP")
+	field(LNK1, "$(PREFIX):$(SGNL)-WLOLO PP")
+	field(LNK3, "$(PREFIX):$(SGNL)-WLOLO-INT.DISA")
+}
+
+record(seq, "$(PREFIX):$(SGNL)-WHIGH-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):$(SGNL)-WHIGH-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):$(SGNL)-WHIGH.DISP")
+	field(LNK1, "$(PREFIX):$(SGNL)-WHIGH PP")
+	field(LNK3, "$(PREFIX):$(SGNL)-WHIGH-INT.DISA")
+}
+
+record(seq, "$(PREFIX):$(SGNL)-WLOW-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):$(SGNL)-WLOW-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):$(SGNL)-WLOW.DISP")
+	field(LNK1, "$(PREFIX):$(SGNL)-WLOW PP")
+	field(LNK3, "$(PREFIX):$(SGNL)-WLOW-INT.DISA")
+}
+
+record(seq, "$(PREFIX):$(SGNL)-TOLInWARMUP-INT")
+{
+        field(DO2,  "0")
+        field(DOL1, "$(PREFIX):$(SGNL)-TOLInWARMUP-RB")
+        field(DO3,  "1")
+
+        field(LNK2, "$(PREFIX):$(SGNL)-TOLInWARMUP.DISP")
+        field(LNK1, "$(PREFIX):$(SGNL)-TOLInWARMUP PP")
+        field(LNK3, "$(PREFIX):$(SGNL)-TOLInWARMUP-INT.DISA")
+}
+

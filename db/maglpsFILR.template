@@ -1,0 +1,617 @@
+record(bi, "$(PREFIX):$(SGNL)-ON-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=0" )
+	field(ZNAM, "PSU-OFF")
+        field(ONAM, "PSU-ON")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-STARTED-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=1" )
+	field(ZNAM, "STOPPED")
+        field(ONAM, "STARTED")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-STOPPED-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=2" )
+}
+
+record(bi, "$(PREFIX):$(SGNL)-WARMUP-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=3" )
+	field(ZNAM, "IDLE")
+        field(ONAM, "RUNNING")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-TEMPREACHED-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=4" )
+	field(ZNAM, "COLD")
+        field(ONAM, "WARM")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-IREG-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=5" )
+}
+
+record(bi, "$(PREFIX):$(SGNL)-LOCREM-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=6" )
+	field(ZNAM, "LOC")
+        field(ONAM, "REM")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-NLTCH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=7" )
+	field(ZNAM, "N-LTCH")
+        field(ONAM, "LTCHD")
+	field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-NFRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+1 T=INT8 B=0" )
+	field(ZNAM, "C-FRC")
+        field(ONAM, "N-FRC")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-ISFRST-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+1 T=INT8 B=1" )
+}
+
+record(bi, "$(PREFIX):$(SGNL)-WRN-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+1 T=INT8 B=2" )
+	field(ZNAM, "OK")
+        field(ONAM, "WRN")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-INT-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+1 T=INT8 B=3" )
+	field(ZNAM, "OK")
+        field(ONAM, "ITLCK")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MAJOR")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-FRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+1 T=INT8 B=4" )
+	field(FLNK, "$(PREFIX):$(SGNL)-FRC-INT")
+	field(ZNAM, "N-FRC")
+        field(ONAM, "FRCD")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-IRAMPON-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+2 T=INT8 B=1" )
+	field(FLNK, "$(PREFIX):$(SGNL)-IRAMPON-INT")
+	field(ZNAM, "I-RAMP-OFF")
+        field(ONAM, "I_RAMP-ON")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-VRAMPON-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+2 T=INT8 B=2" )
+	field(FLNK, "$(PREFIX):$(SGNL)-VRAMPON-INT")
+	field(ZNAM, "V-RAMP-OFF")
+        field(ONAM, "V-RAMP-ON")
+}
+
+record(longin, "$(PREFIX):$(SGNL)-DTYP-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+3 T=BYTE" )
+}
+
+record(longin, "$(PREFIX):$(SGNL)-ERR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+4 T=INT16" )
+}
+
+#Bit0:  SP3 Current value can't be zero if Ramped!
+#Bit1:  PSU SetPoint values are not in incresing order!
+#Bit2:  Interlock PSU has internal faliure!
+#Bit3:  Interlock during Warmup!
+
+#Bit4:  Interlock absulute maximum exeeded!
+#Bit5:  Interlock High limit exeeded while PSU_ON!
+#Bit6:  Interlock Low limit exeeded while PSU_ON!
+#Bit7:  PSU can't be turned on because of an error!
+
+#Bit8:  Initialisation error. No DTYP is given!
+#Bit9:  PSU is in LOCAL mode. Set to REMOTE!
+#Bit10: Analog Input IMON SCALE error!
+#Bit11: Analog Input WMON SCALE error!
+
+#Bit12: Analog Input VMON SCALE error!
+#Bit13: Analog OutPut IPGM/VPGM SCALE error!
+#Bit14: SP1 Current value can't be zero if Ramped!
+#Bit15: SP2 Current value can't be zero if Ramped!
+
+record(bi, "$(PREFIX):$(SGNL)-SP3ERR-RB")
+{
+        field(DTYP, "S7plc")
+        field(SCAN, "I/O Intr")
+        field(INP, "@$(PLC)/$(SOFF)+4 T=INT16 B=0" )
+        field(ZNAM, "SP3 OK")
+        field(ONAM, "SP3 N-ZV")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-ERRSPINC-RB")
+{
+        field(DTYP, "S7plc")
+        field(SCAN, "I/O Intr")
+        field(INP, "@$(PLC)/$(SOFF)+4 T=INT16 B=1" )
+        field(ZNAM, "SPs OK")
+        field(ONAM, "SPs N-INC")
+}
+ 
+record(bi, "$(PREFIX):$(SGNL)-ERRFAULT-RB")
+{
+        field(DTYP, "S7plc")
+        field(SCAN, "I/O Intr")
+        field(INP, "@$(PLC)/$(SOFF)+4 T=INT16 B=2" )
+        field(ZNAM, "OK")
+        field(ONAM, "FAULT")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-ERRWARM-RB")
+{
+        field(DTYP, "S7plc")
+        field(SCAN, "I/O Intr")
+        field(INP, "@$(PLC)/$(SOFF)+4 T=INT16 B=3" )
+        field(ZNAM, "OK")
+        field(ONAM, "WARM ERROR")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-ERRHIHI-RB")
+{
+        field(DTYP, "S7plc")
+        field(SCAN, "I/O Intr")
+        field(INP, "@$(PLC)/$(SOFF)+4 T=INT16 B=4" )
+        field(ZNAM, "HIHI OK")
+        field(ONAM, "HIHI ERROR")
+	field(ZSV, "NO_ALARM")
+        field(OSV, "MAJOR")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-ERRHIGH-RB")
+{
+        field(DTYP, "S7plc")
+        field(SCAN, "I/O Intr")
+        field(INP, "@$(PLC)/$(SOFF)+4 T=INT16 B=5" )
+       	field(ZNAM, "HIGH OK")
+        field(ONAM, "HIGH ITLCK")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-ERRLOW-RB")
+{
+        field(DTYP, "S7plc")
+        field(SCAN, "I/O Intr")
+        field(INP, "@$(PLC)/$(SOFF)+4 T=INT16 B=6" )
+        field(ZNAM, "LOW OK")
+        field(ONAM, "LOW ITLCK")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-ERRPSU-RB")
+{
+        field(DTYP, "S7plc")
+        field(SCAN, "I/O Intr")
+        field(INP, "@$(PLC)/$(SOFF)+4 T=INT16 B=7" )
+        field(ZNAM, "PSU OK")
+        field(ONAM, "PSU ERROR")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-ERRTYP-RB")
+{
+        field(DTYP, "S7plc")
+        field(SCAN, "I/O Intr")
+        field(INP, "@$(PLC)/$(SOFF)+4 T=INT16 B=8" )
+        field(ZNAM, "TYPE OK")
+        field(ONAM, "TYPE ERROR")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-ERRREM-RB")
+{
+        field(DTYP, "S7plc")
+        field(SCAN, "I/O Intr")
+        field(INP, "@$(PLC)/$(SOFF)+4 T=INT16 B=9" )
+        field(ZNAM, "REMOTE")
+        field(ONAM, "LOCAL")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-ERRISC-RB")
+{
+        field(DTYP, "S7plc")
+        field(SCAN, "I/O Intr")
+        field(INP, "@$(PLC)/$(SOFF)+4 T=INT16 B=10" )
+        field(ZNAM, "I-SCALE OK")
+        field(ONAM, "I-SCALE ERR")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-ERRWSC-RB")
+{
+        field(DTYP, "S7plc")
+        field(SCAN, "I/O Intr")
+        field(INP, "@$(PLC)/$(SOFF)+4 T=INT16 B=11" )
+        field(ZNAM, "W-SCALE OK")
+        field(ONAM, "W-SCALE ERR")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-ERRVSC-RB")
+{
+        field(DTYP, "S7plc")
+        field(SCAN, "I/O Intr")
+        field(INP, "@$(PLC)/$(SOFF)+4 T=INT16 B=12" )
+        field(ZNAM, "V-SCALE OK")
+        field(ONAM, "V-SCALE ERR")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-ERROUT-RB")
+{
+        field(DTYP, "S7plc")
+        field(SCAN, "I/O Intr")
+        field(INP, "@$(PLC)/$(SOFF)+4 T=INT16 B=13" )
+        field(ZNAM, "OUT-SCALE OK")
+        field(ONAM, "OUT-SCALE ERR")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-SP1ERR-RB")
+{
+        field(DTYP, "S7plc")
+        field(SCAN, "I/O Intr")
+        field(INP, "@$(PLC)/$(SOFF)+4 T=INT16 B=14" )
+        field(ZNAM, "SP1 OK")
+        field(ONAM, "SP1 N-ZV")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-SP2ERR-RB")
+{
+        field(DTYP, "S7plc")
+        field(SCAN, "I/O Intr")
+        field(INP, "@$(PLC)/$(SOFF)+4 T=INT16 B=15" )
+        field(ZNAM, "SP2 OK")
+        field(ONAM, "SP2 N-ZV")
+}
+
+# End errors list
+
+record(ai, "$(PREFIX):$(SGNL)-TWARMT-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+6 T=REAL32" )
+	field(MDEL, "-1")
+	field(PREC, "$(PREC)")
+}
+
+# I - warm time set-points
+record(ai, "$(PREFIX):$(SGNL)-TWARMSP1-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+30 T=REAL32" )
+	field(PREC, "$(PREC)")
+	field(EGU, "s")
+	field(FLNK, "$(PREFIX):$(SGNL)-TWARMSP1-INT")
+}
+
+record(ai, "$(PREFIX):$(SGNL)-TWARMSP2-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+34 T=REAL32" )
+	field(PREC, "$(PREC)")
+	field(EGU, "s")
+	field(FLNK, "$(PREFIX):$(SGNL)-TWARMSP2-INT")
+}
+
+record(ai, "$(PREFIX):$(SGNL)-TWARMSP3-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+38 T=REAL32" )
+	field(PREC, "$(PREC)")
+	field(EGU, "s")
+	field(FLNK, "$(PREFIX):$(SGNL)-TWARMSP3-INT")
+}
+
+# I - cold time set-points
+record(ai, "$(PREFIX):$(SGNL)-TCOLDSP1-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+18 T=REAL32" )
+	field(PREC, "$(PREC)")
+	field(EGU, "s")
+	field(FLNK, "$(PREFIX):$(SGNL)-TCOLDSP1-INT")
+}
+
+record(ai, "$(PREFIX):$(SGNL)-TCOLDSP2-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+22 T=REAL32" )
+	field(PREC, "$(PREC)")
+	field(EGU, "s")
+	field(FLNK, "$(PREFIX):$(SGNL)-TCOLDSP2-INT")
+}
+
+record(ai, "$(PREFIX):$(SGNL)-TCOLDSP3-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+26 T=REAL32" )
+	field(PREC, "$(PREC)")
+	field(EGU, "s")
+	field(FLNK, "$(PREFIX):$(SGNL)-TCOLDSP3-INT")
+}
+
+# I - set-points
+record(ai, "$(PREFIX):$(SGNL)-ISP1-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+78 T=REAL32" )
+	field(PREC, "$(PREC)")
+	field(EGU, "A")
+	field(FLNK, "$(PREFIX):$(SGNL)-ISP1-INT")
+}
+
+record(ai, "$(PREFIX):$(SGNL)-ISP2-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+82 T=REAL32" )
+	field(PREC, "$(PREC)")
+	field(EGU, "A")
+	field(FLNK, "$(PREFIX):$(SGNL)-ISP2-INT")
+}
+
+record(ai, "$(PREFIX):$(SGNL)-ISP3-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+86 T=REAL32" )
+	field(PREC, "$(PREC)")
+	field(EGU, "A")
+	field(FLNK, "$(PREFIX):$(SGNL)-ISP3-INT")
+}
+
+record(ai, "$(PREFIX):$(SGNL)-VMON-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+54 T=REAL32" )
+	field(MDEL, "-1")
+	field(EGU, "V")
+	field(PREC, "$(PREC)")
+}
+
+record(ai, "$(PREFIX):$(SGNL)-IMON-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+58 T=REAL32" )
+	field(MDEL, "-1")
+	field(EGU, "A")
+	field(PREC, "$(PREC)")
+}
+
+record(ai, "$(PREFIX):$(SGNL)-WMON-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+62 T=REAL32" )
+	field(MDEL, "-1")
+	field(EGU, "W")
+	field(PREC, "$(PREC)")
+}
+
+record(ai, "$(PREFIX):$(SGNL)-VSVAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+66 T=REAL32" )
+	field(PREC, "$(PREC)")
+	field(EGU, "V")
+	field(FLNK, "$(PREFIX):$(SGNL)-VSVAL-INT")
+}
+
+record(ai, "$(PREFIX):$(SGNL)-ISVAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+70 T=REAL32" )
+	field(PREC, "$(PREC)")
+	field(EGU, "A")
+	field(FLNK, "$(PREFIX):$(SGNL)-ISVAL-INT")
+}
+
+record(ai, "$(PREFIX):$(SGNL)-WSVAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+74 T=REAL32" )
+	field(PREC, "$(PREC)")
+	field(EGU, "W")
+	field(FLNK, "$(PREFIX):$(SGNL)-WSVAL-INT")
+}
+
+# I - threshold interlock levels
+record(ai, "$(PREFIX):$(SGNL)-IHIHI-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+102 T=REAL32" )
+	field(PREC, "$(PREC)")
+	field(EGU, "A")	
+	field(FLNK, "$(PREFIX):$(SGNL)-IHIHI-INT")
+}
+
+record(ai, "$(PREFIX):$(SGNL)-ILOLO-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+106 T=REAL32" )
+	field(PREC, "$(PREC)")
+	field(EGU, "A")
+	field(FLNK, "$(PREFIX):$(SGNL)-ILOLO-INT")
+}
+
+record(ai, "$(PREFIX):$(SGNL)-IHIGH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+110 T=REAL32" )
+	field(PREC, "$(PREC)")
+	field(EGU, "A")
+	field(FLNK, "$(PREFIX):$(SGNL)-IHIGH-INT")
+}
+
+record(ai, "$(PREFIX):$(SGNL)-ILOW-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+114 T=REAL32" )
+	field(PREC, "$(PREC)")
+	field(EGU, "A")
+	field(FLNK, "$(PREFIX):$(SGNL)-ILOW-INT")
+}
+
+# W - threshold interlock levels
+record(ai, "$(PREFIX):$(SGNL)-WHIHI-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+118 T=REAL32" )
+	field(PREC, "$(PREC)")
+	field(EGU, "W")
+	field(FLNK, "$(PREFIX):$(SGNL)-WHIHI-INT")
+}
+
+record(ai, "$(PREFIX):$(SGNL)-WLOLO-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+122 T=REAL32" )
+	field(PREC, "$(PREC)")
+	field(EGU, "W")
+	field(FLNK, "$(PREFIX):$(SGNL)-WLOLO-INT")
+}
+
+record(ai, "$(PREFIX):$(SGNL)-WHIGH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+126 T=REAL32" )
+	field(PREC, "$(PREC)")
+	field(EGU, "W")
+	field(FLNK, "$(PREFIX):$(SGNL)-WHIGH-INT")
+}
+
+record(ai, "$(PREFIX):$(SGNL)-WLOW-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+130 T=REAL32" )
+	field(PREC, "$(PREC)")
+	field(EGU, "W")
+	field(FLNK, "$(PREFIX):$(SGNL)-WLOW-INT")
+}
+
+record(ai, "$(PREFIX):$(SGNL)-IMAX-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+138 T=REAL32" )
+	field(MDEL, "-1")
+	field(EGU, "A")
+	field(PREC, "$(PREC)")
+}
+
+record(ai, "$(PREFIX):$(SGNL)-WMAX-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+142 T=REAL32" )
+	field(MDEL, "-1")
+	field(EGU, "W")
+	field(PREC, "$(PREC)")
+}
+
+record(ai, "$(PREFIX):$(SGNL)-TOLInWARMUP-RB")
+{
+        field(DTYP, "S7plc")
+        field(SCAN, "I/O Intr")
+        field(INP, "@$(PLC)/$(SOFF)+146 T=REAL32" )
+        field(MDEL, "-1")
+        field(EGU, "A")
+        field(PREC, "$(PREC)")
+	field(FLNK, "$(PREFIX):$(SGNL)-TOLInWARMUP-INT")
+}
+
+record(waveform, "$(PREFIX):$(SGNL)-TMSTMP-RB")
+{
+	field(SCAN, "I/O Intr")
+	field(DTYP, "S7plc")
+	field(INP, "@$(PLC)/$(SOFF)+150 T=TIME")
+	field(FTVL, "CHAR")
+	field(NELM, "8")
+}

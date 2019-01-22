@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Diagnostics</name>
+  <width>1885</width>
+  <height>1000</height>
+  <actions>
+  </actions>
+  <widget type="label" version="2.0.0">
+    <name>Label_197</name>
+    <text>Open all PVs for digital I/O</text>
+    <x>70</x>
+    <y>20</y>
+    <width>210</width>
+    <height>30</height>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_198</name>
+    <text>Open all timestamp registers</text>
+    <x>70</x>
+    <y>100</y>
+    <width>210</width>
+    <height>30</height>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_24</name>
+    <actions>
+      <action type="open_display">
+        <file>maglpsDIO.bob</file>
+        <target>window</target>
+        <description>Open the configuation display for all the DI/O PVs</description>
+      </action>
+    </actions>
+    <text>Digital I/O</text>
+    <x>290</x>
+    <y>20</y>
+    <width>140</width>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_25</name>
+    <actions>
+      <action type="open_display">
+        <file>maglpsAF.bob</file>
+        <target>window</target>
+        <description>Open the configuation display for all AI PVs</description>
+      </action>
+    </actions>
+    <text>Analog Inputs </text>
+    <x>290</x>
+    <y>60</y>
+    <width>140</width>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_199</name>
+    <text>Open all PVs for analog inputs</text>
+    <x>70</x>
+    <y>60</y>
+    <width>210</width>
+    <height>30</height>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_26</name>
+    <actions>
+      <action type="open_display">
+        <file>maglpsTimeStamp.bob</file>
+        <target>window</target>
+        <description>Open the display for all the timestamp records</description>
+      </action>
+    </actions>
+    <text>Time stamp</text>
+    <x>290</x>
+    <y>100</y>
+    <width>140</width>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_200</name>
+    <text>Open Filament PSU</text>
+    <x>70</x>
+    <y>140</y>
+    <width>210</width>
+    <height>30</height>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_27</name>
+    <actions>
+      <action type="open_display">
+        <file>maglpsFIL.bob</file>
+        <target>window</target>
+        <description>Open the configuation display for the Filament PSU</description>
+      </action>
+    </actions>
+    <text>Filament</text>
+    <x>290</x>
+    <y>140</y>
+    <width>140</width>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_201</name>
+    <text>Open Solenoid PSUs</text>
+    <x>70</x>
+    <y>180</y>
+    <width>210</width>
+    <height>30</height>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_28</name>
+    <actions>
+      <action type="open_display">
+        <file>maglpsSOL.bob</file>
+        <target>window</target>
+        <description>Open the configuation display for Solenoid PSUs</description>
+      </action>
+    </actions>
+    <text>Solenoid</text>
+    <x>290</x>
+    <y>180</y>
+    <width>140</width>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+</display>

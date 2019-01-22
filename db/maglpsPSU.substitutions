@@ -1,0 +1,50 @@
+global {PLC=PLCPSU}
+
+file "maglpsConn.template"
+{
+	pattern {SGNL}
+		{PSU}
+}
+
+file "maglpsFILR.template"
+{
+	pattern {SGNL, SOFF, PREC}
+		{FILAMENT,	0, 	2}
+}
+
+file "maglpsFILW.template"
+{
+	pattern {SGNL, SOFF, PREC}
+		{FILAMENT,	0, 	2} 
+}
+
+file "maglpsFILInternal.template"
+{
+	pattern {SGNL}
+		{FILAMENT}
+}
+
+file "maglpsSOLR.template"
+{
+	pattern {SGNL, SOFF, PREC}
+		{SOLENOID01,	160,	2}
+		{SOLENOID02,	250,	2}
+		{SOLENOID03,	340,	2}
+}
+
+file "maglpsSOLW.template"
+{
+	pattern {SGNL, SOFF, PREC}
+		{SOLENOID01,	106,  	2} 
+		{SOLENOID02,	156,  	2} 
+		{SOLENOID03,	206,  	2} 
+}
+
+file "maglpsSOLInternal.template"
+{
+	pattern {SGNL}
+		{SOLENOID01}
+		{SOLENOID02}
+		{SOLENOID03}
+}
+

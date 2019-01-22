@@ -1,0 +1,62 @@
+global {PLC=PLCAF}
+
+file "maglpsConn.template" 
+{
+
+	pattern {SGNL}
+			{AF}
+}
+
+
+file "maglpsAFR.template"
+{
+	pattern	{SGNL, 	 SOFF,	 PREC,      EGU,	DESC}
+		 {RFS-VacPS-110:I,	0,    	2,    "uA",	"Ion-pump-01 current"}
+		 {RFS-VacPS-120:I,	44,    	2,    "uA",	"Ion-pump-02 current"}
+		 {RFS-Coll-110:TC_TOP,	88,    	2,    "C",	"Collector top TC"}
+		 {RFS-Coll-120:TC_EDGE,	132,    	2,    "C",	"Collector edge TC"}
+		 {RFS-Body-110:TT,	176,    	2,    "C",	"Body water inlet temp"}
+		 {RFS-Body-120:TT,	220,    	2,    "C",	"Body water outlet temp"}
+		 {RFS-Win-110:TT,	264,    	2,    "C",	"Window outer sleeve temp"}
+		 {RFS-Win-120:TT,	308,    	2,    "C",	"Window outlet temp"}
+		 {RFS-Sol-110:TT,	352,    	2,    "C",	"Solenoid water inlet temp"}
+		 {RFS-Sol-120:TT,	396,    	2,    "C",	"Solenoid water outlet temp"}
+		 {RFS-Sol-130:TT,	440,    	2,    "C",	"Solenoid coil temperature"}
+		 {RFS-Oil-110:TT,	484,    	2,    "C",	"Oil tank temperature"}
+}
+
+file "maglpsAFW.template" 
+{
+	pattern	 {SGNL, 	SOFF,	PREC}
+		 {RFS-VacPS-110:I,	0,    	2}
+		 {RFS-VacPS-120:I,	26,    	2}
+		 {RFS-Coll-110:TC_TOP,	52,    	2}
+		 {RFS-Coll-120:TC_EDGE,	78,    	2}
+		 {RFS-Body-110:TT,	104,    	2}
+		 {RFS-Body-120:TT,	130,    	2}
+		 {RFS-Win-110:TT,	156,    	2}
+		 {RFS-Win-120:TT,	182,    	2}
+		 {RFS-Sol-110:TT,	208,    	2}
+		 {RFS-Sol-120:TT,	234,    	2}
+		 {RFS-Sol-130:TT,	260,    	2}
+		 {RFS-Oil-110:TT,	286,    	2}
+}
+
+file "maglpsAFInternal.template"
+{
+	pattern 	{SGNL}
+		{RFS-VacPS-110:I}
+		{RFS-VacPS-120:I}
+		{RFS-Coll-110:TC_TOP}
+		{RFS-Coll-120:TC_EDGE}
+		{RFS-Body-110:TT}
+		{RFS-Body-120:TT}
+		{RFS-Win-110:TT}
+		{RFS-Win-120:TT}
+		{RFS-Sol-110:TT}
+		{RFS-Sol-120:TT}
+		{RFS-Sol-130:TT}
+		{RFS-Oil-110:TT}
+
+}
+

@@ -1,0 +1,146 @@
+global {PLC=PLCDIO}
+
+file "maglpsConn.template"
+{
+	pattern {SGNL}
+		{DIO}
+}
+
+file "maglpsDIOR.template"
+{
+	pattern	{SGNL,		SOFF,	ZNAM,	ONAM,	DESC}
+		 {NoQuench,	0,    	"OK",	"ITLCK",	"No Quench Detected"}
+		 {DAQ:OK,	12,    	"OK",	"ITLCK",	"DAQ system OK"}
+		 {PC:PwrFail,	24,    	"OK",	"ITLCK",	"Pwr Conv. Pwr Fail"}
+		 {PC:EEswOpnRQ,	36,    	"OK",	"ITLCK",	"Enrgy Extr Sw Opn Req"}
+		 {EE:Remote,	48,    	"OK",	"ITLCK",	"Enrgy Extr Remote stat"}
+		 {EE:NoError,	60,    	"OK",	"ITLCK",	"Enrgy Extr NoErr stat"}
+		 {EE:Closed,	72,    	"Closed","Open",	"Enrgy Extr Switch Closed"}
+		 {EE:PwrPerm,	84,    	"OK",	"ITLCK",	"Enrgy Extr Pwr Permit"}
+		 {Cbl:Pos1,	96,    	"Park",	"Oper",		"Cable 1 Position"}
+		 {Cbl:Pos2,	108,   	"Park",	"Oper",		"Cable 2 Position"}
+		 {Cbl:Pos3,	120,   	"Park",	"Oper",		"Cable 3 Position"}
+		 {Cbl:Pos4,	132,   	"Park",	"Oper",		"Cable 4 Position"}
+		 {PC:Connected,	144,   	"OK",	"ITLCK",	"Pwr Conv connected"}
+		 {PC:MCBstat,	156,   	"OK",	"ITLCK",	"Main Circuit Breaker"}
+		 {EE:FPAstat,	168,   	"OK",	"ITLCK",	"Fast Pwr Abort Stat"}
+		 {EE:Warn,	180,   	"OK",	"ITLCK",	"Enrgy Extr Warning"}
+		 {LEAD1:TS,	192,   	"OK",	"ITLCK",	"Lead 1 Thermal Switch"}
+		 {LEAD2:TS,	204,   	"OK",	"ITLCK",	"Lead 2 Thermal Switch"}
+		 {LEAD3:TS,	216,   	"OK",	"ITLCK",	"Lead 3 Thermal Switch"}
+		 {LEAD4:TS,	228,   	"OK",	"ITLCK",	"Lead 4 Thermal Switch"}
+		 {DC24V:PLC,	240,   	"OK",	"ITLCK",	"24V to the PLC"}
+		 {DC24V:Aux,	252,   	"OK",	"ITLCK",	"24V to the In/Out"}
+		 {CRYO19K,	264,   	"OK",	"ITLCK",	"Cryo @ 1.9 K"}
+		 {CRYO45K,	276,   	"OK",	"ITLCK",	"Cryo @ 4.5 K"}
+		 {CRYO300KHe,	288,   	"OK",	"ITLCK",	"Cryo @ 300 K He"}
+		 {CRYO300KAir,	300,   	"OK",	"ITLCK",	"Cryo @ 300 K Air"}
+		 {PC:MCBcmd,	312,   	"ON",	"OFF",		"Main Circ Breaker Cmd"}
+		 {PC:PA,	324,   	"OK",	"ITLCK",	"Power Abort"}
+		 {PC:PERM,	336,   	"OK",	"ITLCK",	"Power Permit"}
+		 {QuenchStat,	348,   	"OK",	"ITLCK",	"Quench status to Gersemi"}
+		 {HV300K:OK,	360,   	"OK",	"ITLCK",	"OK for HV test @ 300K"}
+		 {HVCold:OK,	372,   	"OK",	"ITLCK",	"OK for HV test @ cold"}
+		 {EE:OpenCmd,	384,   	"OK",	"ITLCK",	"Enrgy Extr Sw Open Cmd"}
+		 {EE:CloseCmd,	396,   	"OK",	"ITLCK",	"Enrgy Extr Sw Close Cmd"}
+		 {EE:RstCmd,	408,   	"OK",	"ITLCK",	"Enrgy Extr Sw Reset Cmd"}
+		 {FLSHBX1,	420,   	"ON",	"OFF",		"Flash Box Lamp 1"}
+		 {FLSHBX2,	432,   	"ON",	"OFF",		"Flash Box Lamp 2"}
+		 {FLSHBX3,	444,   	"ON",	"OFF",		"Flash Box Lamp 3"}
+		 {FLSHBX4,	456,   	"ON",	"OFF",		"Flash Box Lamp 4"}
+		 {FLSHBX5,	468,   	"ON",	"OFF",		"Flash Box Lamp 5"}
+		 {FLSHBX6,	480,   	"ON",	"OFF",		"Flash Box Lamp 6"}
+}
+
+file "maglpsDIOW.template"
+{
+	pattern	 {SGNL, 	SOFF}
+		 {NoQuench,	0}
+		 {DAQ:OK,	2}
+		 {PC:PwrFail,	4}
+		 {PC:EEswOpnRQ,	6}
+		 {EE:Remote,	8}
+		 {EE:NoError,	10}
+		 {EE:Closed,	12}
+		 {EE:PwrPerm,	14}
+		 {Cbl:Pos1,	16}
+		 {Cbl:Pos2,	18}
+		 {Cbl:Pos3,	20}
+		 {Cbl:Pos4,	22}
+		 {PC:Connected,	24}
+		 {PC:MCBstat,	26}
+		 {EE:FPAstat,	28}
+		 {EE:Warn,	30}
+		 {LEAD1:TS,	32}
+		 {LEAD2:TS,	34}
+		 {LEAD3:TS,	36}
+		 {LEAD4:TS,	38}
+		 {DC24V:PLC,	40}
+		 {DC24V:Aux,	42}
+		 {CRYO19K,	44}
+		 {CRYO45K,	46}
+		 {CRYO300KHe,	48}
+		 {CRYO300KAir,	50}
+		 {PC:MCBcmd,	52}
+		 {PC:PA,	54}
+		 {PC:PERM,	56}
+		 {QuenchStat,	58}
+		 {HV300K:OK,	60}
+		 {HVCold:OK,	62}
+		 {EE:OpenCmd,	64}
+		 {EE:CloseCmd,	66}
+		 {EE:RstCmd,	68}
+		 {FLSHBX1,	70}
+		 {FLSHBX2,	72}
+		 {FLSHBX3,	74}
+		 {FLSHBX4,	76}
+		 {FLSHBX5,	78}
+		 {FLSHBX6,	80}
+}
+
+
+file "maglpsDIOInternal.template"
+{
+	pattern  {SGNL}
+		 {NoQuench}
+		 {DAQ:OK}
+		 {PC:PwrFail}
+		 {PC:EEswOpnRQ}
+		 {EE:Remote}
+		 {EE:NoError}
+		 {EE:Closed}
+		 {EE:PwrPerm}
+		 {Cbl:Pos1}
+		 {Cbl:Pos2}
+		 {Cbl:Pos3}
+		 {Cbl:Pos4}
+		 {PC:Connected}
+		 {PC:MCBstat}
+		 {EE:FPAstat}
+		 {EE:Warn}
+		 {LEAD1:TS}
+		 {LEAD2:TS}
+		 {LEAD3:TS}
+		 {LEAD4:TS}
+		 {DC24V:PLC}
+		 {DC24V:Aux}
+		 {CRYO19K}
+		 {CRYO45K}
+		 {CRYO300KHe}
+		 {CRYO300KAir}
+		 {PC:MCBcmd}
+		 {PC:PA}
+		 {PC:PERM}
+		 {QuenchStat}
+		 {HV300K:OK}
+		 {HVCold:OK}
+		 {EE:OpenCmd}
+		 {EE:CloseCmd}
+		 {EE:RstCmd}
+		 {FLSHBX1}
+		 {FLSHBX2}
+		 {FLSHBX3}
+		 {FLSHBX4}
+		 {FLSHBX5}
+		 {FLSHBX6}
+}
