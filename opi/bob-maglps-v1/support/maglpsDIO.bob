@@ -145,10 +145,10 @@
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_6</name>
-    <text>Connection Status</text>
-    <x>480</x>
+    <text>DIO Connection Status</text>
+    <x>430</x>
     <y>45</y>
-    <width>119</width>
+    <width>175</width>
     <height>25</height>
     <foreground_color>
       <color red="0" green="0" blue="0">
@@ -165,8 +165,8 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_20</name>
-    <pv_name>$(PREFIX):AF-CONN</pv_name>
-    <x>615</x>
+    <pv_name>$(PREFIX):DIO-CONN</pv_name>
+    <x>620</x>
     <y>45</y>
     <width>107</width>
     <height>25</height>
@@ -284,7 +284,7 @@ Operation Mode read-back</tooltip>
     <x>615</x>
     <y>330</y>
     <width>328</width>
-    <height>219</height>
+    <height>220</height>
     <style>1</style>
     <font>
       <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
@@ -304,7 +304,7 @@ Operation Mode read-back</tooltip>
       <name>Label_155</name>
       <text>CPU Interlock/Alarm</text>
       <x>137</x>
-      <y>14</y>
+      <y>40</y>
       <width>150</width>
       <background_color>
         <color red="255" green="255" blue="255">
@@ -318,7 +318,7 @@ Operation Mode read-back</tooltip>
       <name>Label_156</name>
       <text>Warning - Ack Req</text>
       <x>137</x>
-      <y>44</y>
+      <y>65</y>
       <width>150</width>
       <background_color>
         <color red="255" green="255" blue="255">
@@ -332,7 +332,7 @@ Operation Mode read-back</tooltip>
       <name>Label_157</name>
       <text>Latch mode</text>
       <x>137</x>
-      <y>74</y>
+      <y>90</y>
       <width>150</width>
       <background_color>
         <color red="255" green="255" blue="255">
@@ -346,7 +346,7 @@ Operation Mode read-back</tooltip>
       <name>Label_158</name>
       <text>ForceON status</text>
       <x>137</x>
-      <y>104</y>
+      <y>115</y>
       <width>135</width>
       <background_color>
         <color red="255" green="255" blue="255">
@@ -360,7 +360,7 @@ Operation Mode read-back</tooltip>
       <name>Text Update_37</name>
       <pv_name>$(PREFIX):CPU-INTRLCK-RB</pv_name>
       <x>20</x>
-      <y>14</y>
+      <y>40</y>
       <width>90</width>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
@@ -389,7 +389,7 @@ CPU Interlock/alarm </tooltip>
       <name>Text Update_38</name>
       <pv_name>$(PREFIX):CPU-WRNACKREQ-RB</pv_name>
       <x>20</x>
-      <y>44</y>
+      <y>65</y>
       <width>90</width>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
@@ -418,7 +418,7 @@ One or more signals are being interlocked or may require an acknowledge.</toolti
       <name>Text Update_39</name>
       <pv_name>$(PREFIX):CPU-LTCHMD-RB</pv_name>
       <x>20</x>
-      <y>74</y>
+      <y>90</y>
       <width>90</width>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
@@ -448,7 +448,7 @@ The CPU latches the interlock until a reset is applied</tooltip>
       <name>Text Update_40</name>
       <pv_name>$(PREFIX):CPU-FRCACT-RB</pv_name>
       <x>20</x>
-      <y>104</y>
+      <y>115</y>
       <width>90</width>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
@@ -540,6 +540,49 @@ Reset all non-active interlocks</tooltip>
       </actions>
       <show_confirm_dialog>2</show_confirm_dialog>
       <confirm_message>This will test the arc detectors and will generate interlocks</confirm_message>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_41</name>
+      <pv_name>$(PREFIX):CPU-CONN</pv_name>
+      <x>20</x>
+      <y>15</y>
+      <width>90</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="alarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="ERROR" red="252" green="13" blue="27">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+      <tooltip>$(pv_name)
+$(pv_value)
+CPU Interlock/alarm </tooltip>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_159</name>
+      <text>CPU Connection Status</text>
+      <x>137</x>
+      <y>15</y>
+      <width>177</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
     </widget>
   </widget>
 </display>

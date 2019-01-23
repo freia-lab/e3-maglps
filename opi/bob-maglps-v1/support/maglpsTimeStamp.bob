@@ -56,7 +56,7 @@
     <x>20</x>
     <y>85</y>
     <width>470</width>
-    <height>40</height>
+    <height>30</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_2</name>
@@ -65,9 +65,9 @@
       <SGNL>DAQ:OK</SGNL>
     </macros>
     <x>20</x>
-    <y>125</y>
+    <y>115</y>
     <width>470</width>
-    <height>40</height>
+    <height>30</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_3</name>
@@ -76,9 +76,9 @@
       <SGNL>PC:PwrFail</SGNL>
     </macros>
     <x>20</x>
-    <y>165</y>
+    <y>145</y>
     <width>470</width>
-    <height>40</height>
+    <height>30</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_4</name>
@@ -87,9 +87,9 @@
       <SGNL>PC:EEswOpnRQ</SGNL>
     </macros>
     <x>20</x>
-    <y>205</y>
+    <y>175</y>
     <width>470</width>
-    <height>40</height>
+    <height>30</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_5</name>
@@ -98,9 +98,9 @@
       <SGNL>EE:Remote</SGNL>
     </macros>
     <x>20</x>
-    <y>245</y>
+    <y>205</y>
     <width>470</width>
-    <height>40</height>
+    <height>30</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_6</name>
@@ -109,9 +109,9 @@
       <SGNL>EE:NoError</SGNL>
     </macros>
     <x>20</x>
-    <y>285</y>
+    <y>235</y>
     <width>470</width>
-    <height>40</height>
+    <height>30</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_7</name>
@@ -120,9 +120,9 @@
       <SGNL>EE:Closed</SGNL>
     </macros>
     <x>20</x>
-    <y>325</y>
+    <y>265</y>
     <width>470</width>
-    <height>40</height>
+    <height>30</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_9</name>
@@ -131,9 +131,9 @@
       <SGNL>EE:PwrPerm</SGNL>
     </macros>
     <x>20</x>
-    <y>365</y>
+    <y>295</y>
     <width>470</width>
-    <height>40</height>
+    <height>30</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_10</name>
@@ -142,9 +142,9 @@
       <SGNL>Cbl:Pos1</SGNL>
     </macros>
     <x>20</x>
-    <y>405</y>
+    <y>325</y>
     <width>470</width>
-    <height>40</height>
+    <height>30</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_11</name>
@@ -153,9 +153,9 @@
       <SGNL>Cbl:Pos2</SGNL>
     </macros>
     <x>20</x>
-    <y>445</y>
+    <y>355</y>
     <width>470</width>
-    <height>40</height>
+    <height>30</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_20</name>
@@ -166,7 +166,7 @@
     <x>500</x>
     <y>85</y>
     <width>470</width>
-    <height>40</height>
+    <height>30</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_22</name>
@@ -175,9 +175,9 @@
       <SGNL>RFS-VacPS-120:I</SGNL>
     </macros>
     <x>500</x>
-    <y>125</y>
+    <y>115</y>
     <width>470</width>
-    <height>40</height>
+    <height>30</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_23</name>
@@ -186,9 +186,9 @@
       <SGNL>RFS-Coll-110:TC_TOP</SGNL>
     </macros>
     <x>500</x>
-    <y>165</y>
+    <y>145</y>
     <width>470</width>
-    <height>40</height>
+    <height>30</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_24</name>
@@ -197,9 +197,9 @@
       <SGNL>RFS-Coll-120:TC_EDGE</SGNL>
     </macros>
     <x>500</x>
-    <y>205</y>
+    <y>175</y>
     <width>470</width>
-    <height>40</height>
+    <height>30</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_25</name>
@@ -208,9 +208,9 @@
       <SGNL>RFS-Body-110:TT</SGNL>
     </macros>
     <x>500</x>
-    <y>245</y>
+    <y>205</y>
     <width>470</width>
-    <height>40</height>
+    <height>30</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_26</name>
@@ -219,9 +219,9 @@
       <SGNL>RFS-Body-120:TT</SGNL>
     </macros>
     <x>500</x>
-    <y>285</y>
+    <y>235</y>
     <width>470</width>
-    <height>40</height>
+    <height>30</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_27</name>
@@ -230,9 +230,9 @@
       <SGNL>RFS-Win-110:TT</SGNL>
     </macros>
     <x>500</x>
-    <y>325</y>
+    <y>265</y>
     <width>470</width>
-    <height>40</height>
+    <height>30</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_28</name>
@@ -241,9 +241,9 @@
       <SGNL>RFS-Win-120:TT</SGNL>
     </macros>
     <x>500</x>
-    <y>365</y>
+    <y>295</y>
     <width>470</width>
-    <height>40</height>
+    <height>30</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_29</name>
@@ -252,9 +252,9 @@
       <SGNL>RFS-Sol-110:TT</SGNL>
     </macros>
     <x>500</x>
-    <y>405</y>
+    <y>325</y>
     <width>470</width>
-    <height>40</height>
+    <height>30</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_30</name>
@@ -263,9 +263,9 @@
       <SGNL>RFS-Sol-120:TT</SGNL>
     </macros>
     <x>500</x>
-    <y>445</y>
+    <y>355</y>
     <width>470</width>
-    <height>40</height>
+    <height>30</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_31</name>
@@ -274,9 +274,9 @@
       <SGNL>RFS-Sol-130:TT</SGNL>
     </macros>
     <x>500</x>
-    <y>485</y>
+    <y>385</y>
     <width>470</width>
-    <height>40</height>
+    <height>30</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_32</name>
@@ -285,9 +285,9 @@
       <SGNL>RFS-Oil-110:TT</SGNL>
     </macros>
     <x>500</x>
-    <y>525</y>
+    <y>415</y>
     <width>470</width>
-    <height>40</height>
+    <height>30</height>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_199</name>
@@ -338,9 +338,9 @@
       <SGNL>Cbl:Pos3</SGNL>
     </macros>
     <x>20</x>
-    <y>485</y>
+    <y>385</y>
     <width>470</width>
-    <height>40</height>
+    <height>30</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_13</name>
@@ -349,8 +349,107 @@
       <SGNL>Cbl:Pos4</SGNL>
     </macros>
     <x>20</x>
-    <y>525</y>
+    <y>415</y>
     <width>470</width>
-    <height>40</height>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_14</name>
+    <file>time-stamp.bob</file>
+    <macros>
+      <SGNL>PC:Connected</SGNL>
+    </macros>
+    <x>20</x>
+    <y>445</y>
+    <width>470</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_15</name>
+    <file>time-stamp.bob</file>
+    <macros>
+      <SGNL>PC:MCBstat</SGNL>
+    </macros>
+    <x>20</x>
+    <y>475</y>
+    <width>470</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_16</name>
+    <file>time-stamp.bob</file>
+    <macros>
+      <SGNL>EE:FPAstat</SGNL>
+    </macros>
+    <x>20</x>
+    <y>505</y>
+    <width>470</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_17</name>
+    <file>time-stamp.bob</file>
+    <macros>
+      <SGNL>EE:Warn</SGNL>
+    </macros>
+    <x>20</x>
+    <y>535</y>
+    <width>470</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_18</name>
+    <file>time-stamp.bob</file>
+    <macros>
+      <SGNL>LEAD1:TS</SGNL>
+    </macros>
+    <x>20</x>
+    <y>565</y>
+    <width>470</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_19</name>
+    <file>time-stamp.bob</file>
+    <macros>
+      <SGNL>LEAD2:TS</SGNL>
+    </macros>
+    <x>20</x>
+    <y>595</y>
+    <width>470</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_21</name>
+    <file>time-stamp.bob</file>
+    <macros>
+      <SGNL>LEAD3:TS</SGNL>
+    </macros>
+    <x>20</x>
+    <y>625</y>
+    <width>470</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_33</name>
+    <file>time-stamp.bob</file>
+    <macros>
+      <SGNL>LEAD4:TS</SGNL>
+    </macros>
+    <x>20</x>
+    <y>655</y>
+    <width>470</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_34</name>
+    <file>time-stamp.bob</file>
+    <macros>
+      <SGNL>DC24V:PLC</SGNL>
+    </macros>
+    <x>20</x>
+    <y>685</y>
+    <width>470</width>
+    <height>30</height>
   </widget>
 </display>

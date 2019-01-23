@@ -18,11 +18,6 @@
             <height>1015</height>
             <actions>
             </actions>
-            <scripts>
-              <script file="scripts/prefix2Macro.py" check_connections="false">
-                <pv_name>loc://maglpsPrefix</pv_name>
-              </script>
-            </scripts>
           </widget>
         </children>
       </tab>
@@ -34,11 +29,6 @@
             <file>support/transitions.bob</file>
             <width>1872</width>
             <height>1015</height>
-            <scripts>
-              <script file="scripts/prefix2Macro.py">
-                <pv_name>loc://maglpsPrefix</pv_name>
-              </script>
-            </scripts>
           </widget>
         </children>
       </tab>
@@ -50,11 +40,6 @@
             <file>support/maglpsDiagnostics.bob</file>
             <width>1872</width>
             <height>1015</height>
-            <scripts>
-              <script file="scripts/prefix2Macro.py">
-                <pv_name>loc://maglpsPrefix</pv_name>
-              </script>
-            </scripts>
           </widget>
         </children>
       </tab>
@@ -68,22 +53,6 @@
     </font>
     <active_tab>2</active_tab>
     <tab_height>10</tab_height>
-    <actions>
-    </actions>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_6</name>
-    <text>Connection Status</text>
-    <x>50</x>
-    <y>1010</y>
-    <width>150</width>
-    <height>25</height>
-    <background_color>
-      <color red="255" green="255" blue="255">
-      </color>
-    </background_color>
-    <horizontal_alignment>2</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
     <actions>
     </actions>
   </widget>
@@ -538,40 +507,13 @@ Reset all non-active interlocks</tooltip>
   </widget>
   <widget type="picture" version="2.0.0">
     <name>Image</name>
-    <file>support/images/ESS_Logo_Frugal_Blue_cmyk.png</file>
+    <file>support/images/FREIAlogo.png</file>
     <x>90</x>
     <y>890</y>
     <width>207</width>
     <height>108</height>
     <actions>
     </actions>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_20</name>
-    <pv_name>$(PREFIX):CPU-CONN</pv_name>
-    <x>225</x>
-    <y>1010</y>
-    <width>107</width>
-    <height>25</height>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <rules>
-      <rule name="alarmRule" prop_id="background_color" out_exp="false">
-        <exp bool_exp="pv0==1">
-          <value>
-            <color name="OK" red="61" green="216" blue="61">
-            </color>
-          </value>
-        </exp>
-        <exp bool_exp="pv0==0">
-          <value>
-            <color name="INVALID" red="211" green="45" blue="156">
-            </color>
-          </value>
-        </exp>
-        <pv_name>$(pv_name)</pv_name>
-      </rule>
-    </rules>
   </widget>
   <widget type="group" version="2.0.0">
     <name>     Machine State</name>
@@ -1180,17 +1122,5 @@ Attempting to reach</tooltip>
       <actions>
       </actions>
     </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_5</name>
-      <pv_name>$(PREFIX):CPU-OPMODE-RB</pv_name>
-      <x>19</x>
-      <y>102</y>
-    </widget>
-  </widget>
-  <widget type="combo" version="2.0.0">
-    <name>Combo Box</name>
-    <pv_name>$(PREFIX):CPU-OPMODE</pv_name>
-    <x>213</x>
-    <y>851</y>
   </widget>
 </display>

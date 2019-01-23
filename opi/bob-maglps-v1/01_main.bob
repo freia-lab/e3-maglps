@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
+  <macros>
+    <PREFIX>CstatV-MagLPS</PREFIX>
+  </macros>
   <width>2340</width>
   <height>1120</height>
   <background_color>
@@ -10,7 +13,7 @@
   </actions>
   <widget type="label" version="2.0.0">
     <name>Label_94</name>
-    <text>   RF Local Protection System - SIM</text>
+    <text>   Superconducting Magnet Local Protection System</text>
     <x>12</x>
     <y>5</y>
     <width>2330</width>
@@ -28,87 +31,12 @@
     <actions>
     </actions>
   </widget>
-  <widget type="combo" version="2.0.0">
-    <name>Device prefix combo</name>
-    <pv_name>loc://maglpsPrefix("CstatV-MagLPS")</pv_name>
-    <x>882</x>
-    <y>20</y>
-    <width>160</width>
-    <height>28</height>
-    <background_color>
-      <color name="Read_Background" red="230" green="235" blue="232">
-      </color>
-    </background_color>
-    <actions>
-    </actions>
-    <items>
-      <item>CstatV-MagLPS</item>
-    </items>
-    <items_from_pv>false</items_from_pv>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_85</name>
-    <text>Device Prefix</text>
-    <x>740</x>
-    <y>21</y>
-    <width>130</width>
-    <height>25</height>
-    <font>
-      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
-      </font>
-    </font>
-    <background_color>
-      <color red="255" green="255" blue="255">
-      </color>
-    </background_color>
-    <horizontal_alignment>2</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <actions>
-    </actions>
-  </widget>
-  <widget type="textentry" version="3.0.0">
-    <name>Device prefix</name>
-    <pv_name>loc://maglpsPrefix("CstatV-MagLPS")</pv_name>
-    <x>1052</x>
-    <y>21</y>
-    <width>160</width>
-    <height>25</height>
-    <background_color>
-      <color name="IO Grid" red="215" green="215" blue="215">
-      </color>
-    </background_color>
-    <format>6</format>
-    <actions>
-    </actions>
-    <tooltip>$(pv_name)</tooltip>
-  </widget>
   <widget type="embedded" version="2.0.0">
-    <name>Linking Container</name>
+    <name>Embedded Display_1</name>
     <file>maglpsMain.bob</file>
     <x>12</x>
     <y>60</y>
     <width>2330</width>
     <height>1060</height>
-    <actions>
-    </actions>
-    <rules>
-      <rule name="clearOPIRule" prop_id="file" out_exp="false">
-        <exp bool_exp="true">
-          <value></value>
-        </exp>
-        <pv_name>loc://maglpsPrefix</pv_name>
-      </rule>
-      <rule name="SetOPIRule" prop_id="file" out_exp="false">
-        <exp bool_exp="true">
-          <value>maglpsMain.bob</value>
-        </exp>
-        <pv_name>loc://maglpsPrefix</pv_name>
-      </rule>
-    </rules>
-    <scripts>
-      <script file="scripts/prefix2Macro.py">
-        <pv_name>loc://maglpsPrefix</pv_name>
-      </script>
-    </scripts>
   </widget>
 </display>
