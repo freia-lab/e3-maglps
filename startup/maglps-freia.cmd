@@ -15,8 +15,8 @@ epicsEnvSet("OUTSIZECPU", "4")
 
 epicsEnvSet("TCPPORTAF", "3001")
 epicsEnvSet("PLCPORTAF", "PLCAF")
-epicsEnvSet("INSIZEAF", "528")
-epicsEnvSet("OUTSIZEAF", "312")
+epicsEnvSet("INSIZEAF", "1232")
+epicsEnvSet("OUTSIZEAF", "728")
 
 epicsEnvSet("TCPPORTDIO", "3002")
 epicsEnvSet("PLCPORTDIO", "PLCDIO")
