@@ -20,8 +20,8 @@ epicsEnvSet("OUTSIZEAF", "728")
 
 epicsEnvSet("TCPPORTDIO", "3002")
 epicsEnvSet("PLCPORTDIO", "PLCDIO")
-epicsEnvSet("INSIZEDIO", "492")
-epicsEnvSet("OUTSIZEDIO", "82")
+epicsEnvSet("INSIZEDIO", "864")
+epicsEnvSet("OUTSIZEDIO", "144")
 
 epicsEnvSet("TCPPORTPSU", "3003")
 epicsEnvSet("PLCPORTPSU", "PLCPSU")
