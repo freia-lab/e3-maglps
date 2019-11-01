@@ -17,30 +17,32 @@ record(bo, "$(PREFIX):$(SGNL)-OFF")
 	field(HIGH, "$(HOLDHIGH)")
 }
 
-record(bo, "$(PREFIX):$(SGNL)-AUX")
+# was $(SGNL)-AUX
+record(bo, "$(PREFIX):EE-1:CloseCmd")
 {
 	field(DTYP, "S7plc")
 	field( OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=2" )
 	field(HIGH, "$(HOLDHIGH)")
 }
 
-
-record(bo, "$(PREFIX):$(SGNL)-FIL")
+# was $(SGNL)-FIL
+record(bo, "$(PREFIX):EE-1:RstCmd")
 {
 	field(DTYP, "S7plc")
 	field( OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=3" )
 	field(HIGH, "$(HOLDHIGH)")
 }
 
-record(bo, "$(PREFIX):$(SGNL)-STDBY")
+# was $(SGNL)-STDBY
+record(bo, "$(PREFIX):EE-2:CloseCmd")
 {
 	field(DTYP, "S7plc")
 	field( OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=4" )
 	field(HIGH, "$(HOLDHIGH)")
 }
 
-
-record(bo, "$(PREFIX):$(SGNL)-HVON")
+# was $(SGNL)-HVON
+record(bo, "$(PREFIX):EE-2:RstCmd")
 {
 	field(DTYP, "S7plc")
 	field( OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=5" )

@@ -23,7 +23,7 @@
     </actions>
     <items>
       <item>QuenchStat</item>
-      <item>DAQ:OK</item>
+      <item>DAQ_OK</item>
       <item>EmgcyBtn</item>
       <item>EE-1:PwrPerm</item>
       <item>EE-1:Remote</item>
@@ -47,19 +47,15 @@
       <item>DC24V:PLC</item>
       <item>Cbl:Pos</item>
       <item>EE-1:OpenCmd</item>
-      <item>EE-1:CloseCmd</item>
-      <item>EE-1:RstCmd</item>
       <item>PC-1:PERM</item>
-      <item>PC-1:FPACmd</item>
-      <item>PC-1:DirectPA</item>
+      <item>PC-1:FastPA</item>
+      <item>PC:DirectPA</item>
       <item>FLSHBX_HV</item>
       <item>FLSHBX_HC</item>
       <item>FLSHBX_He</item>
       <item>EE-2:OpenCmd</item>
-      <item>EE-2:CloseCmd</item>
-      <item>EE-2:RstCmd</item>
       <item>PC-2:PERM</item>
-      <item>PC-2:FPACmd</item>
+      <item>PC-2:FastPA</item>
       <item>LEAD1:T_OK</item>
       <item>LEAD2:T_OK</item>
       <item>LEAD3:T_OK</item>
@@ -68,6 +64,7 @@
       <item>CRYO_4_5K</item>
       <item>CRYO_300K_He</item>
       <item>CRYO_300_K_Air</item>
+      <item>CRYO_LEADS_OK</item>
     </items>
     <items_from_pv>false</items_from_pv>
   </widget>

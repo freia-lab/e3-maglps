@@ -555,54 +555,6 @@ $(pv_value)
 Actual Machine State read-back</tooltip>
     </widget>
     <widget type="action_button" version="3.0.0">
-      <name>Action Button</name>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name)</pv_name>
-          <value>1</value>
-          <description>Set amplifier to AUX</description>
-        </action>
-      </actions>
-      <pv_name>$(PREFIX):CPU-AUX</pv_name>
-      <text>AUX</text>
-      <x>20</x>
-      <y>189</y>
-      <width>80</width>
-      <tooltip>$(actions)</tooltip>
-    </widget>
-    <widget type="action_button" version="3.0.0">
-      <name>Action Button_7</name>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name)</pv_name>
-          <value>1</value>
-          <description>Set Filament ON</description>
-        </action>
-      </actions>
-      <pv_name>$(PREFIX):CPU-FIL</pv_name>
-      <text>FIL</text>
-      <x>120</x>
-      <y>189</y>
-      <width>80</width>
-      <tooltip>$(actions)</tooltip>
-    </widget>
-    <widget type="action_button" version="3.0.0">
-      <name>Action Button_8</name>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name)</pv_name>
-          <value>1</value>
-          <description>Set Solenoids ON</description>
-        </action>
-      </actions>
-      <pv_name>$(PREFIX):CPU-STDBY</pv_name>
-      <text>STDBY</text>
-      <x>220</x>
-      <y>189</y>
-      <width>80</width>
-      <tooltip>$(actions)</tooltip>
-    </widget>
-    <widget type="action_button" version="3.0.0">
       <name>Action Button_9</name>
       <actions>
         <action type="write_pv">
@@ -621,358 +573,6 @@ Actual Machine State read-back</tooltip>
         </color>
       </background_color>
       <tooltip>$(actions)</tooltip>
-    </widget>
-    <widget type="action_button" version="3.0.0">
-      <name>Action Button_10</name>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name)</pv_name>
-          <value>1</value>
-          <description>Set amplifier to HVON</description>
-        </action>
-      </actions>
-      <pv_name>$(PREFIX):CPU-HVON</pv_name>
-      <text>HVON</text>
-      <x>20</x>
-      <y>270</y>
-      <width>80</width>
-      <tooltip>$(actions)</tooltip>
-    </widget>
-    <widget type="action_button" version="3.0.0">
-      <name>Action Button_11</name>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name)</pv_name>
-          <value>1</value>
-          <description>Set amplifier to RFON</description>
-        </action>
-      </actions>
-      <pv_name>$(PREFIX):CPU-RFON</pv_name>
-      <text>RFON</text>
-      <x>120</x>
-      <y>270</y>
-      <width>80</width>
-      <tooltip>$(actions)</tooltip>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_14</name>
-      <pv_name>$(PREFIX):CPU-AUXMIPRCND-RB</pv_name>
-      <x>20</x>
-      <y>223</y>
-      <width>80</width>
-      <height>14</height>
-      <font>
-        <font family="Source Sans Pro" style="REGULAR" size="12.0">
-        </font>
-      </font>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <rules>
-        <rule name="alarmRule" prop_id="background_color" out_exp="false">
-          <exp bool_exp="pv0==1">
-            <value>
-              <color name="ON" red="22" green="222" blue="33">
-              </color>
-            </value>
-          </exp>
-          <exp bool_exp="pv0==0">
-            <value>
-              <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
-              </color>
-            </value>
-          </exp>
-          <pv_name>$(pv_name)</pv_name>
-        </rule>
-      </rules>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_23</name>
-      <pv_name>$(PREFIX):CPU-FILMIPRCND-RB</pv_name>
-      <x>120</x>
-      <y>223</y>
-      <width>80</width>
-      <height>14</height>
-      <font>
-        <font family="Source Sans Pro" style="REGULAR" size="12.0">
-        </font>
-      </font>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <rules>
-        <rule name="alarmRule" prop_id="background_color" out_exp="false">
-          <exp bool_exp="pv0==1">
-            <value>
-              <color name="ON" red="22" green="222" blue="33">
-              </color>
-            </value>
-          </exp>
-          <exp bool_exp="pv0==0">
-            <value>
-              <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
-              </color>
-            </value>
-          </exp>
-          <pv_name>$(pv_name)</pv_name>
-        </rule>
-      </rules>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_25</name>
-      <pv_name>$(PREFIX):CPU-AUXMISUCND-RB</pv_name>
-      <x>20</x>
-      <y>170</y>
-      <width>80</width>
-      <height>14</height>
-      <font>
-        <font family="Source Sans Pro" style="REGULAR" size="12.0">
-        </font>
-      </font>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <rules>
-        <rule name="alarmRule" prop_id="background_color" out_exp="false">
-          <exp bool_exp="pv0==1">
-            <value>
-              <color name="ON" red="22" green="222" blue="33">
-              </color>
-            </value>
-          </exp>
-          <exp bool_exp="pv0==0">
-            <value>
-              <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
-              </color>
-            </value>
-          </exp>
-          <pv_name>$(pv_name)</pv_name>
-        </rule>
-      </rules>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_26</name>
-      <pv_name>$(PREFIX):CPU-FILMISUCND-RB</pv_name>
-      <x>120</x>
-      <y>170</y>
-      <width>80</width>
-      <height>14</height>
-      <font>
-        <font family="Source Sans Pro" style="REGULAR" size="12.0">
-        </font>
-      </font>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <rules>
-        <rule name="alarmRule" prop_id="background_color" out_exp="false">
-          <exp bool_exp="pv0==1">
-            <value>
-              <color name="ON" red="22" green="222" blue="33">
-              </color>
-            </value>
-          </exp>
-          <exp bool_exp="pv0==0">
-            <value>
-              <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
-              </color>
-            </value>
-          </exp>
-          <pv_name>$(pv_name)</pv_name>
-        </rule>
-      </rules>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_27</name>
-      <pv_name>$(PREFIX):CPU-STBYMISUCND-RB</pv_name>
-      <x>220</x>
-      <y>170</y>
-      <width>80</width>
-      <height>14</height>
-      <font>
-        <font family="Source Sans Pro" style="REGULAR" size="12.0">
-        </font>
-      </font>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <rules>
-        <rule name="alarmRule" prop_id="background_color" out_exp="false">
-          <exp bool_exp="pv0==1">
-            <value>
-              <color name="ON" red="22" green="222" blue="33">
-              </color>
-            </value>
-          </exp>
-          <exp bool_exp="pv0==0">
-            <value>
-              <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
-              </color>
-            </value>
-          </exp>
-          <pv_name>$(pv_name)</pv_name>
-        </rule>
-      </rules>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_24</name>
-      <pv_name>$(PREFIX):CPU-STBYMIPRCND-RB</pv_name>
-      <x>220</x>
-      <y>223</y>
-      <width>80</width>
-      <height>14</height>
-      <font>
-        <font family="Source Sans Pro" style="REGULAR" size="12.0">
-        </font>
-      </font>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <rules>
-        <rule name="alarmRule" prop_id="background_color" out_exp="false">
-          <exp bool_exp="pv0==1">
-            <value>
-              <color name="ON" red="22" green="222" blue="33">
-              </color>
-            </value>
-          </exp>
-          <exp bool_exp="pv0==0">
-            <value>
-              <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
-              </color>
-            </value>
-          </exp>
-          <pv_name>$(pv_name)</pv_name>
-        </rule>
-      </rules>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_28</name>
-      <pv_name>$(PREFIX):CPU-HVENMIPRCND-RB</pv_name>
-      <x>20</x>
-      <y>303</y>
-      <width>80</width>
-      <height>14</height>
-      <font>
-        <font family="Source Sans Pro" style="REGULAR" size="12.0">
-        </font>
-      </font>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <rules>
-        <rule name="alarmRule" prop_id="background_color" out_exp="false">
-          <exp bool_exp="pv0==1">
-            <value>
-              <color name="ON" red="22" green="222" blue="33">
-              </color>
-            </value>
-          </exp>
-          <exp bool_exp="pv0==0">
-            <value>
-              <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
-              </color>
-            </value>
-          </exp>
-          <pv_name>$(pv_name)</pv_name>
-        </rule>
-      </rules>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_29</name>
-      <pv_name>$(PREFIX):CPU-RFENMIPRCND-RB</pv_name>
-      <x>120</x>
-      <y>304</y>
-      <width>80</width>
-      <height>14</height>
-      <font>
-        <font family="Source Sans Pro" style="REGULAR" size="12.0">
-        </font>
-      </font>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <rules>
-        <rule name="alarmRule" prop_id="background_color" out_exp="false">
-          <exp bool_exp="pv0==1">
-            <value>
-              <color name="ON" red="22" green="222" blue="33">
-              </color>
-            </value>
-          </exp>
-          <exp bool_exp="pv0==0">
-            <value>
-              <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
-              </color>
-            </value>
-          </exp>
-          <pv_name>$(pv_name)</pv_name>
-        </rule>
-      </rules>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_30</name>
-      <pv_name>$(PREFIX):CPU-RFENMISUCND-RB</pv_name>
-      <x>120</x>
-      <y>252</y>
-      <width>80</width>
-      <height>14</height>
-      <font>
-        <font family="Source Sans Pro" style="REGULAR" size="12.0">
-        </font>
-      </font>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <rules>
-        <rule name="alarmRule" prop_id="background_color" out_exp="false">
-          <exp bool_exp="pv0==1">
-            <value>
-              <color name="ON" red="22" green="222" blue="33">
-              </color>
-            </value>
-          </exp>
-          <exp bool_exp="pv0==0">
-            <value>
-              <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
-              </color>
-            </value>
-          </exp>
-          <pv_name>$(pv_name)</pv_name>
-        </rule>
-      </rules>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_31</name>
-      <pv_name>$(PREFIX):CPU-HVENMISUCND-RB</pv_name>
-      <x>20</x>
-      <y>252</y>
-      <width>80</width>
-      <height>14</height>
-      <font>
-        <font family="Source Sans Pro" style="REGULAR" size="12.0">
-        </font>
-      </font>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <rules>
-        <rule name="alarmRule" prop_id="background_color" out_exp="false">
-          <exp bool_exp="pv0==1">
-            <value>
-              <color name="ON" red="22" green="222" blue="33">
-              </color>
-            </value>
-          </exp>
-          <exp bool_exp="pv0==0">
-            <value>
-              <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
-              </color>
-            </value>
-          </exp>
-          <pv_name>$(pv_name)</pv_name>
-        </rule>
-      </rules>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_144</name>
@@ -1121,6 +721,416 @@ Attempting to reach</tooltip>
       <vertical_alignment>1</vertical_alignment>
       <actions>
       </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_30</name>
+      <pv_name>$(PREFIX):CPU-RFENMISUCND-RB</pv_name>
+      <x>220</x>
+      <y>170</y>
+      <width>80</width>
+      <height>14</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="12.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="alarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="ON" red="22" green="222" blue="33">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_11</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(pv_name)</pv_name>
+          <value>1</value>
+          <description>Set amplifier to RFON</description>
+        </action>
+      </actions>
+      <pv_name>$(PREFIX):CPU-RFON</pv_name>
+      <text>RFON</text>
+      <x>220</x>
+      <y>188</y>
+      <width>80</width>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_29</name>
+      <pv_name>$(PREFIX):CPU-RFENMIPRCND-RB</pv_name>
+      <x>220</x>
+      <y>222</y>
+      <width>80</width>
+      <height>14</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="12.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="alarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="ON" red="22" green="222" blue="33">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>$(EE)</name>
+      <macros>
+        <EE>EE-1</EE>
+      </macros>
+      <x>19</x>
+      <y>155</y>
+      <width>82</width>
+      <height>172</height>
+      <style>1</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_26</name>
+        <pv_name>$(PREFIX):CPU-FILMISUCND-RB</pv_name>
+        <width>80</width>
+        <height>14</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="12.0">
+          </font>
+        </font>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <rules>
+          <rule name="alarmRule" prop_id="background_color" out_exp="false">
+            <exp bool_exp="pv0==1">
+              <value>
+                <color name="ON" red="22" green="222" blue="33">
+                </color>
+              </value>
+            </exp>
+            <exp bool_exp="pv0==0">
+              <value>
+                <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+                </color>
+              </value>
+            </exp>
+            <pv_name>$(pv_name)</pv_name>
+          </rule>
+        </rules>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_7</name>
+        <actions>
+          <action type="write_pv">
+            <pv_name>$(pv_name)</pv_name>
+            <value>1</value>
+            <description>Reset Energy Extraction Switch</description>
+          </action>
+        </actions>
+        <pv_name>$(PREFIX):$(EE):RstCmd</pv_name>
+        <text>RESET</text>
+        <y>19</y>
+        <width>80</width>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_23</name>
+        <pv_name>$(PREFIX):CPU-FILMIPRCND-RB</pv_name>
+        <y>53</y>
+        <width>80</width>
+        <height>14</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="12.0">
+          </font>
+        </font>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <rules>
+          <rule name="alarmRule" prop_id="background_color" out_exp="false">
+            <exp bool_exp="pv0==1">
+              <value>
+                <color name="ON" red="22" green="222" blue="33">
+                </color>
+              </value>
+            </exp>
+            <exp bool_exp="pv0==0">
+              <value>
+                <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+                </color>
+              </value>
+            </exp>
+            <pv_name>$(pv_name)</pv_name>
+          </rule>
+        </rules>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_25</name>
+        <pv_name>$(PREFIX):CPU-AUXMISUCND-RB</pv_name>
+        <y>82</y>
+        <width>80</width>
+        <height>14</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="12.0">
+          </font>
+        </font>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <rules>
+          <rule name="alarmRule" prop_id="background_color" out_exp="false">
+            <exp bool_exp="pv0==1">
+              <value>
+                <color name="ON" red="22" green="222" blue="33">
+                </color>
+              </value>
+            </exp>
+            <exp bool_exp="pv0==0">
+              <value>
+                <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+                </color>
+              </value>
+            </exp>
+            <pv_name>$(pv_name)</pv_name>
+          </rule>
+        </rules>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button</name>
+        <actions>
+          <action type="write_pv">
+            <pv_name>$(pv_name)</pv_name>
+            <value>1</value>
+            <description>Close Energy Extraction Switch</description>
+          </action>
+        </actions>
+        <pv_name>$(PREFIX):$(EE):CloseCmd</pv_name>
+        <text>CLOSE</text>
+        <y>101</y>
+        <width>80</width>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_14</name>
+        <pv_name>$(PREFIX):CPU-AUXMIPRCND-RB</pv_name>
+        <y>135</y>
+        <width>80</width>
+        <height>14</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="12.0">
+          </font>
+        </font>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <rules>
+          <rule name="alarmRule" prop_id="background_color" out_exp="false">
+            <exp bool_exp="pv0==1">
+              <value>
+                <color name="ON" red="22" green="222" blue="33">
+                </color>
+              </value>
+            </exp>
+            <exp bool_exp="pv0==0">
+              <value>
+                <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+                </color>
+              </value>
+            </exp>
+            <pv_name>$(pv_name)</pv_name>
+          </rule>
+        </rules>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>$(EE)</name>
+      <macros>
+        <EE>EE-2</EE>
+      </macros>
+      <x>122</x>
+      <y>155</y>
+      <width>82</width>
+      <height>172</height>
+      <style>1</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_31</name>
+        <pv_name>$(PREFIX):CPU-HVENMISUCND-RB</pv_name>
+        <width>80</width>
+        <height>14</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="12.0">
+          </font>
+        </font>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <rules>
+          <rule name="alarmRule" prop_id="background_color" out_exp="false">
+            <exp bool_exp="pv0==1">
+              <value>
+                <color name="ON" red="22" green="222" blue="33">
+                </color>
+              </value>
+            </exp>
+            <exp bool_exp="pv0==0">
+              <value>
+                <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+                </color>
+              </value>
+            </exp>
+            <pv_name>$(pv_name)</pv_name>
+          </rule>
+        </rules>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_8</name>
+        <actions>
+          <action type="write_pv">
+            <pv_name>$(pv_name)</pv_name>
+            <value>1</value>
+            <description>Reset Energy Extraction Switch</description>
+          </action>
+        </actions>
+        <pv_name>$(PREFIX):$(EE):RstCmd</pv_name>
+        <text>RESET</text>
+        <y>18</y>
+        <width>80</width>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_28</name>
+        <pv_name>$(PREFIX):CPU-HVENMIPRCND-RB</pv_name>
+        <y>51</y>
+        <width>80</width>
+        <height>14</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="12.0">
+          </font>
+        </font>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <rules>
+          <rule name="alarmRule" prop_id="background_color" out_exp="false">
+            <exp bool_exp="pv0==1">
+              <value>
+                <color name="ON" red="22" green="222" blue="33">
+                </color>
+              </value>
+            </exp>
+            <exp bool_exp="pv0==0">
+              <value>
+                <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+                </color>
+              </value>
+            </exp>
+            <pv_name>$(pv_name)</pv_name>
+          </rule>
+        </rules>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_27</name>
+        <pv_name>$(PREFIX):CPU-STBYMISUCND-RB</pv_name>
+        <y>82</y>
+        <width>80</width>
+        <height>14</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="12.0">
+          </font>
+        </font>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <rules>
+          <rule name="alarmRule" prop_id="background_color" out_exp="false">
+            <exp bool_exp="pv0==1">
+              <value>
+                <color name="ON" red="22" green="222" blue="33">
+                </color>
+              </value>
+            </exp>
+            <exp bool_exp="pv0==0">
+              <value>
+                <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+                </color>
+              </value>
+            </exp>
+            <pv_name>$(pv_name)</pv_name>
+          </rule>
+        </rules>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_1</name>
+        <actions>
+          <action type="write_pv">
+            <pv_name>$(pv_name)</pv_name>
+            <value>1</value>
+            <description>Close Energy Extraction Switch</description>
+          </action>
+        </actions>
+        <pv_name>$(PREFIX):$(EE):CloseCmd</pv_name>
+        <text>CLOSE</text>
+        <y>101</y>
+        <width>80</width>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_24</name>
+        <pv_name>$(PREFIX):CPU-STBYMIPRCND-RB</pv_name>
+        <y>135</y>
+        <width>80</width>
+        <height>14</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="12.0">
+          </font>
+        </font>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <rules>
+          <rule name="alarmRule" prop_id="background_color" out_exp="false">
+            <exp bool_exp="pv0==1">
+              <value>
+                <color name="ON" red="22" green="222" blue="33">
+                </color>
+              </value>
+            </exp>
+            <exp bool_exp="pv0==0">
+              <value>
+                <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+                </color>
+              </value>
+            </exp>
+            <pv_name>$(pv_name)</pv_name>
+          </rule>
+        </rules>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
     </widget>
   </widget>
 </display>

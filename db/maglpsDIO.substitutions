@@ -42,14 +42,14 @@ file "maglpsDIOR.template"
 		 {DC24V:PLC,	360,   	"OK",	"ITLCK",	"24V to the PLC"}
 		 {Cbl:Pos,	372,   	"Park",	"Oper",		"Cable Position"}
 		 {EE-1:OpenCmd,	384,   	"OK",	"ITLCK",	"Enrgy Extr Sw Open Cmd"}
-		 {EE-1:CloseCmd,396,   	"OK",	"ITLCK",	"Enrgy Extr Sw Close Cmd"}
-		 {EE-1:RstCmd,	408,   	"OK",	"ITLCK",	"Enrgy Extr Sw Reset Cmd"}
+		 {EE-1:spare27,	396,   	"OK",	"ITLCK",	"spare"}
+		 {EE-1:spare28,	408,   	"OK",	"ITLCK",	"spare"}
 		 {PC-1:PERM,	420,   	"OK",	"ITLCK",	"Power Permit"}
-		 {PC-1:FPACmd,	432,   	"OK",	"ITLCK",	"Fast Power Abort Cmd"}
+		 {PC-1:FastPA,	432,   	"OK",	"ITLCK",	"Fast Power Abort"}
 		 {spare-9,	444,   	"OK",	"ITLCK",	"spare"}
 		 {spare-10,	456,   	"OK",	"ITLCK",	"spare"}
 		 {spare-11,	468,   	"OK",	"ITLCK",	"spare"}
-		 {PC-1:DirectPA,480,   	"OK",	"ITLCK",	"Direct Power Abort"}
+		 {PC:DirectPA,	480,   	"OK",	"ITLCK",	"Direct Power Abort"}
 		 {FLSHBX_HV,	492,   	"ON",	"OFF",		"FlashBox Hi Voltage"}
 		 {FLSHBX_HC,	504,   	"ON",	"OFF",		"FlashBox Hi Current"}
 		 {FLSHBX_He,	516,   	"ON",	"OFF",		"FlashBox Helium"}
@@ -58,10 +58,10 @@ file "maglpsDIOR.template"
 		 {spare-14,	552,   	"OK",	"ITLCK",	"spare"}
 		 {spare-15,	564,   	"OK",	"ITLCK",	"spare"}
 		 {EE-2:OpenCmd,	576,   	"OK",	"ITLCK",	"Enrgy Extr Sw Open Cmd"}
-		 {EE-2:CloseCmd,588,   	"OK",	"ITLCK",	"Enrgy Extr Sw Close Cmd"}
-		 {EE-2:RstCmd,	600,   	"OK",	"ITLCK",	"Enrgy Extr Sw Reset Cmd"}
+		 {EE-2:spare29,	588,   	"OK",	"ITLCK",	"spare"}
+		 {EE-2:spare30,	600,   	"OK",	"ITLCK",	"spare"}
 		 {PC-2:PERM,	612,   	"OK",	"ITLCK",	"Power Permit"}
-		 {PC-2:FPACmd,	624,   	"OK",	"ITLCK",	"Fast Power Abort Cmd"}
+		 {PC-2:FastPA,	624,   	"OK",	"ITLCK",	"Fast Power Abort"}
 		 {spare-16,	636,   	"OK",	"ITLCK",	"spare"}
 		 {spare-17,	648,   	"OK",	"ITLCK",	"spare"}
 		 {spare-18,	660,   	"OK",	"ITLCK",	"spare"}
@@ -72,7 +72,7 @@ file "maglpsDIOR.template"
 		 {spare-23,	720,   	"OK",	"ITLCK",	"spare"}
 		 {spare-24,	732,   	"OK",	"ITLCK",	"spare"}
 		 {spare-25,	744,   	"OK",	"ITLCK",	"spare"}
-		 {spare-26,	756,   	"OK",	"ITLCK",	"spare"}
+		 {CRYO_LEADS_OK,	756,   	"OK",	"ITLCK",	"spare"}
 		 {LEAD1:T_OK,	768,   	"OK",	"ITLCK",	"Lead 1 Temperature OK"}
 		 {LEAD2:T_OK,	780,   	"OK",	"ITLCK",	"Lead 2 Temperature OK"}
 		 {LEAD3:T_OK,	792,   	"OK",	"ITLCK",	"Lead 3 Temperature OK"}
@@ -119,14 +119,14 @@ file "maglpsDIOW.template"
 		 {DC24V:PLC,	60}
 		 {Cbl:Pos,	62}
 		 {EE-1:OpenCmd,	64}
-		 {EE-1:CloseCmd,66}
-		 {EE-1:RstCmd,	68}
+		 {EE-1:spare27, 66}
+		 {EE-1:spare28,	68}
 		 {PC-1:PERM,	70}
-		 {PC-1:FPACmd,	72}
+		 {PC-1:FastPA,	72}
 		 {spare-9,	74}
 		 {spare-10,	76}
 		 {spare-11,	78}
-		 {PC-1:DirectPA,80}
+		 {PC:DirectPA,	80}
 		 {FLSHBX_HV,	82}
 		 {FLSHBX_HC,	84}
 		 {FLSHBX_He,	86}
@@ -135,10 +135,10 @@ file "maglpsDIOW.template"
 		 {spare-14,	92}
 		 {spare-15,	94}
 		 {EE-2:OpenCmd,	96}
-		 {EE-2:CloseCmd,98}
-		 {EE-2:RstCmd,	100}
+		 {EE-2:spare29, 98}
+		 {EE-2:spare30,	100}
 		 {PC-2:PERM,	102}
-		 {PC-2:FPACmd,	104}
+		 {PC-2:FastPA,	104}
 		 {spare-16,	106}
 		 {spare-17,	108}
 		 {spare-18,	110}
@@ -149,7 +149,7 @@ file "maglpsDIOW.template"
 		 {spare-23,	120}
 		 {spare-24,	122}
 		 {spare-25,	124}
-		 {spare-26,	126}
+		 {CRYO_LEADS_OK,	126}
 		 {LEAD1:T_OK,	128}
 		 {LEAD2:T_OK,	130}
 		 {LEAD3:T_OK,	132}
@@ -197,14 +197,14 @@ file "maglpsDIOInternal.template"
 		 {DC24V:PLC}
 		 {Cbl:Pos}
 		 {EE-1:OpenCmd}
-		 {EE-1:CloseCmd}
-		 {EE-1:RstCmd}
+		 {EE-1:spare27}
+		 {EE-1:spare28}
 		 {PC-1:PERM}
-		 {PC-1:FPACmd}
+		 {PC-1:FastPA}
 		 {spare-9}
 		 {spare-10}
 		 {spare-11}
-		 {PC-1:DirectPA}
+		 {PC:DirectPA}
 		 {FLSHBX_HV}
 		 {FLSHBX_HC}
 		 {FLSHBX_He}
@@ -213,10 +213,10 @@ file "maglpsDIOInternal.template"
 		 {spare-14}
 		 {spare-15}
 		 {EE-2:OpenCmd}
-		 {EE-2:CloseCmd}
-		 {EE-2:RstCmd}
+		 {EE-2:spare29}
+		 {EE-2:spare30}
 		 {PC-2:PERM}
-		 {PC-2:FPACmd}
+		 {PC-2:FastPA}
 		 {spare-16}
 		 {spare-17}
 		 {spare-18}
@@ -227,7 +227,7 @@ file "maglpsDIOInternal.template"
 		 {spare-23}
 		 {spare-24}
 		 {spare-25}
-		 {spare-26}
+		 {CRYO_LEADS_OK}
 		 {LEAD1:T_OK}
 		 {LEAD2:T_OK}
 		 {LEAD3:T_OK}
