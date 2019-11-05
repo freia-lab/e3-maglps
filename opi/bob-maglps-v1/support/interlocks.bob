@@ -1,0 +1,1593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Interlocks</name>
+  <width>1865</width>
+  <height>1015</height>
+  <actions>
+  </actions>
+  <widget type="polygon" version="2.0.0">
+    <name>Polygon</name>
+    <height>100</height>
+    <line_width>0</line_width>
+    <line_color>
+      <color red="128" green="0" blue="255">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="30" green="144" blue="255">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="polygon" version="2.0.0">
+    <name>Polygon_1</name>
+    <height>100</height>
+    <line_width>0</line_width>
+    <line_color>
+      <color red="128" green="0" blue="255">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="30" green="144" blue="255">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="polygon" version="2.0.0">
+    <name>Polygon_2</name>
+    <height>100</height>
+    <line_width>0</line_width>
+    <line_color>
+      <color red="128" green="0" blue="255">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="30" green="144" blue="255">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline</name>
+    <height>100</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="30" green="144" blue="255">
+      </color>
+    </line_color>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_1</name>
+    <x>40</x>
+    <y>660</y>
+    <width>1220</width>
+    <height>60</height>
+    <line_width>5</line_width>
+    <line_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+    </points>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Grouping Container_11</name>
+    <x>10</x>
+    <y>240</y>
+    <width>330</width>
+    <height>415</height>
+    <style>2</style>
+    <foreground_color>
+      <color red="128" green="128" blue="128">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Read_Background" red="230" green="235" blue="232">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_11</name>
+      <actions>
+        <action type="open_display">
+          <file>maglpsDIOsignal.bob</file>
+          <macros>
+            <SGNL>PC-1:PwrFail</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <pv_name>PC-1:PwrFail</pv_name>
+      <text>...</text>
+      <x>282</x>
+      <y>52</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions) for:
+$(PREFIX):$(pv_name)</tooltip>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_130</name>
+      <text>Direct Power Abort</text>
+      <x>12</x>
+      <y>9</y>
+      <width>305</width>
+      <height>25</height>
+      <font>
+        <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="IO Label" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="Read_Background" red="230" green="235" blue="232">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_3</name>
+      <file>aidio_overview.bob</file>
+      <macros>
+        <SGNL>PC-1:PwrFail</SGNL>
+      </macros>
+      <x>12</x>
+      <y>42</y>
+      <width>260</width>
+      <height>40</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_4</name>
+      <file>aidio_overview.bob</file>
+      <macros>
+        <SGNL>PC-2:PwrFail</SGNL>
+      </macros>
+      <x>12</x>
+      <y>82</y>
+      <width>260</width>
+      <height>40</height>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_21</name>
+      <actions>
+        <action type="open_display">
+          <file>maglpsDIOsignal.bob</file>
+          <macros>
+            <SGNL>PC-2:PwrFail</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <pv_name>PC-2:PwrFail</pv_name>
+      <text>...</text>
+      <x>282</x>
+      <y>91</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions) for:
+$(PREFIX):$(pv_name)</tooltip>
+    </widget>
+    <widget type="polyline" version="2.0.0">
+      <name>Polyline_12</name>
+      <x>161</x>
+      <y>161</y>
+      <width>1</width>
+      <height>74</height>
+      <line_width>4</line_width>
+      <line_color>
+        <color name="PRIMARY" red="0" green="148" blue="202">
+        </color>
+      </line_color>
+      <arrows>2</arrows>
+      <points>
+        <point x="1.0" y="0.0">
+        </point>
+        <point x="0.0" y="74.0">
+        </point>
+      </points>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_6</name>
+      <file>aidio_overview.bob</file>
+      <macros>
+        <SGNL>PC:DirectPA</SGNL>
+      </macros>
+      <x>12</x>
+      <y>258</y>
+      <width>260</width>
+      <height>40</height>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_22</name>
+      <actions>
+        <action type="open_display">
+          <file>maglpsDIOsignal.bob</file>
+          <macros>
+            <SGNL>PC:DirectPA</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <pv_name>PC:DirectPA</pv_name>
+      <text>...</text>
+      <x>272</x>
+      <y>268</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions) for:
+$(PREFIX):$(pv_name)</tooltip>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Grouping Container_12</name>
+    <macros>
+      <DEV>PC-1</DEV>
+    </macros>
+    <x>347</x>
+    <y>240</y>
+    <width>330</width>
+    <height>415</height>
+    <style>2</style>
+    <foreground_color>
+      <color red="128" green="128" blue="128">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Read_Background" red="230" green="235" blue="232">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_15</name>
+      <actions>
+        <action type="open_display">
+          <file>maglpsDIOsignal.bob</file>
+          <macros>
+            <SGNL>DC24V:PLC</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <pv_name>DC24V:PLC
+</pv_name>
+      <text>...</text>
+      <x>282</x>
+      <y>92</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions) for:
+$(PREFIX):$(pv_name)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_16</name>
+      <actions>
+        <action type="open_display">
+          <file>maglpsDIOsignal.bob</file>
+          <macros>
+            <SGNL>EmgcyBtn</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <pv_name>EmgcyBtn
+</pv_name>
+      <text>...</text>
+      <x>282</x>
+      <y>52</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions) for:
+$(PREFIX):$(pv_name)</tooltip>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_205</name>
+      <text>Fast Power Abort</text>
+      <x>12</x>
+      <y>9</y>
+      <width>305</width>
+      <height>25</height>
+      <font>
+        <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="IO Label" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="Read_Background" red="230" green="235" blue="232">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_17</name>
+      <actions>
+        <action type="open_display">
+          <file>maglpsDIOsignal.bob</file>
+          <macros>
+            <SGNL>DC24V:Aux</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <pv_name>DC24V:Aux</pv_name>
+      <text>...</text>
+      <x>282</x>
+      <y>132</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions) for:
+$(PREFIX):$(pv_name)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_20</name>
+      <actions>
+        <action type="open_display">
+          <file>maglpsDIOsignal.bob</file>
+          <macros>
+            <SGNL>PC-1:FastPA</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <pv_name>PC-1:FastPA</pv_name>
+      <text>...</text>
+      <x>282</x>
+      <y>268</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_33</name>
+      <actions>
+        <action type="open_display">
+          <file>maglpsDIOsignal.bob</file>
+          <macros>
+            <SGNL>CRYO_LEADS_OK</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <pv_name>CRYO_LEADS_OK</pv_name>
+      <text>...</text>
+      <x>282</x>
+      <y>172</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_39</name>
+      <file>aidio_overview.bob</file>
+      <macros>
+        <SGNL>EmgcyBtn</SGNL>
+      </macros>
+      <x>12</x>
+      <y>42</y>
+      <width>260</width>
+      <height>40</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_40</name>
+      <file>aidio_overview.bob</file>
+      <macros>
+        <SGNL>DC24V:PLC</SGNL>
+      </macros>
+      <x>12</x>
+      <y>82</y>
+      <width>260</width>
+      <height>40</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_42</name>
+      <file>aidio_overview.bob</file>
+      <macros>
+        <SGNL>DC24V:Aux</SGNL>
+      </macros>
+      <x>12</x>
+      <y>122</y>
+      <width>260</width>
+      <height>40</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_45</name>
+      <file>aidio_overview.bob</file>
+      <macros>
+        <SGNL>CRYO_LEADS_OK</SGNL>
+      </macros>
+      <x>12</x>
+      <y>162</y>
+      <width>210</width>
+      <height>40</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_7</name>
+      <file>aidio_overview.bob</file>
+      <macros>
+        <SGNL>PC-1:FastPA</SGNL>
+      </macros>
+      <x>12</x>
+      <y>258</y>
+      <width>260</width>
+      <height>40</height>
+    </widget>
+    <widget type="polyline" version="2.0.0">
+      <name>Polyline_13</name>
+      <x>164</x>
+      <y>202</y>
+      <width>1</width>
+      <height>50</height>
+      <line_width>4</line_width>
+      <line_color>
+        <color name="PRIMARY" red="0" green="148" blue="202">
+        </color>
+      </line_color>
+      <arrows>2</arrows>
+      <points>
+        <point x="0.0" y="0.0">
+        </point>
+        <point x="0.0" y="50.0">
+        </point>
+      </points>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_48</name>
+      <file>aidio_overview.bob</file>
+      <macros>
+        <SGNL>PC-2:FastPA</SGNL>
+      </macros>
+      <x>12</x>
+      <y>298</y>
+      <width>260</width>
+      <height>40</height>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_35</name>
+      <actions>
+        <action type="open_display">
+          <file>maglpsDIOsignal.bob</file>
+          <macros>
+            <SGNL>PC-2:FastPA</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <pv_name>PC-2:FastPA</pv_name>
+      <text>...</text>
+      <x>282</x>
+      <y>308</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED</name>
+      <pv_name>$(PREFIX):CPU-GERSEMI_COM_OK</pv_name>
+      <x>232</x>
+      <y>172</y>
+      <off_color>
+        <color name="ERROR" red="252" green="13" blue="27">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="OK" red="61" green="216" blue="61">
+        </color>
+      </on_color>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Grouping Container_13</name>
+    <x>1020</x>
+    <y>240</y>
+    <width>330</width>
+    <height>415</height>
+    <style>2</style>
+    <foreground_color>
+      <color red="128" green="128" blue="128">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Read_Background" red="230" green="235" blue="232">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <widget type="label" version="2.0.0">
+      <name>Label_214</name>
+      <text>Stand-by conditions</text>
+      <x>12</x>
+      <y>9</y>
+      <width>307</width>
+      <height>25</height>
+      <font>
+        <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="IO Label" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="Read_Background" red="230" green="235" blue="232">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_50</name>
+      <file>ai_overview.bob</file>
+      <macros>
+        <SGNL>RFS-Body-110:TT</SGNL>
+      </macros>
+      <x>12</x>
+      <y>42</y>
+      <width>260</width>
+      <height>40</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_51</name>
+      <file>ai_overview.bob</file>
+      <macros>
+        <SGNL>RFS-Body-120:TT</SGNL>
+      </macros>
+      <x>12</x>
+      <y>82</y>
+      <width>260</width>
+      <height>40</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_52</name>
+      <file>ai_overview.bob</file>
+      <macros>
+        <SGNL>RFS-Sol-110:TT</SGNL>
+      </macros>
+      <x>12</x>
+      <y>122</y>
+      <width>260</width>
+      <height>40</height>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_38</name>
+      <actions>
+        <action type="open_display">
+          <file>maglpsAFsignal.bob</file>
+          <macros>
+            <SGNL>RFS-Body-110:TT</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <pv_name>RFS-Body-110:TT</pv_name>
+      <text>...</text>
+      <x>282</x>
+      <y>52</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions) for:
+$(PREFIX):$(pv_name)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_39</name>
+      <actions>
+        <action type="open_display">
+          <file>maglpsAFsignal.bob</file>
+          <macros>
+            <SGNL>RFS-Body-120:TT</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <pv_name>RFS-Body-120:TT</pv_name>
+      <text>...</text>
+      <x>282</x>
+      <y>92</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions) for:
+$(PREFIX):$(pv_name)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_40</name>
+      <actions>
+        <action type="open_display">
+          <file>maglpsAFsignal.bob</file>
+          <macros>
+            <SGNL>RFS-Sol-110:TT</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <pv_name>RFS-Sol-110:TT</pv_name>
+      <text>...</text>
+      <x>282</x>
+      <y>132</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions) for:
+$(PREFIX):$(pv_name)</tooltip>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_227</name>
+      <text>SOLENOID01-INT ST</text>
+      <x>12</x>
+      <y>255</y>
+      <width>160</width>
+      <height>21</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_69</name>
+      <pv_name>$(PREFIX):SOLENOID01-INT-RB</pv_name>
+      <x>183</x>
+      <y>255</y>
+      <width>21</width>
+      <height>21</height>
+      <off_color>
+        <color name="OK" red="61" green="216" blue="61">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="MAJOR" red="252" green="13" blue="27">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color red="192" green="192" blue="192">
+        </color>
+      </foreground_color>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_44</name>
+      <actions>
+        <action type="open_display">
+          <file>maglpsSOLsignal.bob</file>
+          <macros>
+            <SGNL>SOLENOID01</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <pv_name>SOLENOID01</pv_name>
+      <text>...</text>
+      <x>282</x>
+      <y>255</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_228</name>
+      <text>SOLENOID02-INT ST</text>
+      <x>12</x>
+      <y>295</y>
+      <width>160</width>
+      <height>21</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_70</name>
+      <pv_name>$(PREFIX):SOLENOID02-INT-RB</pv_name>
+      <x>183</x>
+      <y>295</y>
+      <width>21</width>
+      <height>21</height>
+      <off_color>
+        <color name="OK" red="61" green="216" blue="61">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="MAJOR" red="252" green="13" blue="27">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color red="192" green="192" blue="192">
+        </color>
+      </foreground_color>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_45</name>
+      <actions>
+        <action type="open_display">
+          <file>maglpsSOLsignal.bob</file>
+          <macros>
+            <SGNL>SOLENOID02</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <pv_name>SOLENOID02</pv_name>
+      <text>...</text>
+      <x>282</x>
+      <y>295</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_73</name>
+      <file>ai_overview.bob</file>
+      <macros>
+        <SGNL>RFS-Sol-120:TT</SGNL>
+      </macros>
+      <x>12</x>
+      <y>162</y>
+      <width>260</width>
+      <height>40</height>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_69</name>
+      <actions>
+        <action type="open_display">
+          <file>maglpsAFsignal.bob</file>
+          <macros>
+            <SGNL>RFS-Sol-120:TT</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <pv_name>RFS-Sol-120:TT</pv_name>
+      <text>...</text>
+      <x>282</x>
+      <y>172</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions) for:
+$(PREFIX):$(pv_name)</tooltip>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_74</name>
+      <file>ai_overview.bob</file>
+      <macros>
+        <SGNL>RFS-Sol-130:TT</SGNL>
+      </macros>
+      <x>12</x>
+      <y>202</y>
+      <width>260</width>
+      <height>40</height>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_70</name>
+      <actions>
+        <action type="open_display">
+          <file>maglpsAFsignal.bob</file>
+          <macros>
+            <SGNL>RFS-Sol-130:TT</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <pv_name>RFS-Sol-130:TT</pv_name>
+      <text>...</text>
+      <x>282</x>
+      <y>212</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions) for:
+$(PREFIX):$(pv_name)</tooltip>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_5</name>
+      <file>aidio_overview.bob</file>
+      <macros>
+        <SGNL>RFS-Cooling-110:Ready</SGNL>
+      </macros>
+      <x>12</x>
+      <y>329</y>
+      <width>260</width>
+      <height>40</height>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_18</name>
+      <actions>
+        <action type="open_display">
+          <file>maglpsDIOsignal.bob</file>
+          <macros>
+            <SGNL>RFS-Cooling-110:Ready</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <pv_name>RFS-Cooling-110:Ready</pv_name>
+      <text>...</text>
+      <x>282</x>
+      <y>339</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions) for:
+$(PREFIX):$(pv_name)</tooltip>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Grouping Container_14</name>
+    <x>1360</x>
+    <y>240</y>
+    <width>330</width>
+    <height>415</height>
+    <style>2</style>
+    <foreground_color>
+      <color red="128" green="128" blue="128">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Read_Background" red="230" green="235" blue="232">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <widget type="label" version="2.0.0">
+      <name>Label_230</name>
+      <text>HV Enable conditions</text>
+      <x>12</x>
+      <y>9</y>
+      <width>305</width>
+      <height>25</height>
+      <font>
+        <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="IO Label" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="Read_Background" red="230" green="235" blue="232">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_48</name>
+      <actions>
+        <action type="open_display">
+          <file>maglpsAFsignal.bob</file>
+          <macros>
+            <SGNL>RFS-Win-110:TT</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <pv_name>RFS-Win-110:TT</pv_name>
+      <text>...</text>
+      <x>282</x>
+      <y>172</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions) for:
+$(PREFIX):$(pv_name)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_50</name>
+      <actions>
+        <action type="open_display">
+          <file>maglpsDIOsignal.bob</file>
+          <macros>
+            <SGNL>RFS-Circ-110:TCUready</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <pv_name>RFS-Circ-110:TCUready</pv_name>
+      <text>...</text>
+      <x>282</x>
+      <y>52</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_56</name>
+      <file>ai_overview.bob</file>
+      <macros>
+        <SGNL>RFS-Win-110:TT</SGNL>
+      </macros>
+      <x>12</x>
+      <y>162</y>
+      <width>260</width>
+      <height>40</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_59</name>
+      <file>aidio_overview.bob</file>
+      <macros>
+        <SGNL>RFS-Circ-110:TCUready</SGNL>
+      </macros>
+      <x>12</x>
+      <y>42</y>
+      <width>260</width>
+      <height>40</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_75</name>
+      <file>ai_overview.bob</file>
+      <macros>
+        <SGNL>RFS-Coll-110:TC_TOP</SGNL>
+      </macros>
+      <x>12</x>
+      <y>82</y>
+      <width>260</width>
+      <height>40</height>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_71</name>
+      <actions>
+        <action type="open_display">
+          <file>maglpsAFsignal.bob</file>
+          <macros>
+            <SGNL>RFS-Coll-110:TC_TOP</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <pv_name>RFS-Coll-110:TC_TOP</pv_name>
+      <text>...</text>
+      <x>282</x>
+      <y>92</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions) for:
+$(PREFIX):$(pv_name)</tooltip>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_76</name>
+      <file>ai_overview.bob</file>
+      <macros>
+        <SGNL>RFS-Coll-120:TC_EDGE</SGNL>
+      </macros>
+      <x>12</x>
+      <y>122</y>
+      <width>260</width>
+      <height>40</height>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_72</name>
+      <actions>
+        <action type="open_display">
+          <file>maglpsAFsignal.bob</file>
+          <macros>
+            <SGNL>RFS-Coll-120:TC_EDGE</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <pv_name>RFS-Coll-120:TC_EDGE</pv_name>
+      <text>...</text>
+      <x>282</x>
+      <y>132</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions) for:
+$(PREFIX):$(pv_name)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_73</name>
+      <actions>
+        <action type="open_display">
+          <file>maglpsAFsignal.bob</file>
+          <macros>
+            <SGNL>RFS-Win-120:TT</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <pv_name>RFS-Win-120:TT</pv_name>
+      <text>...</text>
+      <x>282</x>
+      <y>212</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions) for:
+$(PREFIX):$(pv_name)</tooltip>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_77</name>
+      <file>ai_overview.bob</file>
+      <macros>
+        <SGNL>RFS-Win-120:TT</SGNL>
+      </macros>
+      <x>12</x>
+      <y>202</y>
+      <width>260</width>
+      <height>40</height>
+    </widget>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_17</name>
+    <pv_name>$(PREFIX):CPU-AUXMISUCND-RB</pv_name>
+    <x>214</x>
+    <y>20</y>
+    <width>260</width>
+    <height>21</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <format>6</format>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="alarmRule" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>
+            <color name="ON" red="22" green="222" blue="33">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv0==0">
+          <value>
+            <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_18</name>
+    <pv_name>$(PREFIX):CPU-FILMIPRCND-RB</pv_name>
+    <x>500</x>
+    <y>50</y>
+    <width>24</width>
+    <height>110</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <format>6</format>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rotation_step>1</rotation_step>
+    <rules>
+      <rule name="alarmRule" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>
+            <color name="ON" red="22" green="222" blue="33">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv0==0">
+          <value>
+            <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_19</name>
+    <pv_name>$(PREFIX):CPU-FILMISUCND-RB</pv_name>
+    <x>554</x>
+    <y>20</y>
+    <width>260</width>
+    <height>21</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <format>6</format>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="alarmRule" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>
+            <color name="ON" red="22" green="222" blue="33">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv0==0">
+          <value>
+            <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_11</name>
+    <x>171</x>
+    <y>170</y>
+    <width>1</width>
+    <height>54</height>
+    <line_width>4</line_width>
+    <line_color>
+      <color name="PRIMARY" red="0" green="148" blue="202">
+      </color>
+    </line_color>
+    <arrows>2</arrows>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="0.0" y="54.0">
+      </point>
+    </points>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_14</name>
+    <x>512</x>
+    <y>170</y>
+    <width>1</width>
+    <height>54</height>
+    <line_width>4</line_width>
+    <line_color>
+      <color name="PRIMARY" red="0" green="148" blue="202">
+      </color>
+    </line_color>
+    <arrows>2</arrows>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="0.0" y="54.0">
+      </point>
+    </points>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_15</name>
+    <x>852</x>
+    <y>170</y>
+    <width>1</width>
+    <height>54</height>
+    <line_width>4</line_width>
+    <line_color>
+      <color name="PRIMARY" red="0" green="148" blue="202">
+      </color>
+    </line_color>
+    <arrows>2</arrows>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="0.0" y="54.0">
+      </point>
+    </points>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_20</name>
+    <pv_name>$(PREFIX):CPU-STBYMIPRCND-RB</pv_name>
+    <x>840</x>
+    <y>50</y>
+    <width>24</width>
+    <height>110</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <format>6</format>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rotation_step>1</rotation_step>
+    <rules>
+      <rule name="alarmRule" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>
+            <color name="ON" red="22" green="222" blue="33">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv0==0">
+          <value>
+            <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_64</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>1</value>
+      </action>
+    </actions>
+    <pv_name>$(PREFIX):CPU-STDBY</pv_name>
+    <text>STDBY</text>
+    <x>874</x>
+    <y>50</y>
+    <width>290</width>
+    <height>110</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="252" green="233" blue="79">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_65</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>1</value>
+      </action>
+    </actions>
+    <pv_name>$(PREFIX):CPU-HVON</pv_name>
+    <text>HV ON</text>
+    <x>1205</x>
+    <y>50</y>
+    <width>290</width>
+    <height>110</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="15" green="210" blue="22">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_66</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>1</value>
+      </action>
+    </actions>
+    <pv_name>$(PREFIX):CPU-FIL</pv_name>
+    <text>FIL</text>
+    <x>538</x>
+    <y>50</y>
+    <width>290</width>
+    <height>110</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="211" green="215" blue="207">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_67</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>1</value>
+      </action>
+    </actions>
+    <pv_name>$(PREFIX):CPU-AUX</pv_name>
+    <text>AUX</text>
+    <x>200</x>
+    <y>50</y>
+    <width>290</width>
+    <height>110</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="252" green="175" blue="62">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_21</name>
+    <pv_name>$(PREFIX):CPU-STBYMISUCND-RB</pv_name>
+    <x>892</x>
+    <y>20</y>
+    <width>260</width>
+    <height>21</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <format>6</format>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="alarmRule" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>
+            <color name="ON" red="22" green="222" blue="33">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv0==0">
+          <value>
+            <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_22</name>
+    <pv_name>$(PREFIX):CPU-HVENMIPRCND-RB</pv_name>
+    <x>1172</x>
+    <y>50</y>
+    <width>24</width>
+    <height>110</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <format>6</format>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rotation_step>1</rotation_step>
+    <rules>
+      <rule name="alarmRule" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>
+            <color name="ON" red="22" green="222" blue="33">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv0==0">
+          <value>
+            <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_16</name>
+    <x>1183</x>
+    <y>170</y>
+    <width>1</width>
+    <height>54</height>
+    <line_width>4</line_width>
+    <line_color>
+      <color name="PRIMARY" red="0" green="148" blue="202">
+      </color>
+    </line_color>
+    <arrows>2</arrows>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="0.0" y="54.0">
+      </point>
+    </points>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_23</name>
+    <pv_name>$(PREFIX):CPU-HVENMISUCND-RB</pv_name>
+    <x>1220</x>
+    <y>20</y>
+    <width>260</width>
+    <height>21</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <format>6</format>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="alarmRule" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>
+            <color name="ON" red="22" green="222" blue="33">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv0==0">
+          <value>
+            <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_24</name>
+    <pv_name>$(PREFIX):CPU-RFENMIPRCND-RB</pv_name>
+    <x>1503</x>
+    <y>50</y>
+    <width>24</width>
+    <height>110</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <format>6</format>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rotation_step>1</rotation_step>
+    <rules>
+      <rule name="alarmRule" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>
+            <color name="ON" red="22" green="222" blue="33">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv0==0">
+          <value>
+            <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_25</name>
+    <pv_name>$(PREFIX):CPU-RFENMISUCND-RB</pv_name>
+    <x>1555</x>
+    <y>20</y>
+    <width>260</width>
+    <height>21</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <format>6</format>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="alarmRule" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>
+            <color name="ON" red="22" green="222" blue="33">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv0==0">
+          <value>
+            <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_17</name>
+    <x>1516</x>
+    <y>169</y>
+    <width>1</width>
+    <height>54</height>
+    <line_width>4</line_width>
+    <line_color>
+      <color name="PRIMARY" red="0" green="148" blue="202">
+      </color>
+    </line_color>
+    <arrows>2</arrows>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="0.0" y="54.0">
+      </point>
+    </points>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_68</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>1</value>
+      </action>
+    </actions>
+    <pv_name>$(PREFIX):CPU-RFON</pv_name>
+    <text>RF ON</text>
+    <x>1540</x>
+    <y>50</y>
+    <width>290</width>
+    <height>110</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="0" green="255" blue="0">
+      </color>
+    </background_color>
+  </widget>
+</display>

@@ -148,8 +148,8 @@
   <widget type="label" version="2.0.0">
     <name>Label_6</name>
     <text>DIO Connection Status</text>
-    <x>430</x>
-    <y>45</y>
+    <x>450</x>
+    <y>13</y>
     <width>175</width>
     <height>25</height>
     <foreground_color>
@@ -168,8 +168,8 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_20</name>
     <pv_name>$(PREFIX):DIO-CONN</pv_name>
-    <x>620</x>
-    <y>45</y>
+    <x>640</x>
+    <y>13</y>
     <width>107</width>
     <height>25</height>
     <horizontal_alignment>1</horizontal_alignment>
@@ -586,5 +586,52 @@ CPU Interlock/alarm </tooltip>
       <actions>
       </actions>
     </widget>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_8</name>
+    <text>Gersemi Connection Status</text>
+    <x>430</x>
+    <y>45</y>
+    <width>195</width>
+    <height>25</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_21</name>
+    <pv_name>$(PREFIX):CPU-GERSEMI_COM_OK</pv_name>
+    <x>640</x>
+    <y>45</y>
+    <width>107</width>
+    <height>25</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="alarmRule" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>
+            <color name="OK" red="61" green="216" blue="61">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv0==0">
+          <value>
+            <color name="INVALID" red="211" green="45" blue="156">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
   </widget>
 </display>

@@ -72,7 +72,7 @@ file "maglpsDIOR.template"
 		 {spare-23,	720,   	"OK",	"ITLCK",	"spare"}
 		 {spare-24,	732,   	"OK",	"ITLCK",	"spare"}
 		 {spare-25,	744,   	"OK",	"ITLCK",	"spare"}
-		 {CRYO_LEADS_OK,	756,   	"OK",	"ITLCK",	"spare"}
+		 {CRYO_LEADS_OK,756,   	"OK",	"ITLCK",	"Cryo Curr. Leads"}
 		 {LEAD1:T_OK,	768,   	"OK",	"ITLCK",	"Lead 1 Temperature OK"}
 		 {LEAD2:T_OK,	780,   	"OK",	"ITLCK",	"Lead 2 Temperature OK"}
 		 {LEAD3:T_OK,	792,   	"OK",	"ITLCK",	"Lead 3 Temperature OK"}
@@ -149,7 +149,7 @@ file "maglpsDIOW.template"
 		 {spare-23,	120}
 		 {spare-24,	122}
 		 {spare-25,	124}
-		 {CRYO_LEADS_OK,	126}
+		 {CRYO_LEADS_OK,126}
 		 {LEAD1:T_OK,	128}
 		 {LEAD2:T_OK,	130}
 		 {LEAD3:T_OK,	132}

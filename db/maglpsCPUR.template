@@ -39,12 +39,14 @@ record(bi, "$(PREFIX):$(SGNL)-WRNACKREQ-RB")
         field(OSV, "MINOR")
 }
 
-record(bi, "$(PREFIX):$(SGNL)-AUXMIPRCND-RB")
+record(bi, "$(PREFIX):$(SGNL)-GERSEMI_COM_OK")
 {
 	field(DTYP, "S7plc")
 	field(SCAN, "I/O Intr")
-	field(ZNAM, "AUX-PRE-MISS")
-        field(ONAM, "AUX-PRE-OK")
+	field(ZNAM, "Not connected")
+        field(ONAM, "Connected")
+        field(ZSV, "MAJOR")
+        field(OSV, "NO_ALARM")
 	field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=4" )
 }
 

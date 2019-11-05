@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
   <name>Time stamp</name>
-  <width>1500</width>
-  <height>1000</height>
+  <width>1000</width>
+  <height>800</height>
   <actions>
   </actions>
   <widget type="label" version="2.0.0">
@@ -51,7 +51,7 @@
     <name>Embedded Display_1</name>
     <file>time-stamp.bob</file>
     <macros>
-      <SGNL>NoQuench</SGNL>
+      <SGNL>QuenchStat</SGNL>
     </macros>
     <x>20</x>
     <y>85</y>
@@ -62,7 +62,7 @@
     <name>Embedded Display_2</name>
     <file>time-stamp.bob</file>
     <macros>
-      <SGNL>DAQ:OK</SGNL>
+      <SGNL>DAQ_OK</SGNL>
     </macros>
     <x>20</x>
     <y>115</y>
@@ -73,10 +73,10 @@
     <name>Embedded Display_3</name>
     <file>time-stamp.bob</file>
     <macros>
-      <SGNL>PC:PwrFail</SGNL>
+      <SGNL>EE-1:PwrPerm</SGNL>
     </macros>
     <x>20</x>
-    <y>145</y>
+    <y>310</y>
     <width>470</width>
     <height>30</height>
   </widget>
@@ -84,10 +84,10 @@
     <name>Embedded Display_4</name>
     <file>time-stamp.bob</file>
     <macros>
-      <SGNL>PC:EEswOpnRQ</SGNL>
+      <SGNL>EE-1:Remote</SGNL>
     </macros>
     <x>20</x>
-    <y>175</y>
+    <y>340</y>
     <width>470</width>
     <height>30</height>
   </widget>
@@ -95,10 +95,10 @@
     <name>Embedded Display_5</name>
     <file>time-stamp.bob</file>
     <macros>
-      <SGNL>EE:Remote</SGNL>
+      <SGNL>EE-1:NoError</SGNL>
     </macros>
     <x>20</x>
-    <y>205</y>
+    <y>370</y>
     <width>470</width>
     <height>30</height>
   </widget>
@@ -106,10 +106,10 @@
     <name>Embedded Display_6</name>
     <file>time-stamp.bob</file>
     <macros>
-      <SGNL>EE:NoError</SGNL>
+      <SGNL>EE-1:Closed</SGNL>
     </macros>
     <x>20</x>
-    <y>235</y>
+    <y>400</y>
     <width>470</width>
     <height>30</height>
   </widget>
@@ -117,10 +117,10 @@
     <name>Embedded Display_7</name>
     <file>time-stamp.bob</file>
     <macros>
-      <SGNL>EE:Closed</SGNL>
+      <SGNL>EE-1:Warn</SGNL>
     </macros>
     <x>20</x>
-    <y>265</y>
+    <y>430</y>
     <width>470</width>
     <height>30</height>
   </widget>
@@ -128,10 +128,10 @@
     <name>Embedded Display_9</name>
     <file>time-stamp.bob</file>
     <macros>
-      <SGNL>EE:PwrPerm</SGNL>
+      <SGNL>EE-1:SPAstat</SGNL>
     </macros>
     <x>20</x>
-    <y>295</y>
+    <y>460</y>
     <width>470</width>
     <height>30</height>
   </widget>
@@ -139,10 +139,10 @@
     <name>Embedded Display_10</name>
     <file>time-stamp.bob</file>
     <macros>
-      <SGNL>Cbl:Pos1</SGNL>
+      <SGNL>PC-1:PwrFail</SGNL>
     </macros>
     <x>20</x>
-    <y>325</y>
+    <y>490</y>
     <width>470</width>
     <height>30</height>
   </widget>
@@ -150,142 +150,10 @@
     <name>Embedded Display_11</name>
     <file>time-stamp.bob</file>
     <macros>
-      <SGNL>Cbl:Pos2</SGNL>
+      <SGNL>PC-1:Connected</SGNL>
     </macros>
     <x>20</x>
-    <y>355</y>
-    <width>470</width>
-    <height>30</height>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_20</name>
-    <file>time-stamp.bob</file>
-    <macros>
-      <SGNL>RFS-VacPS-110:I</SGNL>
-    </macros>
-    <x>500</x>
-    <y>85</y>
-    <width>470</width>
-    <height>30</height>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_22</name>
-    <file>time-stamp.bob</file>
-    <macros>
-      <SGNL>RFS-VacPS-120:I</SGNL>
-    </macros>
-    <x>500</x>
-    <y>115</y>
-    <width>470</width>
-    <height>30</height>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_23</name>
-    <file>time-stamp.bob</file>
-    <macros>
-      <SGNL>RFS-Coll-110:TC_TOP</SGNL>
-    </macros>
-    <x>500</x>
-    <y>145</y>
-    <width>470</width>
-    <height>30</height>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_24</name>
-    <file>time-stamp.bob</file>
-    <macros>
-      <SGNL>RFS-Coll-120:TC_EDGE</SGNL>
-    </macros>
-    <x>500</x>
-    <y>175</y>
-    <width>470</width>
-    <height>30</height>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_25</name>
-    <file>time-stamp.bob</file>
-    <macros>
-      <SGNL>RFS-Body-110:TT</SGNL>
-    </macros>
-    <x>500</x>
-    <y>205</y>
-    <width>470</width>
-    <height>30</height>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_26</name>
-    <file>time-stamp.bob</file>
-    <macros>
-      <SGNL>RFS-Body-120:TT</SGNL>
-    </macros>
-    <x>500</x>
-    <y>235</y>
-    <width>470</width>
-    <height>30</height>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_27</name>
-    <file>time-stamp.bob</file>
-    <macros>
-      <SGNL>RFS-Win-110:TT</SGNL>
-    </macros>
-    <x>500</x>
-    <y>265</y>
-    <width>470</width>
-    <height>30</height>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_28</name>
-    <file>time-stamp.bob</file>
-    <macros>
-      <SGNL>RFS-Win-120:TT</SGNL>
-    </macros>
-    <x>500</x>
-    <y>295</y>
-    <width>470</width>
-    <height>30</height>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_29</name>
-    <file>time-stamp.bob</file>
-    <macros>
-      <SGNL>RFS-Sol-110:TT</SGNL>
-    </macros>
-    <x>500</x>
-    <y>325</y>
-    <width>470</width>
-    <height>30</height>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_30</name>
-    <file>time-stamp.bob</file>
-    <macros>
-      <SGNL>RFS-Sol-120:TT</SGNL>
-    </macros>
-    <x>500</x>
-    <y>355</y>
-    <width>470</width>
-    <height>30</height>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_31</name>
-    <file>time-stamp.bob</file>
-    <macros>
-      <SGNL>RFS-Sol-130:TT</SGNL>
-    </macros>
-    <x>500</x>
-    <y>385</y>
-    <width>470</width>
-    <height>30</height>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_32</name>
-    <file>time-stamp.bob</file>
-    <macros>
-      <SGNL>RFS-Oil-110:TT</SGNL>
-    </macros>
-    <x>500</x>
-    <y>415</y>
+    <y>520</y>
     <width>470</width>
     <height>30</height>
   </widget>
@@ -335,54 +203,10 @@
     <name>Embedded Display_12</name>
     <file>time-stamp.bob</file>
     <macros>
-      <SGNL>Cbl:Pos3</SGNL>
+      <SGNL>PC-1:sOn</SGNL>
     </macros>
     <x>20</x>
-    <y>385</y>
-    <width>470</width>
-    <height>30</height>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_13</name>
-    <file>time-stamp.bob</file>
-    <macros>
-      <SGNL>Cbl:Pos4</SGNL>
-    </macros>
-    <x>20</x>
-    <y>415</y>
-    <width>470</width>
-    <height>30</height>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_14</name>
-    <file>time-stamp.bob</file>
-    <macros>
-      <SGNL>PC:Connected</SGNL>
-    </macros>
-    <x>20</x>
-    <y>445</y>
-    <width>470</width>
-    <height>30</height>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_15</name>
-    <file>time-stamp.bob</file>
-    <macros>
-      <SGNL>PC:MCBstat</SGNL>
-    </macros>
-    <x>20</x>
-    <y>475</y>
-    <width>470</width>
-    <height>30</height>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_16</name>
-    <file>time-stamp.bob</file>
-    <macros>
-      <SGNL>EE:FPAstat</SGNL>
-    </macros>
-    <x>20</x>
-    <y>505</y>
+    <y>550</y>
     <width>470</width>
     <height>30</height>
   </widget>
@@ -390,10 +214,10 @@
     <name>Embedded Display_17</name>
     <file>time-stamp.bob</file>
     <macros>
-      <SGNL>EE:Warn</SGNL>
+      <SGNL>EmgcyBtn</SGNL>
     </macros>
     <x>20</x>
-    <y>535</y>
+    <y>205</y>
     <width>470</width>
     <height>30</height>
   </widget>
@@ -401,10 +225,10 @@
     <name>Embedded Display_18</name>
     <file>time-stamp.bob</file>
     <macros>
-      <SGNL>LEAD1:TS</SGNL>
+      <SGNL>LEAD1:T_OK</SGNL>
     </macros>
-    <x>20</x>
-    <y>565</y>
+    <x>500</x>
+    <y>85</y>
     <width>470</width>
     <height>30</height>
   </widget>
@@ -412,10 +236,10 @@
     <name>Embedded Display_19</name>
     <file>time-stamp.bob</file>
     <macros>
-      <SGNL>LEAD2:TS</SGNL>
+      <SGNL>LEAD2:T_OK</SGNL>
     </macros>
-    <x>20</x>
-    <y>595</y>
+    <x>500</x>
+    <y>115</y>
     <width>470</width>
     <height>30</height>
   </widget>
@@ -423,10 +247,10 @@
     <name>Embedded Display_21</name>
     <file>time-stamp.bob</file>
     <macros>
-      <SGNL>LEAD3:TS</SGNL>
+      <SGNL>LEAD3:T_OK</SGNL>
     </macros>
-    <x>20</x>
-    <y>625</y>
+    <x>500</x>
+    <y>145</y>
     <width>470</width>
     <height>30</height>
   </widget>
@@ -434,10 +258,10 @@
     <name>Embedded Display_33</name>
     <file>time-stamp.bob</file>
     <macros>
-      <SGNL>LEAD4:TS</SGNL>
+      <SGNL>LEAD4:T_OK</SGNL>
     </macros>
-    <x>20</x>
-    <y>655</y>
+    <x>500</x>
+    <y>175</y>
     <width>470</width>
     <height>30</height>
   </widget>
@@ -448,7 +272,205 @@
       <SGNL>DC24V:PLC</SGNL>
     </macros>
     <x>20</x>
-    <y>685</y>
+    <y>145</y>
+    <width>470</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_8</name>
+    <file>time-stamp.bob</file>
+    <macros>
+      <SGNL>EE-2:PwrPerm</SGNL>
+    </macros>
+    <x>500</x>
+    <y>310</y>
+    <width>470</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_20</name>
+    <file>time-stamp.bob</file>
+    <macros>
+      <SGNL>EE-2:Remote</SGNL>
+    </macros>
+    <x>500</x>
+    <y>340</y>
+    <width>470</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_22</name>
+    <file>time-stamp.bob</file>
+    <macros>
+      <SGNL>EE-2:NoError</SGNL>
+    </macros>
+    <x>500</x>
+    <y>370</y>
+    <width>470</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_23</name>
+    <file>time-stamp.bob</file>
+    <macros>
+      <SGNL>EE-2:Closed</SGNL>
+    </macros>
+    <x>500</x>
+    <y>400</y>
+    <width>470</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_24</name>
+    <file>time-stamp.bob</file>
+    <macros>
+      <SGNL>EE-2:Warn</SGNL>
+    </macros>
+    <x>500</x>
+    <y>430</y>
+    <width>470</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_25</name>
+    <file>time-stamp.bob</file>
+    <macros>
+      <SGNL>EE-2:SPAstat</SGNL>
+    </macros>
+    <x>500</x>
+    <y>460</y>
+    <width>470</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_26</name>
+    <file>time-stamp.bob</file>
+    <macros>
+      <SGNL>PC-2:PwrFail</SGNL>
+    </macros>
+    <x>500</x>
+    <y>490</y>
+    <width>470</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_27</name>
+    <file>time-stamp.bob</file>
+    <macros>
+      <SGNL>PC-2:Connected</SGNL>
+    </macros>
+    <x>500</x>
+    <y>520</y>
+    <width>470</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_28</name>
+    <file>time-stamp.bob</file>
+    <macros>
+      <SGNL>PC-2:sOn</SGNL>
+    </macros>
+    <x>500</x>
+    <y>550</y>
+    <width>470</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_35</name>
+    <file>time-stamp.bob</file>
+    <macros>
+      <SGNL>DC24V:Aux</SGNL>
+    </macros>
+    <x>20</x>
+    <y>175</y>
+    <width>470</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_29</name>
+    <file>time-stamp.bob</file>
+    <macros>
+      <SGNL>CRYO_1_9K</SGNL>
+    </macros>
+    <x>500</x>
+    <y>235</y>
+    <width>470</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_30</name>
+    <file>time-stamp.bob</file>
+    <macros>
+      <SGNL>CRYO_4_5K</SGNL>
+    </macros>
+    <x>500</x>
+    <y>265</y>
+    <width>470</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_31</name>
+    <file>time-stamp.bob</file>
+    <macros>
+      <SGNL>CRYO_LEADS_OK</SGNL>
+    </macros>
+    <x>500</x>
+    <y>205</y>
+    <width>470</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_13</name>
+    <file>time-stamp.bob</file>
+    <macros>
+      <SGNL>PC:DirectPA</SGNL>
+    </macros>
+    <x>20</x>
+    <y>610</y>
+    <width>470</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_15</name>
+    <file>time-stamp.bob</file>
+    <macros>
+      <SGNL>PC-1:PERM</SGNL>
+    </macros>
+    <x>20</x>
+    <y>640</y>
+    <width>470</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_16</name>
+    <file>time-stamp.bob</file>
+    <macros>
+      <SGNL>PC-2:PERM</SGNL>
+    </macros>
+    <x>500</x>
+    <y>640</y>
+    <width>470</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_32</name>
+    <file>time-stamp.bob</file>
+    <macros>
+      <SGNL>PC-1:FastPA</SGNL>
+    </macros>
+    <x>20</x>
+    <y>670</y>
+    <width>470</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_36</name>
+    <file>time-stamp.bob</file>
+    <macros>
+      <SGNL>PC-2:FastPA</SGNL>
+    </macros>
+    <x>500</x>
+    <y>670</y>
     <width>470</width>
     <height>30</height>
   </widget>
