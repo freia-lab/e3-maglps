@@ -29,7 +29,7 @@
       <item>EE-1:Remote</item>
       <item>EE-1:NoError</item>
       <item>EE-1:Closed</item>
-      <item>EE-1:Warn</item>
+      <item>EE-1:NoWarn</item>
       <item>EE-1:SPAstat</item>
       <item>PC-1:PwrFail</item>
       <item>PC-1:Connected</item>
@@ -38,7 +38,7 @@
       <item>EE-2:Remote</item>
       <item>EE-2:NoError</item>
       <item>EE-2:Closed</item>
-      <item>EE-2:Warn</item>
+      <item>EE-2:NoWarn</item>
       <item>EE-2:SPAstat</item>
       <item>PC-2:PwrFail</item>
       <item>PC-2:Connected</item>

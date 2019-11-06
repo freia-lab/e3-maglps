@@ -41,6 +41,7 @@ record(bi, "$(PREFIX):$(SGNL)-WRNACKREQ-RB")
 
 record(bi, "$(PREFIX):$(SGNL)-GERSEMI_COM_OK")
 {
+	field(DESC, "Connection to Gersemi")
 	field(DTYP, "S7plc")
 	field(SCAN, "I/O Intr")
 	field(ZNAM, "Not connected")
@@ -50,30 +51,33 @@ record(bi, "$(PREFIX):$(SGNL)-GERSEMI_COM_OK")
 	field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=4" )
 }
 
-record(bi, "$(PREFIX):$(SGNL)-FILMIPRCND-RB")
+record(bi, "$(PREFIX):$(SGNL)-FLSHBX_HV")
 {
+	field(DESC, "High Voltage Flash Box")
 	field(DTYP, "S7plc")
 	field(SCAN, "I/O Intr")
-	field(ZNAM, "FIL-PRE-MISS")
-        field(ONAM, "FIL-PRE-OK")
+	field(ZNAM, "")
+        field(ONAM, "High Voltage")
 	field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=5" )
 }
 
-record(bi, "$(PREFIX):$(SGNL)-STBYMIPRCND-RB")
+record(bi, "$(PREFIX):$(SGNL)-FLSHBX_HC")
 {
+	field(DESC, "High Current Flash Box")
 	field(DTYP, "S7plc")
 	field(SCAN, "I/O Intr")
-	field(ZNAM, "STDBY-PRE-MISS")
-        field(ONAM, "STDBY-PRE-OK")	
+	field(ZNAM, "")
+        field(ONAM, "Hi Current")	
 	field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=6" )
 }
 
-record(bi, "$(PREFIX):$(SGNL)-HVENMIPRCND-RB")
+record(bi, "$(PREFIX):$(SGNL)-FLSHBX_HE")
 {
+	field(DESC, "Le Helium Flash Box")
 	field(DTYP, "S7plc")
 	field(SCAN, "I/O Intr")
-	field(ZNAM, "HVON-PRE-MISS")
-        field(ONAM, "HVON-PRE-OK")
+	field(ZNAM, "")
+        field(ONAM, "Liquid He")
 	field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=7" )
 }
 

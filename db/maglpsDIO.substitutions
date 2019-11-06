@@ -13,7 +13,7 @@ file "maglpsDIOR.template"
 		 {EE-1:Remote,	12,    	"OK",	"ITLCK",	"Enrgy Extr Remote stat"}
 		 {EE-1:NoError,	24,    	"OK",	"ITLCK",	"Enrgy Extr NoErr stat"}
 		 {EE-1:Closed,	36,    	"Closed","Open",	"Enrgy Extr Switch Closed"}
-		 {EE-1:Warn,	48,   	"OK",	"ITLCK",	"Enrgy Extr Warning"}
+		 {EE-1:NoWarn,	48,   	"OK",	"ITLCK",	"Enrgy Extr Warning"}
 		 {EE-1:SPAstat,	60,   	"OK",	"ITLCK",	"Slow Pwr Abort Stat"}
 		 {PC-1:PwrFail,	72,    	"OK",	"ITLCK",	"Pwr Conv. Pwr Fail"}
 		 {PC-1:Connected,84,   	"OK",	"ITLCK",	"Pwr Conv connected"}
@@ -29,7 +29,7 @@ file "maglpsDIOR.template"
 		 {EE-2:Remote,	204,   	"OK",	"ITLCK",	"Enrgy Extr Remote stat"}
 		 {EE-2:NoError,	216,   	"OK",	"ITLCK",	"Enrgy Extr NoErr stat"}
 		 {EE-2:Closed,	228,   	"Closed","Open",	"Enrgy Extr Switch Closed"}
-		 {EE-2:Warn,	240,   	"OK",	"ITLCK",	"Enrgy Extr Warning"}
+		 {EE-2:NoWarn,	240,   	"OK",	"ITLCK",	"Enrgy Extr Warning"}
 		 {EE-2:SPAstat,	252,   	"OK",	"ITLCK",	"Slow Pwr Abort Stat"}
 		 {PC-2:PwrFail,	264,   	"OK",	"ITLCK",	"Pwr Conv. Pwr Fail"}
 		 {PC-2:Connected,276,  	"OK",	"ITLCK",	"Pwr Conv connected"}
@@ -50,9 +50,9 @@ file "maglpsDIOR.template"
 		 {spare-10,	456,   	"OK",	"ITLCK",	"spare"}
 		 {spare-11,	468,   	"OK",	"ITLCK",	"spare"}
 		 {PC:DirectPA,	480,   	"OK",	"ITLCK",	"Direct Power Abort"}
-		 {FLSHBX_HV,	492,   	"ON",	"OFF",		"FlashBox Hi Voltage"}
-		 {FLSHBX_HC,	504,   	"ON",	"OFF",		"FlashBox Hi Current"}
-		 {FLSHBX_He,	516,   	"ON",	"OFF",		"FlashBox Helium"}
+		 {FLSHBX_HV,	492,   	"OFF",	"ON",		"FlashBox Hi Voltage"}
+		 {FLSHBX_HC,	504,   	"OFF",	"ON",		"FlashBox Hi Current"}
+		 {FLSHBX_He,	516,   	"OFF",	"ON",		"FlashBox Helium"}
 		 {spare-12,	528,   	"OK",	"ITLCK",	"spare"}
 		 {spare-13,	540,   	"OK",	"ITLCK",	"spare"}
 		 {spare-14,	552,   	"OK",	"ITLCK",	"spare"}
@@ -94,7 +94,7 @@ file "maglpsDIOW.template"
 		 {EE-1:Remote,	2}
 		 {EE-1:NoError,	4}
 		 {EE-1:Closed,	6}
-		 {EE-1:Warn,	8}
+		 {EE-1:NoWarn,	8}
 		 {EE-1:SPAstat,	10}
 		 {PC-1:PwrFail,	12}
 		 {PC-1:Connected,14}
@@ -110,7 +110,7 @@ file "maglpsDIOW.template"
 		 {EE-2:Remote,	34}
 		 {EE-2:NoError,	36}
 		 {EE-2:Closed,	38}
-		 {EE-2:Warn,	40}
+		 {EE-2:NoWarn,	40}
 		 {EE-2:SPAstat,	42}
 		 {PC-2:PwrFail,	44}
 		 {PC-2:Connected,46}
@@ -176,7 +176,7 @@ file "maglpsDIOInternal.template"
 		 {EE-1:Remote}
 		 {EE-1:NoError}
 		 {EE-1:Closed}
-		 {EE-1:Warn}
+		 {EE-1:NoWarn}
 		 {EE-1:SPAstat}
 		 {PC-1:PwrFail}
 		 {PC-1:Connected}
@@ -192,7 +192,7 @@ file "maglpsDIOInternal.template"
 		 {EE-2:Remote}
 		 {EE-2:NoError}
 		 {EE-2:Closed}
-		 {EE-2:Warn}
+		 {EE-2:NoWarn}
 		 {EE-2:SPAstat}
 		 {PC-2:PwrFail}
 		 {PC-2:Connected}
