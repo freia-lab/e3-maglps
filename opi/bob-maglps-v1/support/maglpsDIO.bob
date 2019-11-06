@@ -65,6 +65,10 @@
       <item>CRYO_300K_He</item>
       <item>CRYO_300_K_Air</item>
       <item>CRYO_LEADS_OK</item>
+      <item>LEAD1:V_OK</item>
+      <item>LEAD2:V_OK</item>
+      <item>LEAD3:V_OK</item>
+      <item>LEAD4:V_OK</item>
     </items>
     <items_from_pv>false</items_from_pv>
   </widget>

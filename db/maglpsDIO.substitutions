@@ -81,6 +81,10 @@ file "maglpsDIOR.template"
 		 {CRYO_4_5K,	828,   	"OK",	"ITLCK",	"Cryo @ 4.5 K"}
 		 {CRYO_300K_He,	840,   	"OK",	"ITLCK",	"Cryo @ 300 K He"}
 		 {CRYO_300_K_Air,852,   "OK",	"ITLCK",	"Cryo @ 300 K Air"}
+		 {LEAD1:V_OK,	864,   	"OK",	"ITLCK",	"Lead 1 Voltage OK"}
+		 {LEAD2:V_OK,	876,   	"OK",	"ITLCK",	"Lead 2 Voltage OK"}
+		 {LEAD3:V_OK,	888,   	"OK",	"ITLCK",	"Lead 3 Voltage OK"}
+		 {LEAD4:V_OK,	900,   	"OK",	"ITLCK",	"Lead 4 Voltage OK"}
 }
 
 file "maglpsDIOW.template"
@@ -158,6 +162,10 @@ file "maglpsDIOW.template"
 		 {CRYO_4_5K,	138}
 		 {CRYO_300K_He,	140}
 		 {CRYO_300_K_Air,142}
+		 {LEAD1:V_OK,	144}
+		 {LEAD2:V_OK,	146}
+		 {LEAD3:V_OK,	148}
+		 {LEAD4:V_OK,	150}
 }
 
 
@@ -236,4 +244,8 @@ file "maglpsDIOInternal.template"
 		 {CRYO_4_5K}
 		 {CRYO_300K_He}
 		 {CRYO_300_K_Air}
+		 {LEAD1:V_OK}
+		 {LEAD2:V_OK}
+		 {LEAD3:V_OK}
+		 {LEAD4:V_OK}
 }

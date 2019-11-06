@@ -513,7 +513,7 @@ $(PREFIX):$(pv_name)</tooltip>
   </widget>
   <widget type="group" version="2.0.0">
     <name>Grouping Container_13</name>
-    <x>1020</x>
+    <x>1030</x>
     <y>240</y>
     <width>330</width>
     <height>415</height>
@@ -871,7 +871,7 @@ $(PREFIX):$(pv_name)</tooltip>
   </widget>
   <widget type="group" version="2.0.0">
     <name>Grouping Container_14</name>
-    <x>1360</x>
+    <x>1370</x>
     <y>240</y>
     <width>330</width>
     <height>415</height>
@@ -1589,5 +1589,243 @@ $(PREFIX):$(pv_name)</tooltip>
       <color red="0" green="255" blue="0">
       </color>
     </background_color>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Grouping Container_16</name>
+    <macros>
+      <NR>1</NR>
+    </macros>
+    <x>690</x>
+    <y>240</y>
+    <width>330</width>
+    <height>415</height>
+    <style>2</style>
+    <foreground_color>
+      <color red="128" green="128" blue="128">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Read_Background" red="230" green="235" blue="232">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_36</name>
+      <actions>
+        <action type="open_display">
+          <file>maglpsDIOsignal.bob</file>
+          <macros>
+            <SGNL>DC24V:PLC</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <pv_name>DC24V:PLC
+</pv_name>
+      <text>...</text>
+      <x>282</x>
+      <y>92</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions) for:
+$(PREFIX):$(pv_name)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_37</name>
+      <actions>
+        <action type="open_display">
+          <file>maglpsDIOsignal.bob</file>
+          <macros>
+            <SGNL>EmgcyBtn</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <pv_name>EmgcyBtn
+</pv_name>
+      <text>...</text>
+      <x>282</x>
+      <y>52</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions) for:
+$(PREFIX):$(pv_name)</tooltip>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_207</name>
+      <text>Power Permit PC-$(NR)</text>
+      <x>12</x>
+      <y>9</y>
+      <width>305</width>
+      <height>25</height>
+      <font>
+        <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="IO Label" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="Read_Background" red="230" green="235" blue="232">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_41</name>
+      <actions>
+        <action type="open_display">
+          <file>maglpsDIOsignal.bob</file>
+          <macros>
+            <SGNL>DC24V:Aux</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <pv_name>DC24V:Aux</pv_name>
+      <text>...</text>
+      <x>282</x>
+      <y>132</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions) for:
+$(PREFIX):$(pv_name)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_42</name>
+      <actions>
+        <action type="open_display">
+          <file>maglpsDIOsignal.bob</file>
+          <macros>
+            <SGNL>PC-$(NR):PERM</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <pv_name>PC-$(NR):PERM</pv_name>
+      <text>...</text>
+      <x>282</x>
+      <y>268</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_43</name>
+      <actions>
+        <action type="open_display">
+          <file>maglpsDIOsignal.bob</file>
+          <macros>
+            <SGNL>CRYO_LEADS_OK</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <pv_name>CRYO_LEADS_OK</pv_name>
+      <text>...</text>
+      <x>282</x>
+      <y>172</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_49</name>
+      <file>aidio_overview.bob</file>
+      <macros>
+        <SGNL>EmgcyBtn</SGNL>
+      </macros>
+      <x>12</x>
+      <y>42</y>
+      <width>260</width>
+      <height>40</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_53</name>
+      <file>aidio_overview.bob</file>
+      <macros>
+        <SGNL>DC24V:PLC</SGNL>
+      </macros>
+      <x>12</x>
+      <y>82</y>
+      <width>260</width>
+      <height>40</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_54</name>
+      <file>aidio_overview.bob</file>
+      <macros>
+        <SGNL>DC24V:Aux</SGNL>
+      </macros>
+      <x>12</x>
+      <y>122</y>
+      <width>260</width>
+      <height>40</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_55</name>
+      <file>aidio_overview.bob</file>
+      <macros>
+        <SGNL>CRYO_LEADS_OK</SGNL>
+      </macros>
+      <x>12</x>
+      <y>162</y>
+      <width>210</width>
+      <height>40</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_57</name>
+      <file>aidio_overview.bob</file>
+      <macros>
+        <SGNL>PC-$(NR):PERM</SGNL>
+      </macros>
+      <x>12</x>
+      <y>258</y>
+      <width>260</width>
+      <height>40</height>
+    </widget>
+    <widget type="polyline" version="2.0.0">
+      <name>Polyline_19</name>
+      <x>164</x>
+      <y>202</y>
+      <width>1</width>
+      <height>50</height>
+      <line_width>4</line_width>
+      <line_color>
+        <color name="PRIMARY" red="0" green="148" blue="202">
+        </color>
+      </line_color>
+      <arrows>2</arrows>
+      <points>
+        <point x="0.0" y="0.0">
+        </point>
+        <point x="0.0" y="50.0">
+        </point>
+      </points>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_1</name>
+      <pv_name>$(PREFIX):CPU-GERSEMI_COM_OK</pv_name>
+      <x>232</x>
+      <y>172</y>
+      <off_color>
+        <color name="ERROR" red="252" green="13" blue="27">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="OK" red="61" green="216" blue="61">
+        </color>
+      </on_color>
+    </widget>
   </widget>
 </display>
