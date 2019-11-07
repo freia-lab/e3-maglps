@@ -117,7 +117,7 @@
     <name>Embedded Display_7</name>
     <file>time-stamp.bob</file>
     <macros>
-      <SGNL>EE-1:Warn</SGNL>
+      <SGNL>EE-1:NoWarn</SGNL>
     </macros>
     <x>20</x>
     <y>430</y>
@@ -324,7 +324,7 @@
     <name>Embedded Display_24</name>
     <file>time-stamp.bob</file>
     <macros>
-      <SGNL>EE-2:Warn</SGNL>
+      <SGNL>EE-2:NoWarn</SGNL>
     </macros>
     <x>500</x>
     <y>430</y>

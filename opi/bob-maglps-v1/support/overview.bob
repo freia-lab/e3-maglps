@@ -1664,4 +1664,22 @@ else:
     <width>210</width>
     <horizontal_alignment>1</horizontal_alignment>
   </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>Example</text>
+    <x>490</x>
+    <y>287</y>
+    <width>532</width>
+    <height>90</height>
+    <font>
+      <font family="Source Sans Pro" style="REGULAR" size="72.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="RED" red="252" green="13" blue="27">
+      </color>
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
 </display>

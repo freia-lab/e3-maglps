@@ -88,7 +88,7 @@ $(pv_value)</tooltip>
   <widget type="group" version="2.0.0">
     <name>Grouping Container_11</name>
     <x>10</x>
-    <y>240</y>
+    <y>10</y>
     <width>330</width>
     <height>226</height>
     <style>2</style>
@@ -248,7 +248,7 @@ $(PREFIX):$(pv_name)</tooltip>
       <DEV>PC-1</DEV>
     </macros>
     <x>347</x>
-    <y>240</y>
+    <y>10</y>
     <width>330</width>
     <height>415</height>
     <style>2</style>
@@ -518,8 +518,8 @@ $(PREFIX):$(pv_name)</tooltip>
       <L2>LEAD2</L2>
       <NR>1</NR>
     </macros>
-    <x>690</x>
-    <y>240</y>
+    <x>10</x>
+    <y>441</y>
     <width>550</width>
     <height>415</height>
     <style>2</style>
@@ -1517,6 +1517,54 @@ $(PREFIX):$(pv_name)</tooltip>
         <tooltip>$(actions)</tooltip>
       </widget>
     </widget>
+    <widget type="group" version="2.0.0">
+      <name>    $(EE)</name>
+      <macros>
+        <EE>EE-1</EE>
+      </macros>
+      <x>440</x>
+      <y>320</y>
+      <width>100</width>
+      <height>89</height>
+      <style>2</style>
+      <foreground_color>
+        <color name="PRIMARY-GROUP-BORDER" red="151" green="188" blue="202">
+        </color>
+      </foreground_color>
+      <transparent>true</transparent>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_58</name>
+        <actions>
+          <action type="write_pv">
+            <pv_name>$(pv_name)</pv_name>
+            <value>1</value>
+            <description>Reset Energy Extraction Switch</description>
+          </action>
+        </actions>
+        <pv_name>$(PREFIX):$(EE):RstCmd</pv_name>
+        <text>RESET EE</text>
+        <x>10</x>
+        <y>10</y>
+        <width>80</width>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_64</name>
+        <actions>
+          <action type="write_pv">
+            <pv_name>$(pv_name)</pv_name>
+            <value>1</value>
+            <description>Close Energy Extraction Switch</description>
+          </action>
+        </actions>
+        <pv_name>$(PREFIX):$(EE):CloseCmd</pv_name>
+        <text>CLOSE EE</text>
+        <x>10</x>
+        <y>50</y>
+        <width>80</width>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+    </widget>
   </widget>
   <widget type="group" version="2.0.0">
     <name>Grouping Container_17</name>
@@ -1525,8 +1573,8 @@ $(PREFIX):$(pv_name)</tooltip>
       <L2>LEAD4</L2>
       <NR>2</NR>
     </macros>
-    <x>1250</x>
-    <y>240</y>
+    <x>570</x>
+    <y>441</y>
     <width>550</width>
     <height>415</height>
     <style>2</style>
@@ -2524,11 +2572,59 @@ $(PREFIX):$(pv_name)</tooltip>
         <tooltip>$(actions)</tooltip>
       </widget>
     </widget>
+    <widget type="group" version="2.0.0">
+      <name>    $(EE)</name>
+      <macros>
+        <EE>EE-2</EE>
+      </macros>
+      <x>440</x>
+      <y>320</y>
+      <width>100</width>
+      <height>89</height>
+      <style>2</style>
+      <foreground_color>
+        <color name="PRIMARY-GROUP-BORDER" red="151" green="188" blue="202">
+        </color>
+      </foreground_color>
+      <transparent>true</transparent>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_65</name>
+        <actions>
+          <action type="write_pv">
+            <pv_name>$(pv_name)</pv_name>
+            <value>1</value>
+            <description>Reset Energy Extraction Switch</description>
+          </action>
+        </actions>
+        <pv_name>$(PREFIX):$(EE):RstCmd</pv_name>
+        <text>RESET EE</text>
+        <x>10</x>
+        <y>10</y>
+        <width>80</width>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_66</name>
+        <actions>
+          <action type="write_pv">
+            <pv_name>$(pv_name)</pv_name>
+            <value>1</value>
+            <description>Close Energy Extraction Switch</description>
+          </action>
+        </actions>
+        <pv_name>$(PREFIX):$(EE):CloseCmd</pv_name>
+        <text>CLOSE EE</text>
+        <x>10</x>
+        <y>50</y>
+        <width>80</width>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+    </widget>
   </widget>
   <widget type="group" version="2.0.0">
     <name>Grouping Container_13</name>
     <x>10</x>
-    <y>475</y>
+    <y>245</y>
     <width>330</width>
     <height>180</height>
     <style>2</style>

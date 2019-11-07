@@ -1157,7 +1157,7 @@ $(PREFIX):$(pv_name)</tooltip>
       <rule name="alarmRule" prop_id="background_color" out_exp="false">
         <exp bool_exp="pv0==1">
           <value>
-            <color name="ON" red="61" green="216" blue="61">
+            <color name="ON" red="22" green="222" blue="33">
             </color>
           </value>
         </exp>
@@ -1191,7 +1191,7 @@ $(PREFIX):$(pv_name)</tooltip>
       <rule name="alarmRule" prop_id="background_color" out_exp="false">
         <exp bool_exp="pv0==1">
           <value>
-            <color name="ON" red="61" green="216" blue="61">
+            <color name="ON" red="22" green="222" blue="33">
             </color>
           </value>
         </exp>
@@ -1226,7 +1226,7 @@ $(PREFIX):$(pv_name)</tooltip>
       <rule name="alarmRule" prop_id="background_color" out_exp="false">
         <exp bool_exp="pv0==1">
           <value>
-            <color name="ON" red="61" green="216" blue="61">
+            <color name="ON" red="22" green="222" blue="33">
             </color>
           </value>
         </exp>
@@ -1260,7 +1260,7 @@ $(PREFIX):$(pv_name)</tooltip>
       <rule name="alarmRule" prop_id="background_color" out_exp="false">
         <exp bool_exp="pv0==1">
           <value>
-            <color name="ON" red="61" green="216" blue="61">
+            <color name="ON" red="22" green="222" blue="33">
             </color>
           </value>
         </exp>
@@ -1283,7 +1283,7 @@ $(PREFIX):$(pv_name)</tooltip>
     <height>54</height>
     <line_width>4</line_width>
     <line_color>
-      <color name="PRIMARY" red="0" green="148" blue="201">
+      <color name="PRIMARY" red="0" green="148" blue="202">
       </color>
     </line_color>
     <arrows>2</arrows>
@@ -1302,7 +1302,7 @@ $(PREFIX):$(pv_name)</tooltip>
     <height>54</height>
     <line_width>4</line_width>
     <line_color>
-      <color name="PRIMARY" red="0" green="148" blue="201">
+      <color name="PRIMARY" red="0" green="148" blue="202">
       </color>
     </line_color>
     <arrows>2</arrows>
@@ -1321,7 +1321,7 @@ $(PREFIX):$(pv_name)</tooltip>
     <height>54</height>
     <line_width>4</line_width>
     <line_color>
-      <color name="PRIMARY" red="0" green="148" blue="201">
+      <color name="PRIMARY" red="0" green="148" blue="202">
       </color>
     </line_color>
     <arrows>2</arrows>
@@ -1352,7 +1352,7 @@ $(PREFIX):$(pv_name)</tooltip>
       <rule name="alarmRule" prop_id="background_color" out_exp="false">
         <exp bool_exp="pv0==1">
           <value>
-            <color name="ON" red="61" green="216" blue="61">
+            <color name="ON" red="22" green="222" blue="33">
             </color>
           </value>
         </exp>
@@ -1478,7 +1478,7 @@ $(PREFIX):$(pv_name)</tooltip>
       <rule name="alarmRule" prop_id="background_color" out_exp="false">
         <exp bool_exp="pv0==1">
           <value>
-            <color name="ON" red="61" green="216" blue="61">
+            <color name="ON" red="22" green="222" blue="33">
             </color>
           </value>
         </exp>
@@ -1513,7 +1513,7 @@ $(PREFIX):$(pv_name)</tooltip>
       <rule name="alarmRule" prop_id="background_color" out_exp="false">
         <exp bool_exp="pv0==1">
           <value>
-            <color name="ON" red="61" green="216" blue="61">
+            <color name="ON" red="22" green="222" blue="33">
             </color>
           </value>
         </exp>
@@ -1536,7 +1536,7 @@ $(PREFIX):$(pv_name)</tooltip>
     <height>54</height>
     <line_width>4</line_width>
     <line_color>
-      <color name="PRIMARY" red="0" green="148" blue="201">
+      <color name="PRIMARY" red="0" green="148" blue="202">
       </color>
     </line_color>
     <arrows>2</arrows>
@@ -1566,7 +1566,7 @@ $(PREFIX):$(pv_name)</tooltip>
       <rule name="alarmRule" prop_id="background_color" out_exp="false">
         <exp bool_exp="pv0==1">
           <value>
-            <color name="ON" red="61" green="216" blue="61">
+            <color name="ON" red="22" green="222" blue="33">
             </color>
           </value>
         </exp>
@@ -1601,7 +1601,7 @@ $(PREFIX):$(pv_name)</tooltip>
       <rule name="alarmRule" prop_id="background_color" out_exp="false">
         <exp bool_exp="pv0==1">
           <value>
-            <color name="ON" red="61" green="216" blue="61">
+            <color name="ON" red="22" green="222" blue="33">
             </color>
           </value>
         </exp>
@@ -1635,7 +1635,7 @@ $(PREFIX):$(pv_name)</tooltip>
       <rule name="alarmRule" prop_id="background_color" out_exp="false">
         <exp bool_exp="pv0==1">
           <value>
-            <color name="ON" red="61" green="216" blue="61">
+            <color name="ON" red="22" green="222" blue="33">
             </color>
           </value>
         </exp>
@@ -1658,7 +1658,7 @@ $(PREFIX):$(pv_name)</tooltip>
     <height>54</height>
     <line_width>4</line_width>
     <line_color>
-      <color name="PRIMARY" red="0" green="148" blue="201">
+      <color name="PRIMARY" red="0" green="148" blue="202">
       </color>
     </line_color>
     <arrows>2</arrows>
@@ -1691,5 +1691,23 @@ $(PREFIX):$(pv_name)</tooltip>
       <color red="0" green="255" blue="0">
       </color>
     </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>Example</text>
+    <x>770</x>
+    <y>373</y>
+    <width>532</width>
+    <height>90</height>
+    <font>
+      <font family="Source Sans Pro" style="REGULAR" size="72.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="RED" red="252" green="13" blue="27">
+      </color>
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
   </widget>
 </display>

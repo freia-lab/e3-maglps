@@ -50,9 +50,9 @@
       <item>PC-1:PERM</item>
       <item>PC-1:FastPA</item>
       <item>PC:DirectPA</item>
-      <item>FLSHBX_HV</item>
-      <item>FLSHBX_HC</item>
-      <item>FLSHBX_He</item>
+      <item>spare-31</item>
+      <item>spare-32</item>
+      <item>spare-33</item>
       <item>EE-2:OpenCmd</item>
       <item>PC-2:PERM</item>
       <item>PC-2:FastPA</item>

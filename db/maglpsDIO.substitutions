@@ -50,9 +50,9 @@ file "maglpsDIOR.template"
 		 {spare-10,	456,   	"OK",	"ITLCK",	"spare"}
 		 {spare-11,	468,   	"OK",	"ITLCK",	"spare"}
 		 {PC:DirectPA,	480,   	"OK",	"ITLCK",	"Direct Power Abort"}
-		 {FLSHBX_HV,	492,   	"OFF",	"ON",		"FlashBox Hi Voltage"}
-		 {FLSHBX_HC,	504,   	"OFF",	"ON",		"FlashBox Hi Current"}
-		 {FLSHBX_He,	516,   	"OFF",	"ON",		"FlashBox Helium"}
+		 {spare-31,	492,   	"OFF",	"ON",		"spare"}
+		 {spare-32,	504,   	"OFF",	"ON",		"spare"}
+		 {spare-33,	516,   	"OFF",	"ON",		"spare"}
 		 {spare-12,	528,   	"OK",	"ITLCK",	"spare"}
 		 {spare-13,	540,   	"OK",	"ITLCK",	"spare"}
 		 {spare-14,	552,   	"OK",	"ITLCK",	"spare"}
@@ -131,9 +131,9 @@ file "maglpsDIOW.template"
 		 {spare-10,	76}
 		 {spare-11,	78}
 		 {PC:DirectPA,	80}
-		 {FLSHBX_HV,	82}
-		 {FLSHBX_HC,	84}
-		 {FLSHBX_He,	86}
+		 {spare-31,	82}
+		 {spare-32,	84}
+		 {spare-33,	86}
 		 {spare-12,	88}
 		 {spare-13,	90}
 		 {spare-14,	92}
@@ -213,9 +213,9 @@ file "maglpsDIOInternal.template"
 		 {spare-10}
 		 {spare-11}
 		 {PC:DirectPA}
-		 {FLSHBX_HV}
-		 {FLSHBX_HC}
-		 {FLSHBX_He}
+		 {spare-31}
+		 {spare-32}
+		 {spare-33}
 		 {spare-12}
 		 {spare-13}
 		 {spare-14}
