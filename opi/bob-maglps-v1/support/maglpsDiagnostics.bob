@@ -105,6 +105,7 @@
     <y>140</y>
     <width>210</width>
     <height>30</height>
+    <visible>false</visible>
     <background_color>
       <color red="255" green="255" blue="255">
       </color>
@@ -127,6 +128,7 @@
     <x>290</x>
     <y>140</y>
     <width>140</width>
+    <visible>false</visible>
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="label" version="2.0.0">
@@ -136,6 +138,7 @@
     <y>180</y>
     <width>210</width>
     <height>30</height>
+    <visible>false</visible>
     <background_color>
       <color red="255" green="255" blue="255">
       </color>
@@ -158,6 +161,7 @@
     <x>290</x>
     <y>180</y>
     <width>140</width>
+    <visible>false</visible>
     <tooltip>$(actions)</tooltip>
   </widget>
 </display>

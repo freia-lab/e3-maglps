@@ -75,15 +75,15 @@ $(pv_value)</tooltip>
     <y>660</y>
     <width>1220</width>
     <height>60</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+    </points>
     <line_width>5</line_width>
     <line_color>
       <color name="BLACK" red="0" green="0" blue="0">
       </color>
     </line_color>
-    <points>
-      <point x="0.0" y="0.0">
-      </point>
-    </points>
   </widget>
   <widget type="group" version="2.0.0">
     <name>Grouping Container_11</name>
@@ -114,7 +114,6 @@ $(pv_value)</tooltip>
           <description>Change PV settings</description>
         </action>
       </actions>
-      <pv_name>PC-1:PwrFail</pv_name>
       <text>...</text>
       <x>282</x>
       <y>52</y>
@@ -149,10 +148,10 @@ $(PREFIX):$(pv_name)</tooltip>
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_3</name>
-      <file>aidio_overview.bob</file>
       <macros>
         <SGNL>PC-1:PwrFail</SGNL>
       </macros>
+      <file>aidio_overview.bob</file>
       <x>12</x>
       <y>42</y>
       <width>260</width>
@@ -160,10 +159,10 @@ $(PREFIX):$(pv_name)</tooltip>
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_4</name>
-      <file>aidio_overview.bob</file>
       <macros>
         <SGNL>PC-2:PwrFail</SGNL>
       </macros>
+      <file>aidio_overview.bob</file>
       <x>12</x>
       <y>82</y>
       <width>260</width>
@@ -181,7 +180,6 @@ $(PREFIX):$(pv_name)</tooltip>
           <description>Change PV settings</description>
         </action>
       </actions>
-      <pv_name>PC-2:PwrFail</pv_name>
       <text>...</text>
       <x>282</x>
       <y>91</y>
@@ -196,25 +194,25 @@ $(PREFIX):$(pv_name)</tooltip>
       <y>132</y>
       <width>1</width>
       <height>35</height>
-      <line_width>4</line_width>
-      <line_color>
-        <color name="PRIMARY" red="0" green="148" blue="202">
-        </color>
-      </line_color>
-      <arrows>2</arrows>
       <points>
         <point x="1.0" y="0.0">
         </point>
         <point x="0.0" y="35.0">
         </point>
       </points>
+      <line_width>4</line_width>
+      <line_color>
+        <color name="PRIMARY" red="0" green="148" blue="202">
+        </color>
+      </line_color>
+      <arrows>2</arrows>
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_6</name>
-      <file>aidio_overview.bob</file>
       <macros>
         <SGNL>PC:DirectPA</SGNL>
       </macros>
+      <file>aidio_overview.bob</file>
       <x>12</x>
       <y>172</y>
       <width>260</width>
@@ -232,7 +230,6 @@ $(PREFIX):$(pv_name)</tooltip>
           <description>Change PV settings</description>
         </action>
       </actions>
-      <pv_name>PC:DirectPA</pv_name>
       <text>...</text>
       <x>282</x>
       <y>182</y>
@@ -274,8 +271,6 @@ $(PREFIX):$(pv_name)</tooltip>
           <description>Change PV settings</description>
         </action>
       </actions>
-      <pv_name>DC24V:PLC
-</pv_name>
       <text>...</text>
       <x>282</x>
       <y>92</y>
@@ -296,8 +291,6 @@ $(PREFIX):$(pv_name)</tooltip>
           <description>Change PV settings</description>
         </action>
       </actions>
-      <pv_name>EmgcyBtn
-</pv_name>
       <text>...</text>
       <x>282</x>
       <y>52</y>
@@ -342,7 +335,6 @@ $(PREFIX):$(pv_name)</tooltip>
           <description>Change PV settings</description>
         </action>
       </actions>
-      <pv_name>DC24V:Aux</pv_name>
       <text>...</text>
       <x>282</x>
       <y>132</y>
@@ -363,7 +355,6 @@ $(PREFIX):$(pv_name)</tooltip>
           <description>Change PV settings</description>
         </action>
       </actions>
-      <pv_name>PC-1:FastPA</pv_name>
       <text>...</text>
       <x>282</x>
       <y>268</y>
@@ -383,7 +374,6 @@ $(PREFIX):$(pv_name)</tooltip>
           <description>Change PV settings</description>
         </action>
       </actions>
-      <pv_name>CRYO_LEADS_OK</pv_name>
       <text>...</text>
       <x>282</x>
       <y>172</y>
@@ -393,10 +383,10 @@ $(PREFIX):$(pv_name)</tooltip>
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_39</name>
-      <file>aidio_overview.bob</file>
       <macros>
         <SGNL>EmgcyBtn</SGNL>
       </macros>
+      <file>aidio_overview.bob</file>
       <x>12</x>
       <y>42</y>
       <width>260</width>
@@ -404,10 +394,10 @@ $(PREFIX):$(pv_name)</tooltip>
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_40</name>
-      <file>aidio_overview.bob</file>
       <macros>
         <SGNL>DC24V:PLC</SGNL>
       </macros>
+      <file>aidio_overview.bob</file>
       <x>12</x>
       <y>82</y>
       <width>260</width>
@@ -415,10 +405,10 @@ $(PREFIX):$(pv_name)</tooltip>
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_42</name>
-      <file>aidio_overview.bob</file>
       <macros>
         <SGNL>DC24V:Aux</SGNL>
       </macros>
+      <file>aidio_overview.bob</file>
       <x>12</x>
       <y>122</y>
       <width>260</width>
@@ -426,10 +416,10 @@ $(PREFIX):$(pv_name)</tooltip>
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_45</name>
-      <file>aidio_overview.bob</file>
       <macros>
         <SGNL>CRYO_LEADS_OK</SGNL>
       </macros>
+      <file>aidio_overview.bob</file>
       <x>12</x>
       <y>162</y>
       <width>210</width>
@@ -437,10 +427,10 @@ $(PREFIX):$(pv_name)</tooltip>
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_7</name>
-      <file>aidio_overview.bob</file>
       <macros>
         <SGNL>PC-1:FastPA</SGNL>
       </macros>
+      <file>aidio_overview.bob</file>
       <x>12</x>
       <y>258</y>
       <width>260</width>
@@ -452,25 +442,25 @@ $(PREFIX):$(pv_name)</tooltip>
       <y>202</y>
       <width>1</width>
       <height>50</height>
-      <line_width>4</line_width>
-      <line_color>
-        <color name="PRIMARY" red="0" green="148" blue="202">
-        </color>
-      </line_color>
-      <arrows>2</arrows>
       <points>
         <point x="0.0" y="0.0">
         </point>
         <point x="0.0" y="50.0">
         </point>
       </points>
+      <line_width>4</line_width>
+      <line_color>
+        <color name="PRIMARY" red="0" green="148" blue="202">
+        </color>
+      </line_color>
+      <arrows>2</arrows>
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_48</name>
-      <file>aidio_overview.bob</file>
       <macros>
         <SGNL>PC-2:FastPA</SGNL>
       </macros>
+      <file>aidio_overview.bob</file>
       <x>12</x>
       <y>298</y>
       <width>260</width>
@@ -488,7 +478,6 @@ $(PREFIX):$(pv_name)</tooltip>
           <description>Change PV settings</description>
         </action>
       </actions>
-      <pv_name>PC-2:FastPA</pv_name>
       <text>...</text>
       <x>282</x>
       <y>308</y>
@@ -605,7 +594,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -649,7 +637,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -693,7 +680,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -737,7 +723,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -781,7 +766,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -825,7 +809,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -869,7 +852,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -913,7 +895,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -957,7 +938,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -1001,7 +981,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -1045,7 +1024,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -1089,7 +1067,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -1133,7 +1110,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -1177,7 +1153,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -1221,7 +1196,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -1265,7 +1239,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -1309,7 +1282,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -1353,7 +1325,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -1397,7 +1368,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -1441,7 +1411,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -1460,18 +1429,18 @@ $(PREFIX):$(pv_name)</tooltip>
       <y>330</y>
       <width>1</width>
       <height>35</height>
-      <line_width>4</line_width>
-      <line_color>
-        <color name="PRIMARY" red="0" green="148" blue="202">
-        </color>
-      </line_color>
-      <arrows>2</arrows>
       <points>
         <point x="0.0" y="0.0">
         </point>
         <point x="1.0" y="35.0">
         </point>
       </points>
+      <line_width>4</line_width>
+      <line_color>
+        <color name="PRIMARY" red="0" green="148" blue="202">
+        </color>
+      </line_color>
+      <arrows>2</arrows>
     </widget>
     <widget type="group" version="2.0.0">
       <name>Group_36</name>
@@ -1504,7 +1473,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -1660,7 +1628,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -1704,7 +1671,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -1748,7 +1714,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -1792,7 +1757,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -1836,7 +1800,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -1880,7 +1843,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -1924,7 +1886,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -1968,7 +1929,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -2012,7 +1972,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -2056,7 +2015,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -2100,7 +2058,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -2144,7 +2101,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -2188,7 +2144,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -2232,7 +2187,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -2276,7 +2230,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -2320,7 +2273,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -2364,7 +2316,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -2408,7 +2359,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -2452,7 +2402,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -2496,7 +2445,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>
@@ -2515,18 +2463,18 @@ $(PREFIX):$(pv_name)</tooltip>
       <y>330</y>
       <width>1</width>
       <height>35</height>
-      <line_width>4</line_width>
-      <line_color>
-        <color name="PRIMARY" red="0" green="148" blue="202">
-        </color>
-      </line_color>
-      <arrows>2</arrows>
       <points>
         <point x="0.0" y="0.0">
         </point>
         <point x="1.0" y="35.0">
         </point>
       </points>
+      <line_width>4</line_width>
+      <line_color>
+        <color name="PRIMARY" red="0" green="148" blue="202">
+        </color>
+      </line_color>
+      <arrows>2</arrows>
     </widget>
     <widget type="group" version="2.0.0">
       <name>Group_48</name>
@@ -2559,7 +2507,6 @@ $(PREFIX):$(pv_name)</tooltip>
             <description>Change PV settings</description>
           </action>
         </actions>
-        <pv_name>$(SGNL)</pv_name>
         <text>...</text>
         <x>210</x>
         <y>3</y>

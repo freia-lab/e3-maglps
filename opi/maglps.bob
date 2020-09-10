@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
+  <name>MagLPS</name>
   <macros>
     <PREFIX>CstatV-MagLPS</PREFIX>
   </macros>
@@ -14,9 +15,9 @@
   <widget type="label" version="2.0.0">
     <name>Label_94</name>
     <text>   Superconducting Magnet Local Protection System</text>
-    <x>12</x>
+    <x>150</x>
     <y>5</y>
-    <width>2330</width>
+    <width>2192</width>
     <height>55</height>
     <font>
       <font name="Header 1" family="Source Sans Pro" style="BOLD_ITALIC" size="36.0">
@@ -38,5 +39,15 @@
     <y>60</y>
     <width>2330</width>
     <height>1060</height>
+  </widget>
+  <widget type="picture" version="2.0.0">
+    <name>Image</name>
+    <file>bob-maglps-v1/support/images/FREIAlogo.png</file>
+    <x>10</x>
+    <y>10</y>
+    <width>130</width>
+    <height>50</height>
+    <actions>
+    </actions>
   </widget>
 </display>

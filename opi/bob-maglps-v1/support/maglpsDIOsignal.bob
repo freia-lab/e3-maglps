@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
+  <name>maglpsDIO</name>
   <width>730</width>
   <height>500</height>
   <actions>
@@ -312,7 +313,7 @@
           </exp>
           <exp bool_exp="pv0==0">
             <value>
-              <color name="OFF" red="169" green="169" blue="169">
+              <color name="OFF" red="90" green="110" blue="90">
               </color>
             </value>
           </exp>
@@ -420,7 +421,7 @@ Reset all non active Interlocks</tooltip>
           </exp>
           <exp bool_exp="pv0==0">
             <value>
-              <color name="OFF" red="169" green="169" blue="169">
+              <color name="OFF" red="90" green="110" blue="90">
               </color>
             </value>
           </exp>
