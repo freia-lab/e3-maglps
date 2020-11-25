@@ -18,11 +18,11 @@ file "maglpsDIOR.template"
 		 {PC-1:PwrFail,	72,    	"OK",	"ITLCK",	"Pwr Conv. Pwr Fail"}
 		 {PC-1:Connected,84,   	"OK",	"ITLCK",	"Pwr Conv connected"}
 		 {PC-1:sOn,	96,   	"OFF",	"ON",		"Pwr Conv status ON/OFF"}
-		 {spare-1,	108,   	"OK",	"ITLCK",	"spare"}
-		 {spare-2,	120,   	"OK",	"ITLCK",	"spare"}
-		 {spare-3,	132,   	"OK",	"ITLCK",	"spare"}
+		 {EE-1:FS,	108,   	"OK",	"ITLCK",	"Enrgy Extr Flow switch"}
+		 {PolSw-1:Pos1,	120,   	"OK",	"ITLCK",	"Polarity switch pos 1"}
+		 {PolSw-1:Pos2,	132,   	"OK",	"ITLCK",	"Polarity switch pos 2"}
 		 {spare-4,	144,   	"OK",	"ITLCK",	"spare"}
-		 {EmgcyBtn,	156,   	"OK",	"ITLCK",	"Emergency Button"}
+		 {Key1,		156,   	"OK",	"ITLCK",	"Interlock Key 1"}
 		 {QuenchStat,	168,   	"OK",	"Quench",	"Quench status"}
 		 {DAQ_OK,	180,   	"OK",	"ITLCK",	"DAQ status"}
 		 {EE-2:PwrPerm,	192,   	"OK",	"ITLCK",	"Enrgy Extr Pwr Permit"}
@@ -34,13 +34,13 @@ file "maglpsDIOR.template"
 		 {PC-2:PwrFail,	264,   	"OK",	"ITLCK",	"Pwr Conv. Pwr Fail"}
 		 {PC-2:Connected,276,  	"OK",	"ITLCK",	"Pwr Conv connected"}
 		 {PC-2:sOn,	288,   	"OFF",	"ON",		"Pwr Conv status ON/OFF"}
-		 {spare-5,	300,   	"OK",	"ITLCK",	"spare"}
-		 {spare-6,	312,   	"OK",	"ITLCK",	"spare"}
-		 {spare-7,	324,   	"OK",	"ITLCK",	"spare"}
+		 {EE-2:FS,	300,   	"OK",	"ITLCK",	"Enrgy Extr Flow switch"}
+		 {PolSw-2:Pos1,	312,   	"OK",	"ITLCK",	"Polarity switch pos 1"}
+		 {PolSw-2:Pos2,	324,   	"OK",	"ITLCK",	"Polarity switch pos 2"}
 		 {spare-8,	336,   	"OK",	"ITLCK",	"spare"}
-		 {DC24V:Aux,	348,   	"OK",	"ITLCK",	"24V to the In/Out"}
-		 {DC24V:PLC,	360,   	"OK",	"ITLCK",	"24V to the PLC"}
-		 {Cbl:Pos,	372,   	"Park",	"Oper",		"Cable Position"}
+		 {DC24V:Aux1,	348,   	"OK",	"ITLCK",	"24V PS Aux1"}
+		 {DC24V:Aux2,	360,   	"OK",	"ITLCK",	"24V PS Aux2"}
+		 {Key2,		372,   	"Park",	"Oper",		"Interlock Key 2"}
 		 {EE-1:OpenCmd,	384,   	"OK",	"ITLCK",	"Enrgy Extr Sw Open Cmd"}
 		 {EE-1:spare27,	396,   	"OK",	"ITLCK",	"spare"}
 		 {EE-1:spare28,	408,   	"OK",	"ITLCK",	"spare"}
@@ -99,11 +99,11 @@ file "maglpsDIOW.template"
 		 {PC-1:PwrFail,	12}
 		 {PC-1:Connected,14}
 		 {PC-1:sOn,	16}
-		 {spare-1,	18}
-		 {spare-2,	20}
-		 {spare-3,	22}
+		 {EE-1:FS,	18}
+		 {PolSw:Pos1,	20}
+		 {PolSw:Pos1,	22}
 		 {spare-4,	24}
-		 {EmgcyBtn,	26}
+		 {Key1,		26}
 		 {QuenchStat,	28}
 		 {DAQ_OK,	30}
 		 {EE-2:PwrPerm,	32}
@@ -115,13 +115,13 @@ file "maglpsDIOW.template"
 		 {PC-2:PwrFail,	44}
 		 {PC-2:Connected,46}
 		 {PC-2:sOn,	48}
-		 {spare-5,	50}
-		 {spare-6,	52}
-		 {spare-7,	54}
+		 {EE-2:FS,	50}
+		 {PolSw-2:Pos1,	52}
+		 {PolSw-2:Pos2,	54}
 		 {spare-8,	56}
-		 {DC24V:Aux,	58}
-		 {DC24V:PLC,	60}
-		 {Cbl:Pos,	62}
+		 {DC24V:Aux1,	58}
+		 {DC24V:Aux2,	60}
+		 {Key2,		62}
 		 {EE-1:OpenCmd,	64}
 		 {EE-1:spare27, 66}
 		 {EE-1:spare28,	68}
@@ -181,11 +181,11 @@ file "maglpsDIOInternal.template"
 		 {PC-1:PwrFail}
 		 {PC-1:Connected}
 		 {PC-1:sOn}
-		 {spare-1}
-		 {spare-2}
-		 {spare-3}
+		 {EE-1:FS}
+		 {PolSw-1:Pos1}
+		 {PolSw-1:Pos2}
 		 {spare-4}
-		 {EmgcyBtn}
+		 {Key1}
 		 {QuenchStat}
 		 {DAQ_OK}
 		 {EE-2:PwrPerm}
@@ -197,13 +197,13 @@ file "maglpsDIOInternal.template"
 		 {PC-2:PwrFail}
 		 {PC-2:Connected}
 		 {PC-2:sOn}
-		 {spare-5}
-		 {spare-6}
-		 {spare-7}
+		 {EE-2:FS}
+		 {PolSw-2:Pos1}
+		 {PolSw-2:Pos2}
 		 {spare-8}
-		 {DC24V:Aux}
-		 {DC24V:PLC}
-		 {Cbl:Pos}
+		 {DC24V:Aux1}
+		 {DC24V:Aux2}
+		 {Key2}
 		 {EE-1:OpenCmd}
 		 {EE-1:spare27}
 		 {EE-1:spare28}

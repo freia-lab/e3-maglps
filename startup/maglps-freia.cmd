@@ -47,3 +47,13 @@ dbLoadRecords(maglpsPSU.db, "PREFIX=$(PREFIX)")
 #dbLoadTemplate(../db/maglpsDIO.substitutions, "PREFIX=$(PREFIX)")
 #dbLoadTemplate(../db/maglpsPSU.substitutions, "PREFIX=$(PREFIX)")
 
+# It looks like it has no effect on the Button alarm border property
+#iocInit
+#dbpf CstatV-MagLPS:EE-1:RstCmd.UDFS NO_ALARM
+#dbpf CstatV-MagLPS:EE-1:RstCmd.PROC 1
+#dbpf CstatV-MagLPS:EE-2:RstCmd.UDFS NO_ALARM
+#dbpf CstatV-MagLPS:EE-2:RstCmd.PROC 1
+#dbpf CstatV-MagLPS:EE-1:CloseCmd.UDFS NO_ALARM
+#dbpf CstatV-MagLPS:EE-1:CloseCmd.PROC 1
+#dbpf CstatV-MagLPS:EE-2:CloseCmd.UDFS NO_ALARM
+#dbpf CstatV-MagLPS:EE-2:CloseCmd.PROC 1

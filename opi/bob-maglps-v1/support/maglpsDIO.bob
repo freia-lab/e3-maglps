@@ -24,7 +24,7 @@
     <items>
       <item>QuenchStat</item>
       <item>DAQ_OK</item>
-      <item>EmgcyBtn</item>
+      <item>Key1</item>
       <item>EE-1:PwrPerm</item>
       <item>EE-1:Remote</item>
       <item>EE-1:NoError</item>
@@ -43,9 +43,9 @@
       <item>PC-2:PwrFail</item>
       <item>PC-2:Connected</item>
       <item>PC-2:sOn</item>
-      <item>DC24V:Aux</item>
-      <item>DC24V:PLC</item>
-      <item>Cbl:Pos</item>
+      <item>DC24V:Aux1</item>
+      <item>DC24V:Aux2</item>
+      <item>Key2</item>
       <item>EE-1:OpenCmd</item>
       <item>PC-1:PERM</item>
       <item>PC-1:FastPA</item>
@@ -69,6 +69,12 @@
       <item>LEAD2:V_OK</item>
       <item>LEAD3:V_OK</item>
       <item>LEAD4:V_OK</item>
+      <item>EE-1:FS</item>
+      <item>EE-2:FS</item>
+      <item>PolSw-1:Pos1</item>
+      <item>PolSw-1:Pos2</item>
+      <item>PolSw-2:Pos1</item>
+      <item>PolSw-2:Pos2</item>
     </items>
     <items_from_pv>false</items_from_pv>
   </widget>
@@ -117,10 +123,10 @@
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Linking Container_1</name>
-    <file>maglpsDIOsignal.bob</file>
     <macros>
       <SGNL>loc://maglpsDigitalSignal</SGNL>
     </macros>
+    <file>maglpsDIOsignal.bob</file>
     <y>90</y>
     <width>740</width>
     <height>500</height>
@@ -188,7 +194,7 @@
         </exp>
         <exp bool_exp="pv0==0">
           <value>
-            <color name="INVALID" red="211" green="45" blue="156">
+            <color name="INVALID" red="149" green="110" blue="221">
             </color>
           </value>
         </exp>
@@ -630,7 +636,7 @@ CPU Interlock/alarm </tooltip>
         </exp>
         <exp bool_exp="pv0==0">
           <value>
-            <color name="INVALID" red="211" green="45" blue="156">
+            <color name="INVALID" red="149" green="110" blue="221">
             </color>
           </value>
         </exp>
