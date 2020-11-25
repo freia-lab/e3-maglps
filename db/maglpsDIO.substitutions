@@ -100,8 +100,8 @@ file "maglpsDIOW.template"
 		 {PC-1:Connected,14}
 		 {PC-1:sOn,	16}
 		 {EE-1:FS,	18}
-		 {PolSw:Pos1,	20}
-		 {PolSw:Pos1,	22}
+		 {PolSw-1:Pos1,	20}
+		 {PolSw-1:Pos2,	22}
 		 {spare-4,	24}
 		 {Key1,		26}
 		 {QuenchStat,	28}
