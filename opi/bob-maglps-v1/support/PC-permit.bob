@@ -2,11 +2,11 @@
 <display version="2.0.0">
   <name>Display</name>
   <width>550</width>
-  <height>450</height>
+  <height>425</height>
   <widget type="group" version="2.0.0">
     <name>Grouping Container_16</name>
     <width>550</width>
-    <height>449</height>
+    <height>424</height>
     <style>2</style>
     <foreground_color>
       <color red="128" green="128" blue="128">
@@ -48,7 +48,7 @@
       <x>262</x>
       <y>205</y>
       <width>18</width>
-      <height>118</height>
+      <height>43</height>
       <off_color>
         <color name="ERROR" red="252" green="13" blue="27">
         </color>
@@ -58,49 +58,6 @@
         </color>
       </on_color>
       <square>true</square>
-    </widget>
-    <widget type="group" version="2.0.0">
-      <name>Group_20</name>
-      <macros>
-        <SGNL>CRYO_LEADS_OK</SGNL>
-      </macros>
-      <x>12</x>
-      <y>200</y>
-      <width>245</width>
-      <height>25</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="embedded" version="2.0.0">
-        <name>Embedded Display_82</name>
-        <file>aidio_overview_tiny.bob</file>
-        <x>2</x>
-        <y>2</y>
-        <width>202</width>
-        <height>22</height>
-      </widget>
-      <widget type="action_button" version="3.0.0">
-        <name>Action Button_76</name>
-        <actions>
-          <action type="open_display">
-            <file>maglpsDIOsignal.bob</file>
-            <macros>
-              <SGNL>$(SGNL)</SGNL>
-            </macros>
-            <target>window</target>
-            <description>Change PV settings</description>
-          </action>
-        </actions>
-        <text>...</text>
-        <x>210</x>
-        <y>3</y>
-        <width>35</width>
-        <height>20</height>
-        <font>
-          <font family="Source Sans Pro" style="REGULAR" size="14.0">
-          </font>
-        </font>
-        <tooltip>$(actions)</tooltip>
-      </widget>
     </widget>
     <widget type="group" version="2.0.0">
       <name>Group_21</name>
@@ -267,49 +224,6 @@
       </widget>
     </widget>
     <widget type="group" version="2.0.0">
-      <name>Group_25</name>
-      <macros>
-        <SGNL>Key2</SGNL>
-      </macros>
-      <x>12</x>
-      <y>175</y>
-      <width>245</width>
-      <height>25</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="embedded" version="2.0.0">
-        <name>Embedded Display_86</name>
-        <file>aidio_overview_tiny.bob</file>
-        <x>2</x>
-        <y>2</y>
-        <width>202</width>
-        <height>22</height>
-      </widget>
-      <widget type="action_button" version="3.0.0">
-        <name>Action Button_81</name>
-        <actions>
-          <action type="open_display">
-            <file>maglpsDIOsignal.bob</file>
-            <macros>
-              <SGNL>$(SGNL)</SGNL>
-            </macros>
-            <target>window</target>
-            <description>Change PV settings</description>
-          </action>
-        </actions>
-        <text>...</text>
-        <x>210</x>
-        <y>3</y>
-        <width>35</width>
-        <height>20</height>
-        <font>
-          <font family="Source Sans Pro" style="REGULAR" size="14.0">
-          </font>
-        </font>
-        <tooltip>$(actions)</tooltip>
-      </widget>
-    </widget>
-    <widget type="group" version="2.0.0">
       <name>Group_33</name>
       <macros>
         <SGNL>DC24V:Aux1</SGNL>
@@ -401,7 +315,7 @@
         <SGNL>$(L1):T_OK</SGNL>
       </macros>
       <x>12</x>
-      <y>225</y>
+      <y>200</y>
       <width>245</width>
       <height>25</height>
       <style>3</style>
@@ -444,7 +358,7 @@
         <SGNL>$(L2):T_OK</SGNL>
       </macros>
       <x>12</x>
-      <y>250</y>
+      <y>225</y>
       <width>245</width>
       <height>25</height>
       <style>3</style>
@@ -482,98 +396,12 @@
       </widget>
     </widget>
     <widget type="group" version="2.0.0">
-      <name>Group_37</name>
-      <macros>
-        <SGNL>$(L1):V_OK</SGNL>
-      </macros>
-      <x>12</x>
-      <y>275</y>
-      <width>245</width>
-      <height>25</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="embedded" version="2.0.0">
-        <name>Embedded Display_99</name>
-        <file>aidio_overview_tiny.bob</file>
-        <x>2</x>
-        <y>2</y>
-        <width>202</width>
-        <height>22</height>
-      </widget>
-      <widget type="action_button" version="3.0.0">
-        <name>Action Button_93</name>
-        <actions>
-          <action type="open_display">
-            <file>maglpsDIOsignal.bob</file>
-            <macros>
-              <SGNL>$(SGNL)</SGNL>
-            </macros>
-            <target>window</target>
-            <description>Change PV settings</description>
-          </action>
-        </actions>
-        <text>...</text>
-        <x>210</x>
-        <y>3</y>
-        <width>35</width>
-        <height>20</height>
-        <font>
-          <font family="Source Sans Pro" style="REGULAR" size="14.0">
-          </font>
-        </font>
-        <tooltip>$(actions)</tooltip>
-      </widget>
-    </widget>
-    <widget type="group" version="2.0.0">
-      <name>Group_38</name>
-      <macros>
-        <SGNL>$(L2):V_OK</SGNL>
-      </macros>
-      <x>12</x>
-      <y>300</y>
-      <width>245</width>
-      <height>25</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="embedded" version="2.0.0">
-        <name>Embedded Display_100</name>
-        <file>aidio_overview_tiny.bob</file>
-        <x>2</x>
-        <y>2</y>
-        <width>202</width>
-        <height>22</height>
-      </widget>
-      <widget type="action_button" version="3.0.0">
-        <name>Action Button_94</name>
-        <actions>
-          <action type="open_display">
-            <file>maglpsDIOsignal.bob</file>
-            <macros>
-              <SGNL>$(SGNL)</SGNL>
-            </macros>
-            <target>window</target>
-            <description>Change PV settings</description>
-          </action>
-        </actions>
-        <text>...</text>
-        <x>210</x>
-        <y>3</y>
-        <width>35</width>
-        <height>20</height>
-        <font>
-          <font family="Source Sans Pro" style="REGULAR" size="14.0">
-          </font>
-        </font>
-        <tooltip>$(actions)</tooltip>
-      </widget>
-    </widget>
-    <widget type="group" version="2.0.0">
       <name>Group_39</name>
       <macros>
         <SGNL>PC-$(NR):PERM</SGNL>
       </macros>
       <x>79</x>
-      <y>400</y>
+      <y>375</y>
       <width>260</width>
       <height>30</height>
       <style>3</style>
@@ -616,7 +444,7 @@
         <EE>EE-$(NR)</EE>
       </macros>
       <x>339</x>
-      <y>380</y>
+      <y>355</y>
       <width>201</width>
       <height>50</height>
       <style>2</style>
@@ -962,55 +790,12 @@
       </widget>
     </widget>
     <widget type="group" version="2.0.0">
-      <name>Group_47</name>
-      <macros>
-        <SGNL>EE-$(NR):NoWarn</SGNL>
-      </macros>
-      <x>289</x>
-      <y>275</y>
-      <width>245</width>
-      <height>25</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="embedded" version="2.0.0">
-        <name>Embedded Display_109</name>
-        <file>aidio_overview_tiny.bob</file>
-        <x>2</x>
-        <y>2</y>
-        <width>202</width>
-        <height>22</height>
-      </widget>
-      <widget type="action_button" version="3.0.0">
-        <name>Action Button_105</name>
-        <actions>
-          <action type="open_display">
-            <file>maglpsDIOsignal.bob</file>
-            <macros>
-              <SGNL>$(SGNL)</SGNL>
-            </macros>
-            <target>window</target>
-            <description>Change PV settings</description>
-          </action>
-        </actions>
-        <text>...</text>
-        <x>210</x>
-        <y>3</y>
-        <width>35</width>
-        <height>20</height>
-        <font>
-          <font family="Source Sans Pro" style="REGULAR" size="14.0">
-          </font>
-        </font>
-        <tooltip>$(actions)</tooltip>
-      </widget>
-    </widget>
-    <widget type="group" version="2.0.0">
       <name>Group_48</name>
       <macros>
         <SGNL>EE-$(NR):SPAstat</SGNL>
       </macros>
       <x>289</x>
-      <y>300</y>
+      <y>275</y>
       <width>245</width>
       <height>25</height>
       <style>3</style>
@@ -1136,7 +921,7 @@
     <widget type="group" version="2.0.0">
       <name>Group_51</name>
       <x>9</x>
-      <y>335</y>
+      <y>310</y>
       <width>530</width>
       <height>53</height>
       <style>3</style>
@@ -1185,7 +970,7 @@
         <SGNL>EE-$(NR):FS</SGNL>
       </macros>
       <x>289</x>
-      <y>325</y>
+      <y>300</y>
       <width>245</width>
       <height>25</height>
       <style>3</style>
