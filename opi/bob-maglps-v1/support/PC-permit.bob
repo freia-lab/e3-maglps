@@ -62,7 +62,7 @@
     <widget type="group" version="2.0.0">
       <name>Group_21</name>
       <macros>
-        <SGNL>Key1</SGNL>
+        <SGNL>Key$(NR)</SGNL>
       </macros>
       <x>12</x>
       <y>52</y>
