@@ -575,49 +575,6 @@
       </widget>
     </widget>
     <widget type="group" version="2.0.0">
-      <name>Group_42</name>
-      <macros>
-        <SGNL>PC-$(NR):sOn</SGNL>
-      </macros>
-      <x>289</x>
-      <y>151</y>
-      <width>245</width>
-      <height>25</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="embedded" version="2.0.0">
-        <name>Embedded Display_104</name>
-        <file>aidio_overview_tiny.bob</file>
-        <x>2</x>
-        <y>2</y>
-        <width>202</width>
-        <height>22</height>
-      </widget>
-      <widget type="action_button" version="3.0.0">
-        <name>Action Button_100</name>
-        <actions>
-          <action type="open_display">
-            <file>maglpsDIOsignal.bob</file>
-            <macros>
-              <SGNL>$(SGNL)</SGNL>
-            </macros>
-            <target>window</target>
-            <description>Change PV settings</description>
-          </action>
-        </actions>
-        <text>...</text>
-        <x>210</x>
-        <y>3</y>
-        <width>35</width>
-        <height>20</height>
-        <font>
-          <font family="Source Sans Pro" style="REGULAR" size="14.0">
-          </font>
-        </font>
-        <tooltip>$(actions)</tooltip>
-      </widget>
-    </widget>
-    <widget type="group" version="2.0.0">
       <name>Group_43</name>
       <macros>
         <SGNL>EE-$(NR):PwrPerm</SGNL>
