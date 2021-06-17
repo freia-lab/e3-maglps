@@ -122,3 +122,7 @@ MAGNET_ITLK_V15.1_20210211_1207 - Changed the interlock logic (removed "DIO_RDAT
 
 "CPU_RDATA".CPU_CONF.FLSHBX_HC :=  "DIO_RDATA".PC_1_EXT_OUT.INTERLOCK OR "DIO_RDATA".PC_2_EXT_OUT.INTERLOCK;
 "FLSHBX_HCUR" := "CPU_RDATA".CPU_CONF.FLSHBX_HC;
+===========================================================================================================================
+
+MAGNET_ITLK_V15.1_20210617_2021 - Fixed a bug: the firs polarity switch input state was written to both pos1 and pos2 switch data.
+MAGNET_ITLK_V15.1_20210617_2051 - Changed all input bits for EE* and PC* to be not latched.
