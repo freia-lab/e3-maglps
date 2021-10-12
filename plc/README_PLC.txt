@@ -57,13 +57,13 @@ Output and interlock logic:
                     PT:=#pulse_time,
                     Q=>#EE_1_Open_RQ,
                     ET=>#t1);
-"EE_1_OPEN_RQ" := NOT(#EE_1_Open_RQ);
+"EE_1_OPEN_RQ" := (NOT (#EE_1_Open_RQ))  AND (NOT "DIO_RDATA".KEY1_OK.INTERLOCK);
 
 "IEC_Timer_EE2_DB".TP(IN:="DIO_RDATA".PC_2_EXT.INTERLOCK,
                       PT:=#pulse_time,
                       Q=>#EE_2_Open_RQ,
                       ET=>#t2);
-"EE_2_OPEN_RQ" := NOT (#EE_2_Open_RQ);
+"EE_2_OPEN_RQ" := (NOT (#EE_2_Open_RQ)) AND (NOT "DIO_RDATA".KEY2_OK.INTERLOCK);
 
 
 // Flash lights
