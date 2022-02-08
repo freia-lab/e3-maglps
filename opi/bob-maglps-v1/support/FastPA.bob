@@ -318,5 +318,54 @@ $(PREFIX):$(pv_name)</tooltip>
       </off_color>
       <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_43</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(pv_name)</pv_name>
+          <value>1</value>
+          <description>Switch Polarity</description>
+        </action>
+      </actions>
+      <pv_name>$(PREFIX):PolSw-$(NR):cmdMove</pv_name>
+      <x>149</x>
+      <y>289</y>
+      <height>50</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_1</name>
+      <pv_name>=(`$(PREFIX):PolSw-$(NR):Pos1`&amp;`$(PREFIX):PolSw:dirPos1`)|(`$(PREFIX):PolSw-$(NR):Pos2`&amp;`$(PREFIX):PolSw:dirPos2`)</pv_name>
+      <x>109</x>
+      <y>289</y>
+      <off_color>
+        <color name="ERROR" red="252" green="13" blue="27">
+        </color>
+      </off_color>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_2</name>
+      <pv_name>=(`$(PREFIX):PolSw-$(NR):Pos1`&amp;!`$(PREFIX):PolSw-$(NR):Pos2`)|(`$(PREFIX):PolSw-$(NR):Pos2`&amp;!`$(PREFIX):PolSw-$(NR):Pos1`)</pv_name>
+      <x>109</x>
+      <y>319</y>
+      <off_color>
+        <color name="ERROR" red="252" green="13" blue="27">
+        </color>
+      </off_color>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label</name>
+      <text>Motor Dir OK</text>
+      <x>9</x>
+      <y>289</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_1</name>
+      <text>Interlock OK</text>
+      <x>9</x>
+      <y>319</y>
+    </widget>
   </widget>
 </display>

@@ -62,8 +62,8 @@ file "maglpsDIOR.template"
 		 {EE-2:spare30,	600,   	"OK",	"ITLCK",	"spare"}
 		 {PC-2:PERM,	612,   	"OK",	"ITLCK",	"Power Permit"}
 		 {PC-2:FastPA,	624,   	"OK",	"ITLCK",	"Fast Power Abort"}
-		 {spare-16,	636,   	"OK",	"ITLCK",	"spare"}
-		 {spare-17,	648,   	"OK",	"ITLCK",	"spare"}
+		 {PolSw:dirPos1,636,   	"Inactive",	"Towards_Pos1",	"Motor direction to pos1"}
+		 {PolSw:dirPos2,648,   	"Inactive",	"Towards_Pos2",	"Motor direction to pos2"}
 		 {spare-18,	660,   	"OK",	"ITLCK",	"spare"}
 		 {spare-19,	672,   	"OK",	"ITLCK",	"spare"}
 		 {spare-20,	684,   	"OK",	"ITLCK",	"spare"}
@@ -143,8 +143,8 @@ file "maglpsDIOW.template"
 		 {EE-2:spare30,	100}
 		 {PC-2:PERM,	102}
 		 {PC-2:FastPA,	104}
-		 {spare-16,	106}
-		 {spare-17,	108}
+		 {PolSw:dirPos1,106}
+		 {PolSw:dirPos2,108}
 		 {spare-18,	110}
 		 {spare-19,	112}
 		 {spare-20,	114}
@@ -225,8 +225,8 @@ file "maglpsDIOInternal.template"
 		 {EE-2:spare30}
 		 {PC-2:PERM}
 		 {PC-2:FastPA}
-		 {spare-16}
-		 {spare-17}
+		 {PolSw:dirPos1}
+		 {PolSw:dirPos2}
 		 {spare-18}
 		 {spare-19}
 		 {spare-20}

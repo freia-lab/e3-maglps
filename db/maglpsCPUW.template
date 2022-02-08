@@ -65,6 +65,35 @@ record(bo, "$(PREFIX):$(SGNL)-TEST-ALL-ADS")
 	field(VAL, "0")
 }
 
+record(bo, "$(PREFIX):PolSw-1:cmdMove")
+{
+	field(DTYP, "S7plc")
+	field( OUT, "@$(PLC)/$(SOFF)+1 T=INT8 B=1" )
+	field(HIGH, "$(HOLDHIGH)")
+}
+
+record(bo, "$(PREFIX):PolSw-2:cmdMove")
+{
+	field(DTYP, "S7plc")
+	field( OUT, "@$(PLC)/$(SOFF)+1 T=INT8 B=2" )
+	field(HIGH, "$(HOLDHIGH)")
+}
+
+record(bo, "$(PREFIX):PolSw:cmdDirPos1")
+{
+	field(DTYP, "S7plc")
+	field( OUT, "@$(PLC)/$(SOFF)+1 T=INT8 B=3" )
+	field(HIGH, "$(HOLDHIGH)")
+}
+
+record(bo, "$(PREFIX):PolSw:cmdDirPos2")
+{
+	field(DTYP, "S7plc")
+	field( OUT, "@$(PLC)/$(SOFF)+1 T=INT8 B=4" )
+	field(HIGH, "$(HOLDHIGH)")
+}
+
+
 record(mbbo, "$(PREFIX):$(SGNL)-OPMODE")
 {
 	field(DTYP, "S7plc")
