@@ -2,14 +2,14 @@
 <display version="2.0.0">
   <name>Display</name>
   <width>365</width>
-  <height>420</height>
+  <height>450</height>
   <widget type="group" version="2.0.0">
     <name>Grouping Container_12</name>
     <macros>
       <DEV>PC-1</DEV>
     </macros>
     <width>360</width>
-    <height>415</height>
+    <height>450</height>
     <style>2</style>
     <foreground_color>
       <color red="128" green="128" blue="128">
@@ -24,9 +24,9 @@
     <widget type="label" version="2.0.0">
       <name>Label_205</name>
       <text>Fast Power Abort $(NR)</text>
-      <x>12</x>
+      <x>9</x>
       <y>9</y>
-      <width>305</width>
+      <width>340</width>
       <height>25</height>
       <font>
         <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
@@ -44,25 +44,6 @@
       <vertical_alignment>1</vertical_alignment>
       <actions>
       </actions>
-    </widget>
-    <widget type="polyline" version="2.0.0">
-      <name>Polyline_13</name>
-      <x>279</x>
-      <y>289</y>
-      <width>1</width>
-      <height>50</height>
-      <points>
-        <point x="0.0" y="0.0">
-        </point>
-        <point x="0.0" y="50.0">
-        </point>
-      </points>
-      <line_width>4</line_width>
-      <line_color>
-        <color name="PRIMARY" red="0" green="148" blue="202">
-        </color>
-      </line_color>
-      <arrows>2</arrows>
     </widget>
     <widget type="group" version="2.0.0">
       <name>Group</name>
@@ -175,7 +156,7 @@ $(PREFIX):$(pv_name)</tooltip>
         <SGNL>PC-$(NR):FastPA</SGNL>
       </macros>
       <x>100</x>
-      <y>359</y>
+      <y>300</y>
       <width>250</width>
       <height>40</height>
       <style>3</style>
@@ -251,7 +232,7 @@ $(PREFIX):$(pv_name)</tooltip>
       <transparent>true</transparent>
       <widget type="embedded" version="2.0.0">
         <name>Embedded Display_53</name>
-        <file>aidio_overview.bob</file>
+        <file>aidio_overview_offon.bob</file>
         <width>202</width>
         <height>40</height>
       </widget>
@@ -285,7 +266,7 @@ $(PREFIX):$(pv_name)</tooltip>
       <transparent>true</transparent>
       <widget type="embedded" version="2.0.0">
         <name>Embedded Display_55</name>
-        <file>aidio_overview.bob</file>
+        <file>aidio_overview_offon.bob</file>
         <width>202</width>
         <height>40</height>
       </widget>
@@ -328,16 +309,29 @@ $(PREFIX):$(pv_name)</tooltip>
         </action>
       </actions>
       <pv_name>$(PREFIX):PolSw-$(NR):cmdMove</pv_name>
-      <x>149</x>
-      <y>289</y>
+      <x>159</x>
+      <y>389</y>
+      <width>80</width>
       <height>50</height>
+      <rules>
+        <rule name="Active" prop_id="enabled" out_exp="false">
+          <exp bool_exp="pvInt0 or  (((not pvInt1) and pvInt2) or ((not pvInt3) and  pvInt4))">
+            <value>false</value>
+          </exp>
+          <pv_name>$(PREFIX):PC-$(NR):sOn</pv_name>
+          <pv_name>$(PREFIX):PolSw-$(NR):Pos1</pv_name>
+          <pv_name>$(PREFIX):PolSw:dirPos1</pv_name>
+          <pv_name>$(PREFIX):PolSw-$(NR):Pos2</pv_name>
+          <pv_name>$(PREFIX):PolSw:dirPos2</pv_name>
+        </rule>
+      </rules>
       <tooltip>$(actions)</tooltip>
     </widget>
     <widget type="led" version="2.0.0">
       <name>LED_1</name>
       <pv_name>=(`$(PREFIX):PolSw-$(NR):Pos1`&amp;`$(PREFIX):PolSw:dirPos1`)|(`$(PREFIX):PolSw-$(NR):Pos2`&amp;`$(PREFIX):PolSw:dirPos2`)</pv_name>
-      <x>109</x>
-      <y>289</y>
+      <x>129</x>
+      <y>389</y>
       <off_color>
         <color name="ERROR" red="252" green="13" blue="27">
         </color>
@@ -346,26 +340,89 @@ $(PREFIX):$(pv_name)</tooltip>
     </widget>
     <widget type="led" version="2.0.0">
       <name>LED_2</name>
-      <pv_name>=(`$(PREFIX):PolSw-$(NR):Pos1`&amp;!`$(PREFIX):PolSw-$(NR):Pos2`)|(`$(PREFIX):PolSw-$(NR):Pos2`&amp;!`$(PREFIX):PolSw-$(NR):Pos1`)</pv_name>
-      <x>109</x>
-      <y>319</y>
+      <pv_name>$(PREFIX):PC-$(NR):sOn</pv_name>
+      <x>129</x>
+      <y>419</y>
       <off_color>
-        <color name="ERROR" red="252" green="13" blue="27">
+        <color name="IO OK" red="0" green="255" blue="0">
         </color>
       </off_color>
+      <on_color>
+        <color name="ERROR" red="252" green="13" blue="27">
+        </color>
+      </on_color>
+      <tooltip>Power Converter OFF
+$(pv_name)
+$(pv_value)</tooltip>
       <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label</name>
       <text>Motor Dir OK</text>
-      <x>9</x>
-      <y>289</y>
+      <x>29</x>
+      <y>389</y>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_1</name>
-      <text>Interlock OK</text>
+      <text>PC Status OK</text>
+      <x>29</x>
+      <y>419</y>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_4</name>
+      <pv_name>$(PREFIX):PolSw-$(NR):sSwitching</pv_name>
+      <x>268</x>
+      <y>413</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_2</name>
+      <text>MTR ON</text>
+      <x>250</x>
+      <y>390</y>
+      <width>60</width>
+    </widget>
+    <widget type="polyline" version="2.0.0">
+      <name>Polyline_13</name>
+      <x>282</x>
+      <y>260</y>
+      <width>1</width>
+      <height>40</height>
+      <points>
+        <point x="0.0" y="0.0">
+        </point>
+        <point x="0.0" y="40.0">
+        </point>
+      </points>
+      <line_width>4</line_width>
+      <line_color>
+        <color name="PRIMARY" red="0" green="148" blue="202">
+        </color>
+      </line_color>
+      <arrows>2</arrows>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_206</name>
+      <text>Polarity Switch $(NR)</text>
       <x>9</x>
-      <y>319</y>
+      <y>349</y>
+      <width>340</width>
+      <height>25</height>
+      <font>
+        <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="IO Label" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="Read_Background" red="230" green="235" blue="232">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
     </widget>
   </widget>
 </display>

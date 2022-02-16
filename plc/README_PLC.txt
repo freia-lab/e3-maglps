@@ -57,13 +57,13 @@ Output and interlock logic:
                     PT:=#pulse_time,
                     Q=>#EE_1_Open_RQ,
                     ET=>#t1);
-"EE_1_OPEN_RQ" := (NOT (#EE_1_Open_RQ))  AND (NOT "DIO_RDATA".KEY1_OK.INTERLOCK);
+"EE_1_OPEN_RQ" := NOT(#EE_1_Open_RQ);
 
 "IEC_Timer_EE2_DB".TP(IN:="DIO_RDATA".PC_2_EXT.INTERLOCK,
                       PT:=#pulse_time,
                       Q=>#EE_2_Open_RQ,
                       ET=>#t2);
-"EE_2_OPEN_RQ" := (NOT (#EE_2_Open_RQ)) AND (NOT "DIO_RDATA".KEY2_OK.INTERLOCK);
+"EE_2_OPEN_RQ" := NOT (#EE_2_Open_RQ);
 
 
 // Flash lights
@@ -126,3 +126,76 @@ MAGNET_ITLK_V15.1_20210211_1207 - Changed the interlock logic (removed "DIO_RDAT
 
 MAGNET_ITLK_V15.1_20210617_2021 - Fixed a bug: the firs polarity switch input state was written to both pos1 and pos2 switch data.
 MAGNET_ITLK_V15.1_20210617_2051 - Changed all input bits for EE* and PC* to be not latched.
+MAGNET_ITLK_V15.1_20220215_1653 - Added support for control of polarity switches.
+
+"DIO_RDATA".POLSW_1_POS1.DTYP := "DI";
+"DIO_RDATA".POLSW_1_POS1.INVERT := FALSE;
+"DIO_RDATA".POLSW_1_POS1.N_LATCH := TRUE;
+"DIO_RDATA".POLSW_1_POS2.DTYP := "DI";
+"DIO_RDATA".POLSW_1_POS2.INVERT := FALSE;
+"DIO_RDATA".POLSW_1_POS2.N_LATCH := TRUE;
+"DIO_RDATA".POLSW_2_POS1.DTYP := "DI";
+"DIO_RDATA".POLSW_2_POS1.INVERT := FALSE;
+"DIO_RDATA".POLSW_2_POS1.N_LATCH := TRUE;
+"DIO_RDATA".POLSW_2_POS2.DTYP := "DI";
+"DIO_RDATA".POLSW_2_POS2.INVERT := FALSE;
+"DIO_RDATA".POLSW_2_POS2.N_LATCH := TRUE;
+"DIO_RDATA".POLSW_DIR_POS1_RQ.DTYP := "DO";
+"DIO_RDATA".POLSW_DIR_POS1_RQ.N_LATCH := TRUE;
+// ??????????? No effect ?????????????? "DIO_RDATA".POLSW_DIR_POS1_RQ.N_FORCE := TRUE;
+"DIO_RDATA".POLSW_DIR_POS2_RQ.DTYP := "DO";
+"DIO_RDATA".POLSW_DIR_POS2_RQ.N_LATCH := TRUE;
+// ??????????? No effect ?????????????? "DIO_RDATA".POLSW_DIR_POS2_RQ.N_FORCE := TRUE;
+// Polarity switch directions (change the polarity under condition that none of the motors is running)
+// 
+
+"R_TRIG_DB_1"(CLK :="CPU_WDATA".CPU_CONF.POLSW_DIR_POS1,
+            Q => #to_pos1_trig);
+IF #to_pos1_trig AND NOT ("POLSW_1_MTR_ON_RQ" OR "POLSW_2_MTR_ON_RQ") THEN
+    "DIO_RDATA".POLSW_DIR_POS1_RQ.INTERLOCK := TRUE;
+    "DIO_RDATA".POLSW_DIR_POS2_RQ.INTERLOCK := FALSE;
+END_IF;
+
+"R_TRIG_DB_2"(CLK := "CPU_WDATA".CPU_CONF.POLSW_DIR_POS2,
+            Q => #to_pos2_trig);
+IF #to_pos2_trig AND NOT ("POLSW_1_MTR_ON_RQ" OR "POLSW_2_MTR_ON_RQ") THEN
+    "DIO_RDATA".POLSW_DIR_POS1_RQ.INTERLOCK := FALSE;
+    "DIO_RDATA".POLSW_DIR_POS2_RQ.INTERLOCK := TRUE;
+END_IF;
+
+// Polarity switch motors on interlock
+// 
+
+// Motor 1
+#mtr_1_trig := "CPU_WDATA".CPU_CONF.POLSW_1_MTR_ON AND
+    (NOT "DIO_RDATA".PC_1_EXT_OUT.INTERLOCK) AND
+    (("DIO_RDATA".POLSW_1_POS1.INTERLOCK AND "DIO_RDATA".POLSW_DIR_POS1_RQ.INTERLOCK) OR
+    ("DIO_RDATA".POLSW_1_POS2.INTERLOCK AND "DIO_RDATA".POLSW_DIR_POS2_RQ.INTERLOCK));
+// Start the motor timer on the request from the operator
+// 
+    "IEC_Timer_MTR_1_DB".TP(IN:=#mtr_1_trig,
+                            PT:=t#5s,
+                            Q => #mtr_1_on_rq);
+                        
+    "POLSW_1_MTR_ON_RQ" := #mtr_1_on_rq AND
+    (NOT "DIO_RDATA".PC_1_EXT_OUT.INTERLOCK) AND
+    (("DIO_RDATA".POLSW_1_POS1.INTERLOCK AND "DIO_RDATA".POLSW_DIR_POS1_RQ.INTERLOCK) OR
+    ("DIO_RDATA".POLSW_1_POS2.INTERLOCK AND "DIO_RDATA".POLSW_DIR_POS2_RQ.INTERLOCK));
+    "CPU_RDATA".CPU_CONF.POLSW_1_MTR_ON := "POLSW_1_MTR_ON_RQ";
+   
+// Motor 2
+    #mtr_2_trig := "CPU_WDATA".CPU_CONF.POLSW_2_MTR_ON AND
+    (NOT "DIO_RDATA".PC_2_EXT_OUT.INTERLOCK) AND
+    (("DIO_RDATA".POLSW_2_POS1.INTERLOCK AND "DIO_RDATA".POLSW_DIR_POS1_RQ.INTERLOCK) OR
+    ("DIO_RDATA".POLSW_2_POS2.INTERLOCK AND "DIO_RDATA".POLSW_DIR_POS2_RQ.INTERLOCK));
+    // Start the motor timer on the request from the operator
+    // 
+    "IEC_Timer_MTR_2_DB".TP(IN:=#mtr_2_trig,
+                            PT:=t#5s,
+                            Q => #mtr_2_on_rq);
+    "POLSW_2_MTR_ON_RQ" := #mtr_2_on_rq AND
+    (NOT "DIO_RDATA".PC_2_EXT_OUT.INTERLOCK) AND
+    (("DIO_RDATA".POLSW_2_POS1.INTERLOCK AND "DIO_RDATA".POLSW_DIR_POS1_RQ.INTERLOCK) OR
+    ("DIO_RDATA".POLSW_2_POS2.INTERLOCK AND "DIO_RDATA".POLSW_DIR_POS2_RQ.INTERLOCK));
+    "CPU_RDATA".CPU_CONF.POLSW_2_MTR_ON := "POLSW_2_MTR_ON_RQ";
+    

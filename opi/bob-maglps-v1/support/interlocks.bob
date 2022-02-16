@@ -250,7 +250,7 @@ $(pv_value)</tooltip>
     </macros>
     <file>PC-permit.bob</file>
     <x>580</x>
-    <y>440</y>
+    <y>480</y>
     <width>560</width>
     <height>460</height>
   </widget>
@@ -263,7 +263,7 @@ $(pv_value)</tooltip>
     </macros>
     <file>PC-permit.bob</file>
     <x>10</x>
-    <y>440</y>
+    <y>480</y>
     <width>560</width>
     <height>460</height>
   </widget>
@@ -276,7 +276,7 @@ $(pv_value)</tooltip>
     <x>10</x>
     <y>10</y>
     <width>370</width>
-    <height>420</height>
+    <height>460</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_1</name>
@@ -287,12 +287,12 @@ $(pv_value)</tooltip>
     <x>770</x>
     <y>10</y>
     <width>370</width>
-    <height>420</height>
+    <height>460</height>
   </widget>
   <widget type="group" version="2.0.0">
     <name>Grouping Container_14</name>
-    <x>410</x>
-    <y>240</y>
+    <x>405</x>
+    <y>265</y>
     <width>330</width>
     <height>180</height>
     <style>2</style>
@@ -343,7 +343,7 @@ $(pv_value)</tooltip>
       <transparent>true</transparent>
       <widget type="embedded" version="2.0.0">
         <name>Embedded Display_53</name>
-        <file>aidio_overview.bob</file>
+        <file>aidio_overview_onoff.bob</file>
         <width>202</width>
         <height>40</height>
       </widget>
@@ -378,7 +378,7 @@ $(PREFIX):$(pv_name)</tooltip>
       <transparent>true</transparent>
       <widget type="embedded" version="2.0.0">
         <name>Embedded Display_54</name>
-        <file>aidio_overview.bob</file>
+        <file>aidio_overview_onoff.bob</file>
         <width>202</width>
         <height>40</height>
       </widget>
@@ -412,6 +412,15 @@ $(PREFIX):$(pv_name)</tooltip>
       <pv_name>$(PREFIX):PolSw:cmdDirPos1</pv_name>
       <x>29</x>
       <y>129</y>
+      <rules>
+        <rule name="Enabled" prop_id="enabled" out_exp="false">
+          <exp bool_exp="pvInt0 or pvInt1">
+            <value>false</value>
+          </exp>
+          <pv_name>$(PREFIX):PolSw-1:sSwitching</pv_name>
+          <pv_name>$(PREFIX):PolSw-2:sSwitching</pv_name>
+        </rule>
+      </rules>
       <tooltip>$(actions)</tooltip>
     </widget>
     <widget type="action_button" version="3.0.0">
@@ -426,6 +435,15 @@ $(PREFIX):$(pv_name)</tooltip>
       <pv_name>$(PREFIX):PolSw:cmdDirPos2</pv_name>
       <x>189</x>
       <y>129</y>
+      <rules>
+        <rule name="Enabled" prop_id="enabled" out_exp="false">
+          <exp bool_exp="pvInt0 or pvInt1">
+            <value>false</value>
+          </exp>
+          <pv_name>$(PREFIX):PolSw-1:sSwitching</pv_name>
+          <pv_name>$(PREFIX):PolSw-2:sSwitching</pv_name>
+        </rule>
+      </rules>
       <tooltip>$(actions)</tooltip>
     </widget>
   </widget>

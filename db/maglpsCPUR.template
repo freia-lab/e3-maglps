@@ -81,21 +81,21 @@ record(bi, "$(PREFIX):$(SGNL)-FLSHBX_HE")
 	field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=7" )
 }
 
-record(bi, "$(PREFIX):$(SGNL)-RFENMIPRCND-RB")
+record(bi, "$(PREFIX):PolSw-1:sSwitching")
 {
 	field(DTYP, "S7plc")
 	field(SCAN, "I/O Intr")
-	field(ZNAM, "RFON-PRE-MISS")
-        field(ONAM, "RFON-PRE-OK")
+	field(ZNAM, "MOTOR OFF")
+        field(ONAM, "MOTOR ON")
 	field(INP, "@$(PLC)/$(SOFF)+1 T=INT8 B=0" )
 }
 
-record(bi, "$(PREFIX):$(SGNL)-AUXMISUCND-RB")
+record(bi, "$(PREFIX):PolSw-2:sSwitching")
 {
 	field(DTYP, "S7plc")
 	field(SCAN, "I/O Intr")
-	field(ZNAM, "AUX-SUP-MISS")
-        field(ONAM, "AUX-SUP-OK")
+	field(ZNAM, "MOTOR OFF")
+        field(ONAM, "MOTOR ON")
 	field(INP, "@$(PLC)/$(SOFF)+1 T=INT8 B=1" )
 }
 

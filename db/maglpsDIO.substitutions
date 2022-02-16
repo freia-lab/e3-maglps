@@ -19,8 +19,8 @@ file "maglpsDIOR.template"
 		 {PC-1:Connected,84,   	"OK",	"ITLCK",	"Pwr Conv connected"}
 		 {PC-1:sOn,	96,   	"OFF",	"ON",		"Pwr Conv status ON/OFF"}
 		 {EE-1:FS,	108,   	"OK",	"ITLCK",	"Enrgy Extr Flow switch"}
-		 {PolSw-1:Pos1,	120,   	"OK",	"ITLCK",	"Polarity switch pos 1"}
-		 {PolSw-1:Pos2,	132,   	"OK",	"ITLCK",	"Polarity switch pos 2"}
+		 {PolSw-1:Pos1,	120,   	"At_Pos1",	"Away_from_Pos1",	"Polarity switch pos 1"}
+		 {PolSw-1:Pos2,	132,   	"At_Pos2",	"Away_from_Pos2",	"Polarity switch pos 2"}
 		 {spare-4,	144,   	"OK",	"ITLCK",	"spare"}
 		 {Key1,		156,   	"OK",	"ITLCK",	"Interlock Key 1"}
 		 {QuenchStat,	168,   	"OK",	"Quench",	"Quench status"}
@@ -35,8 +35,8 @@ file "maglpsDIOR.template"
 		 {PC-2:Connected,276,  	"OK",	"ITLCK",	"Pwr Conv connected"}
 		 {PC-2:sOn,	288,   	"OFF",	"ON",		"Pwr Conv status ON/OFF"}
 		 {EE-2:FS,	300,   	"OK",	"ITLCK",	"Enrgy Extr Flow switch"}
-		 {PolSw-2:Pos1,	312,   	"OK",	"ITLCK",	"Polarity switch pos 1"}
-		 {PolSw-2:Pos2,	324,   	"OK",	"ITLCK",	"Polarity switch pos 2"}
+		 {PolSw-2:Pos1,	312,   	"At_Pos1",	"Away_from_Pos1",	"Polarity switch pos 1"}
+		 {PolSw-2:Pos2,	324,   	"At_Pos2",	"Away_from_Pos2",	"Polarity switch pos 2"}
 		 {spare-8,	336,   	"OK",	"ITLCK",	"spare"}
 		 {DC24V:Aux1,	348,   	"OK",	"ITLCK",	"24V PS Aux1"}
 		 {DC24V:Aux2,	360,   	"OK",	"ITLCK",	"24V PS Aux2"}
@@ -62,8 +62,8 @@ file "maglpsDIOR.template"
 		 {EE-2:spare30,	600,   	"OK",	"ITLCK",	"spare"}
 		 {PC-2:PERM,	612,   	"OK",	"ITLCK",	"Power Permit"}
 		 {PC-2:FastPA,	624,   	"OK",	"ITLCK",	"Fast Power Abort"}
-		 {PolSw:dirPos1,636,   	"Inactive",	"Towards_Pos1",	"Motor direction to pos1"}
-		 {PolSw:dirPos2,648,   	"Inactive",	"Towards_Pos2",	"Motor direction to pos2"}
+		 {PolSw:dirPos1,636,   	"Inactive",	"To_Pos1",	"Motor direction to pos1"}
+		 {PolSw:dirPos2,648,   	"Inactive",	"To_Pos2",	"Motor direction to pos2"}
 		 {spare-18,	660,   	"OK",	"ITLCK",	"spare"}
 		 {spare-19,	672,   	"OK",	"ITLCK",	"spare"}
 		 {spare-20,	684,   	"OK",	"ITLCK",	"spare"}

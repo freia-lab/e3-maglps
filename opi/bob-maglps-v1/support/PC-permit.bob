@@ -802,7 +802,7 @@
       <transparent>true</transparent>
       <widget type="embedded" version="2.0.0">
         <name>Embedded Display_111</name>
-        <file>aidio_overview_tiny.bob</file>
+        <file>aidio_overview_tiny_offon.bob</file>
         <x>2</x>
         <y>2</y>
         <width>202</width>
@@ -845,7 +845,7 @@
       <transparent>true</transparent>
       <widget type="embedded" version="2.0.0">
         <name>Embedded Display_112</name>
-        <file>aidio_overview_tiny.bob</file>
+        <file>aidio_overview_tiny_offon.bob</file>
         <x>2</x>
         <y>2</y>
         <width>202</width>
