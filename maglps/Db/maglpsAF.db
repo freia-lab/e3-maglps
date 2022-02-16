@@ -1,0 +1,5251 @@
+record(bi, "$(PREFIX):AF-CONN") {
+        field(DTYP, "S7plc stat")
+  	field(INP,  "@PLCAF")
+  	field(SCAN, "I/O Intr")
+	field(ZNAM, "Not connected")
+	field(ONAM, "Connected")
+}
+#record(bi, "$(PREFIX):RFS-VacPS-110:I")
+#{
+#        field(DESC, "Ion-pump-01 current")
+#}
+
+record(bi, "$(PREFIX):RFS-VacPS-110:I-WRN-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/0+0 T=INT8 B=0" )
+	field(ZNAM, "OK")
+        field(ONAM, "WRN")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-VacPS-110:I-INT-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/0+0 T=INT8 B=1" )
+	field(ZNAM, "OK")
+        field(ONAM, "ITLCK")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MAJOR")
+}
+
+record(bi, "$(PREFIX):RFS-VacPS-110:I-DIS-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/0+0 T=INT8 B=2" )
+	field(FLNK, "$(PREFIX):RFS-VacPS-110:I-DIS-INT")
+	field(ZNAM, "ENA")
+        field(ONAM, "DIS")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-VacPS-110:I-FRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/0+0 T=INT8 B=3" )
+	field(FLNK, "$(PREFIX):RFS-VacPS-110:I-FRC-INT")
+	field(ZNAM, "N-SIMM")
+        field(ONAM, "SIMM")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-VacPS-110:I-NFRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/0+0 T=INT8 B=4" )
+	field(ZNAM, "C-SIMM")
+        field(ONAM, "N-SIMM")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-VacPS-110:I-NLTCH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/0+0 T=INT8 B=5" )
+	field(ZNAM, "LTCHD")
+        field(ONAM, "N-LTCHD")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-VacPS-110:I-ISFRST-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/0+0 T=INT8 B=6" )
+}
+
+record(bi, "$(PREFIX):RFS-VacPS-110:I-LOALR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/0+0 T=INT8 B=7" )
+}
+
+record(bi, "$(PREFIX):RFS-VacPS-110:I-HIALR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/0+1 T=INT8 B=0" )
+}
+
+record(waveform, "$(PREFIX):RFS-VacPS-110:I-TMSTMP-RB")
+{
+	field(SCAN, "I/O Intr")
+	field(DTYP, "S7plc")
+	field(INP, "@PLCAF/0+2 T=TIME")
+	field(FTVL, "CHAR")
+	field(NELM, "8")
+}
+
+#record(longin, "$(PREFIX):RFS-VacPS-110:I-DTYP-RB")
+#{
+#	field(DTYP, "S7plc")
+#	field(SCAN, "I/O Intr")
+#	field(INP, "@PLCAF/0+10 T=BYTE" )
+#}
+
+record(mbbi, "$(PREFIX):RFS-VacPS-110:I-DTYP-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/0+10 T=BYTE" )
+    	field(ZRVL, "0")
+	field(ZRST, "Unknow")
+	field(ONVL, "1")
+	field(ONST, "TSn")
+	field(TWVL, "2")
+	field(TWST, "PSn")
+	field(THVL, "3")
+	field(THST, "VSn_0_10v")
+	field(FRVL, "4")
+	field(FRST, "ISn_0_20mA")
+	field(SXVL, "5")
+	field(SXST, "ISn_4_20mA")
+	field(SVVL, "6")
+	field(SVST, "FSn_05_80_l_min")
+	field(EIVL, "7")
+	field(EIST, "FSn_8_1000_l_min")
+	field(NIVL, "8")
+	field(NIST, "PSn_0_10_bar")
+	field(TEVL, "9")
+	field(TEST, "TSn_0_50_C")
+	field(ELVL, "10")
+	field(ELST, "TSn_PT100")
+	field(TVVL, "11")
+	field(TVST, "TSn_TC")
+	field(TTVL, "12")
+	field(TTST, "COLL_DISP")
+	field(FTVL, "13")
+	field(FTST, "BODY_DISP")
+	field(SXVL, "27")
+	field(SXST, "ISn_IP")
+	field(NOBT, "8")
+	field(SHFT, "0")
+}
+
+record(longin, "$(PREFIX):RFS-VacPS-110:I-ERR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/0+12 T=INT16" )
+}
+
+record(ai, "$(PREFIX):RFS-VacPS-110:I-HIHI-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/0+14 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-VacPS-110:I-HIHI-INT")
+}
+
+record(ai, "$(PREFIX):RFS-VacPS-110:I-HIGH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/0+18 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-VacPS-110:I-HIGH-INT")
+}
+
+record(ai, "$(PREFIX):RFS-VacPS-110:I-LOW-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/0+22 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-VacPS-110:I-LOW-INT")
+}
+
+record(ai, "$(PREFIX):RFS-VacPS-110:I-LOLO-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/0+26 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-VacPS-110:I-LOLO-INT")
+}
+
+record(ai, "$(PREFIX):RFS-VacPS-110:I-AOFF-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/0+30 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-VacPS-110:I-AOFF-INT")
+}
+
+record(ai, "$(PREFIX):RFS-VacPS-110:I-SVAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/0+34 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-VacPS-110:I-SVAL-INT")
+}
+
+record(ai, "$(PREFIX):RFS-VacPS-110:I")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(DESC, "Ion-pump-01 current")
+	field(INP, "@PLCAF/0+38 T=REAL32" )
+	field(MDEL, "-1")
+	field(PREC, "2")
+	field(EGU, "uA")
+	field(SIMS, "MINOR")
+	field(HHSV, "MAJOR")
+	field(HSV,  "MINOR")
+	field(LSV, "MINOR")
+	field(LLSV, "MAJOR")
+}
+
+record(longin, "$(PREFIX):RFS-VacPS-110:I-VAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/0+42 T=INT16" )
+	field(MDEL, "-1")
+}
+
+#record(bi, "$(PREFIX):RFS-VacPS-120:I")
+#{
+#        field(DESC, "Ion-pump-02 current")
+#}
+
+record(bi, "$(PREFIX):RFS-VacPS-120:I-WRN-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/44+0 T=INT8 B=0" )
+	field(ZNAM, "OK")
+        field(ONAM, "WRN")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-VacPS-120:I-INT-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/44+0 T=INT8 B=1" )
+	field(ZNAM, "OK")
+        field(ONAM, "ITLCK")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MAJOR")
+}
+
+record(bi, "$(PREFIX):RFS-VacPS-120:I-DIS-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/44+0 T=INT8 B=2" )
+	field(FLNK, "$(PREFIX):RFS-VacPS-120:I-DIS-INT")
+	field(ZNAM, "ENA")
+        field(ONAM, "DIS")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-VacPS-120:I-FRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/44+0 T=INT8 B=3" )
+	field(FLNK, "$(PREFIX):RFS-VacPS-120:I-FRC-INT")
+	field(ZNAM, "N-SIMM")
+        field(ONAM, "SIMM")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-VacPS-120:I-NFRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/44+0 T=INT8 B=4" )
+	field(ZNAM, "C-SIMM")
+        field(ONAM, "N-SIMM")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-VacPS-120:I-NLTCH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/44+0 T=INT8 B=5" )
+	field(ZNAM, "LTCHD")
+        field(ONAM, "N-LTCHD")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-VacPS-120:I-ISFRST-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/44+0 T=INT8 B=6" )
+}
+
+record(bi, "$(PREFIX):RFS-VacPS-120:I-LOALR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/44+0 T=INT8 B=7" )
+}
+
+record(bi, "$(PREFIX):RFS-VacPS-120:I-HIALR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/44+1 T=INT8 B=0" )
+}
+
+record(waveform, "$(PREFIX):RFS-VacPS-120:I-TMSTMP-RB")
+{
+	field(SCAN, "I/O Intr")
+	field(DTYP, "S7plc")
+	field(INP, "@PLCAF/44+2 T=TIME")
+	field(FTVL, "CHAR")
+	field(NELM, "8")
+}
+
+#record(longin, "$(PREFIX):RFS-VacPS-120:I-DTYP-RB")
+#{
+#	field(DTYP, "S7plc")
+#	field(SCAN, "I/O Intr")
+#	field(INP, "@PLCAF/44+10 T=BYTE" )
+#}
+
+record(mbbi, "$(PREFIX):RFS-VacPS-120:I-DTYP-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/44+10 T=BYTE" )
+    	field(ZRVL, "0")
+	field(ZRST, "Unknow")
+	field(ONVL, "1")
+	field(ONST, "TSn")
+	field(TWVL, "2")
+	field(TWST, "PSn")
+	field(THVL, "3")
+	field(THST, "VSn_0_10v")
+	field(FRVL, "4")
+	field(FRST, "ISn_0_20mA")
+	field(SXVL, "5")
+	field(SXST, "ISn_4_20mA")
+	field(SVVL, "6")
+	field(SVST, "FSn_05_80_l_min")
+	field(EIVL, "7")
+	field(EIST, "FSn_8_1000_l_min")
+	field(NIVL, "8")
+	field(NIST, "PSn_0_10_bar")
+	field(TEVL, "9")
+	field(TEST, "TSn_0_50_C")
+	field(ELVL, "10")
+	field(ELST, "TSn_PT100")
+	field(TVVL, "11")
+	field(TVST, "TSn_TC")
+	field(TTVL, "12")
+	field(TTST, "COLL_DISP")
+	field(FTVL, "13")
+	field(FTST, "BODY_DISP")
+	field(SXVL, "27")
+	field(SXST, "ISn_IP")
+	field(NOBT, "8")
+	field(SHFT, "0")
+}
+
+record(longin, "$(PREFIX):RFS-VacPS-120:I-ERR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/44+12 T=INT16" )
+}
+
+record(ai, "$(PREFIX):RFS-VacPS-120:I-HIHI-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/44+14 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-VacPS-120:I-HIHI-INT")
+}
+
+record(ai, "$(PREFIX):RFS-VacPS-120:I-HIGH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/44+18 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-VacPS-120:I-HIGH-INT")
+}
+
+record(ai, "$(PREFIX):RFS-VacPS-120:I-LOW-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/44+22 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-VacPS-120:I-LOW-INT")
+}
+
+record(ai, "$(PREFIX):RFS-VacPS-120:I-LOLO-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/44+26 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-VacPS-120:I-LOLO-INT")
+}
+
+record(ai, "$(PREFIX):RFS-VacPS-120:I-AOFF-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/44+30 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-VacPS-120:I-AOFF-INT")
+}
+
+record(ai, "$(PREFIX):RFS-VacPS-120:I-SVAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/44+34 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-VacPS-120:I-SVAL-INT")
+}
+
+record(ai, "$(PREFIX):RFS-VacPS-120:I")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(DESC, "Ion-pump-02 current")
+	field(INP, "@PLCAF/44+38 T=REAL32" )
+	field(MDEL, "-1")
+	field(PREC, "2")
+	field(EGU, "uA")
+	field(SIMS, "MINOR")
+	field(HHSV, "MAJOR")
+	field(HSV,  "MINOR")
+	field(LSV, "MINOR")
+	field(LLSV, "MAJOR")
+}
+
+record(longin, "$(PREFIX):RFS-VacPS-120:I-VAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/44+42 T=INT16" )
+	field(MDEL, "-1")
+}
+
+#record(bi, "$(PREFIX):RFS-Coll-110:TC_TOP")
+#{
+#        field(DESC, "Collector top TC")
+#}
+
+record(bi, "$(PREFIX):RFS-Coll-110:TC_TOP-WRN-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/88+0 T=INT8 B=0" )
+	field(ZNAM, "OK")
+        field(ONAM, "WRN")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Coll-110:TC_TOP-INT-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/88+0 T=INT8 B=1" )
+	field(ZNAM, "OK")
+        field(ONAM, "ITLCK")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MAJOR")
+}
+
+record(bi, "$(PREFIX):RFS-Coll-110:TC_TOP-DIS-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/88+0 T=INT8 B=2" )
+	field(FLNK, "$(PREFIX):RFS-Coll-110:TC_TOP-DIS-INT")
+	field(ZNAM, "ENA")
+        field(ONAM, "DIS")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Coll-110:TC_TOP-FRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/88+0 T=INT8 B=3" )
+	field(FLNK, "$(PREFIX):RFS-Coll-110:TC_TOP-FRC-INT")
+	field(ZNAM, "N-SIMM")
+        field(ONAM, "SIMM")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Coll-110:TC_TOP-NFRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/88+0 T=INT8 B=4" )
+	field(ZNAM, "C-SIMM")
+        field(ONAM, "N-SIMM")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Coll-110:TC_TOP-NLTCH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/88+0 T=INT8 B=5" )
+	field(ZNAM, "LTCHD")
+        field(ONAM, "N-LTCHD")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Coll-110:TC_TOP-ISFRST-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/88+0 T=INT8 B=6" )
+}
+
+record(bi, "$(PREFIX):RFS-Coll-110:TC_TOP-LOALR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/88+0 T=INT8 B=7" )
+}
+
+record(bi, "$(PREFIX):RFS-Coll-110:TC_TOP-HIALR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/88+1 T=INT8 B=0" )
+}
+
+record(waveform, "$(PREFIX):RFS-Coll-110:TC_TOP-TMSTMP-RB")
+{
+	field(SCAN, "I/O Intr")
+	field(DTYP, "S7plc")
+	field(INP, "@PLCAF/88+2 T=TIME")
+	field(FTVL, "CHAR")
+	field(NELM, "8")
+}
+
+#record(longin, "$(PREFIX):RFS-Coll-110:TC_TOP-DTYP-RB")
+#{
+#	field(DTYP, "S7plc")
+#	field(SCAN, "I/O Intr")
+#	field(INP, "@PLCAF/88+10 T=BYTE" )
+#}
+
+record(mbbi, "$(PREFIX):RFS-Coll-110:TC_TOP-DTYP-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/88+10 T=BYTE" )
+    	field(ZRVL, "0")
+	field(ZRST, "Unknow")
+	field(ONVL, "1")
+	field(ONST, "TSn")
+	field(TWVL, "2")
+	field(TWST, "PSn")
+	field(THVL, "3")
+	field(THST, "VSn_0_10v")
+	field(FRVL, "4")
+	field(FRST, "ISn_0_20mA")
+	field(SXVL, "5")
+	field(SXST, "ISn_4_20mA")
+	field(SVVL, "6")
+	field(SVST, "FSn_05_80_l_min")
+	field(EIVL, "7")
+	field(EIST, "FSn_8_1000_l_min")
+	field(NIVL, "8")
+	field(NIST, "PSn_0_10_bar")
+	field(TEVL, "9")
+	field(TEST, "TSn_0_50_C")
+	field(ELVL, "10")
+	field(ELST, "TSn_PT100")
+	field(TVVL, "11")
+	field(TVST, "TSn_TC")
+	field(TTVL, "12")
+	field(TTST, "COLL_DISP")
+	field(FTVL, "13")
+	field(FTST, "BODY_DISP")
+	field(SXVL, "27")
+	field(SXST, "ISn_IP")
+	field(NOBT, "8")
+	field(SHFT, "0")
+}
+
+record(longin, "$(PREFIX):RFS-Coll-110:TC_TOP-ERR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/88+12 T=INT16" )
+}
+
+record(ai, "$(PREFIX):RFS-Coll-110:TC_TOP-HIHI-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/88+14 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Coll-110:TC_TOP-HIHI-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Coll-110:TC_TOP-HIGH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/88+18 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Coll-110:TC_TOP-HIGH-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Coll-110:TC_TOP-LOW-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/88+22 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Coll-110:TC_TOP-LOW-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Coll-110:TC_TOP-LOLO-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/88+26 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Coll-110:TC_TOP-LOLO-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Coll-110:TC_TOP-AOFF-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/88+30 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Coll-110:TC_TOP-AOFF-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Coll-110:TC_TOP-SVAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/88+34 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Coll-110:TC_TOP-SVAL-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Coll-110:TC_TOP")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(DESC, "Collector top TC")
+	field(INP, "@PLCAF/88+38 T=REAL32" )
+	field(MDEL, "-1")
+	field(PREC, "2")
+	field(EGU, "C")
+	field(SIMS, "MINOR")
+	field(HHSV, "MAJOR")
+	field(HSV,  "MINOR")
+	field(LSV, "MINOR")
+	field(LLSV, "MAJOR")
+}
+
+record(longin, "$(PREFIX):RFS-Coll-110:TC_TOP-VAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/88+42 T=INT16" )
+	field(MDEL, "-1")
+}
+
+#record(bi, "$(PREFIX):RFS-Coll-120:TC_EDGE")
+#{
+#        field(DESC, "Collector edge TC")
+#}
+
+record(bi, "$(PREFIX):RFS-Coll-120:TC_EDGE-WRN-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/132+0 T=INT8 B=0" )
+	field(ZNAM, "OK")
+        field(ONAM, "WRN")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Coll-120:TC_EDGE-INT-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/132+0 T=INT8 B=1" )
+	field(ZNAM, "OK")
+        field(ONAM, "ITLCK")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MAJOR")
+}
+
+record(bi, "$(PREFIX):RFS-Coll-120:TC_EDGE-DIS-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/132+0 T=INT8 B=2" )
+	field(FLNK, "$(PREFIX):RFS-Coll-120:TC_EDGE-DIS-INT")
+	field(ZNAM, "ENA")
+        field(ONAM, "DIS")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Coll-120:TC_EDGE-FRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/132+0 T=INT8 B=3" )
+	field(FLNK, "$(PREFIX):RFS-Coll-120:TC_EDGE-FRC-INT")
+	field(ZNAM, "N-SIMM")
+        field(ONAM, "SIMM")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Coll-120:TC_EDGE-NFRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/132+0 T=INT8 B=4" )
+	field(ZNAM, "C-SIMM")
+        field(ONAM, "N-SIMM")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Coll-120:TC_EDGE-NLTCH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/132+0 T=INT8 B=5" )
+	field(ZNAM, "LTCHD")
+        field(ONAM, "N-LTCHD")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Coll-120:TC_EDGE-ISFRST-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/132+0 T=INT8 B=6" )
+}
+
+record(bi, "$(PREFIX):RFS-Coll-120:TC_EDGE-LOALR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/132+0 T=INT8 B=7" )
+}
+
+record(bi, "$(PREFIX):RFS-Coll-120:TC_EDGE-HIALR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/132+1 T=INT8 B=0" )
+}
+
+record(waveform, "$(PREFIX):RFS-Coll-120:TC_EDGE-TMSTMP-RB")
+{
+	field(SCAN, "I/O Intr")
+	field(DTYP, "S7plc")
+	field(INP, "@PLCAF/132+2 T=TIME")
+	field(FTVL, "CHAR")
+	field(NELM, "8")
+}
+
+#record(longin, "$(PREFIX):RFS-Coll-120:TC_EDGE-DTYP-RB")
+#{
+#	field(DTYP, "S7plc")
+#	field(SCAN, "I/O Intr")
+#	field(INP, "@PLCAF/132+10 T=BYTE" )
+#}
+
+record(mbbi, "$(PREFIX):RFS-Coll-120:TC_EDGE-DTYP-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/132+10 T=BYTE" )
+    	field(ZRVL, "0")
+	field(ZRST, "Unknow")
+	field(ONVL, "1")
+	field(ONST, "TSn")
+	field(TWVL, "2")
+	field(TWST, "PSn")
+	field(THVL, "3")
+	field(THST, "VSn_0_10v")
+	field(FRVL, "4")
+	field(FRST, "ISn_0_20mA")
+	field(SXVL, "5")
+	field(SXST, "ISn_4_20mA")
+	field(SVVL, "6")
+	field(SVST, "FSn_05_80_l_min")
+	field(EIVL, "7")
+	field(EIST, "FSn_8_1000_l_min")
+	field(NIVL, "8")
+	field(NIST, "PSn_0_10_bar")
+	field(TEVL, "9")
+	field(TEST, "TSn_0_50_C")
+	field(ELVL, "10")
+	field(ELST, "TSn_PT100")
+	field(TVVL, "11")
+	field(TVST, "TSn_TC")
+	field(TTVL, "12")
+	field(TTST, "COLL_DISP")
+	field(FTVL, "13")
+	field(FTST, "BODY_DISP")
+	field(SXVL, "27")
+	field(SXST, "ISn_IP")
+	field(NOBT, "8")
+	field(SHFT, "0")
+}
+
+record(longin, "$(PREFIX):RFS-Coll-120:TC_EDGE-ERR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/132+12 T=INT16" )
+}
+
+record(ai, "$(PREFIX):RFS-Coll-120:TC_EDGE-HIHI-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/132+14 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Coll-120:TC_EDGE-HIHI-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Coll-120:TC_EDGE-HIGH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/132+18 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Coll-120:TC_EDGE-HIGH-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Coll-120:TC_EDGE-LOW-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/132+22 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Coll-120:TC_EDGE-LOW-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Coll-120:TC_EDGE-LOLO-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/132+26 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Coll-120:TC_EDGE-LOLO-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Coll-120:TC_EDGE-AOFF-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/132+30 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Coll-120:TC_EDGE-AOFF-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Coll-120:TC_EDGE-SVAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/132+34 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Coll-120:TC_EDGE-SVAL-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Coll-120:TC_EDGE")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(DESC, "Collector edge TC")
+	field(INP, "@PLCAF/132+38 T=REAL32" )
+	field(MDEL, "-1")
+	field(PREC, "2")
+	field(EGU, "C")
+	field(SIMS, "MINOR")
+	field(HHSV, "MAJOR")
+	field(HSV,  "MINOR")
+	field(LSV, "MINOR")
+	field(LLSV, "MAJOR")
+}
+
+record(longin, "$(PREFIX):RFS-Coll-120:TC_EDGE-VAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/132+42 T=INT16" )
+	field(MDEL, "-1")
+}
+
+#record(bi, "$(PREFIX):RFS-Body-110:TT")
+#{
+#        field(DESC, "Body water inlet temp")
+#}
+
+record(bi, "$(PREFIX):RFS-Body-110:TT-WRN-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/176+0 T=INT8 B=0" )
+	field(ZNAM, "OK")
+        field(ONAM, "WRN")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Body-110:TT-INT-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/176+0 T=INT8 B=1" )
+	field(ZNAM, "OK")
+        field(ONAM, "ITLCK")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MAJOR")
+}
+
+record(bi, "$(PREFIX):RFS-Body-110:TT-DIS-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/176+0 T=INT8 B=2" )
+	field(FLNK, "$(PREFIX):RFS-Body-110:TT-DIS-INT")
+	field(ZNAM, "ENA")
+        field(ONAM, "DIS")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Body-110:TT-FRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/176+0 T=INT8 B=3" )
+	field(FLNK, "$(PREFIX):RFS-Body-110:TT-FRC-INT")
+	field(ZNAM, "N-SIMM")
+        field(ONAM, "SIMM")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Body-110:TT-NFRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/176+0 T=INT8 B=4" )
+	field(ZNAM, "C-SIMM")
+        field(ONAM, "N-SIMM")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Body-110:TT-NLTCH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/176+0 T=INT8 B=5" )
+	field(ZNAM, "LTCHD")
+        field(ONAM, "N-LTCHD")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Body-110:TT-ISFRST-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/176+0 T=INT8 B=6" )
+}
+
+record(bi, "$(PREFIX):RFS-Body-110:TT-LOALR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/176+0 T=INT8 B=7" )
+}
+
+record(bi, "$(PREFIX):RFS-Body-110:TT-HIALR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/176+1 T=INT8 B=0" )
+}
+
+record(waveform, "$(PREFIX):RFS-Body-110:TT-TMSTMP-RB")
+{
+	field(SCAN, "I/O Intr")
+	field(DTYP, "S7plc")
+	field(INP, "@PLCAF/176+2 T=TIME")
+	field(FTVL, "CHAR")
+	field(NELM, "8")
+}
+
+#record(longin, "$(PREFIX):RFS-Body-110:TT-DTYP-RB")
+#{
+#	field(DTYP, "S7plc")
+#	field(SCAN, "I/O Intr")
+#	field(INP, "@PLCAF/176+10 T=BYTE" )
+#}
+
+record(mbbi, "$(PREFIX):RFS-Body-110:TT-DTYP-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/176+10 T=BYTE" )
+    	field(ZRVL, "0")
+	field(ZRST, "Unknow")
+	field(ONVL, "1")
+	field(ONST, "TSn")
+	field(TWVL, "2")
+	field(TWST, "PSn")
+	field(THVL, "3")
+	field(THST, "VSn_0_10v")
+	field(FRVL, "4")
+	field(FRST, "ISn_0_20mA")
+	field(SXVL, "5")
+	field(SXST, "ISn_4_20mA")
+	field(SVVL, "6")
+	field(SVST, "FSn_05_80_l_min")
+	field(EIVL, "7")
+	field(EIST, "FSn_8_1000_l_min")
+	field(NIVL, "8")
+	field(NIST, "PSn_0_10_bar")
+	field(TEVL, "9")
+	field(TEST, "TSn_0_50_C")
+	field(ELVL, "10")
+	field(ELST, "TSn_PT100")
+	field(TVVL, "11")
+	field(TVST, "TSn_TC")
+	field(TTVL, "12")
+	field(TTST, "COLL_DISP")
+	field(FTVL, "13")
+	field(FTST, "BODY_DISP")
+	field(SXVL, "27")
+	field(SXST, "ISn_IP")
+	field(NOBT, "8")
+	field(SHFT, "0")
+}
+
+record(longin, "$(PREFIX):RFS-Body-110:TT-ERR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/176+12 T=INT16" )
+}
+
+record(ai, "$(PREFIX):RFS-Body-110:TT-HIHI-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/176+14 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Body-110:TT-HIHI-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Body-110:TT-HIGH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/176+18 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Body-110:TT-HIGH-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Body-110:TT-LOW-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/176+22 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Body-110:TT-LOW-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Body-110:TT-LOLO-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/176+26 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Body-110:TT-LOLO-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Body-110:TT-AOFF-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/176+30 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Body-110:TT-AOFF-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Body-110:TT-SVAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/176+34 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Body-110:TT-SVAL-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Body-110:TT")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(DESC, "Body water inlet temp")
+	field(INP, "@PLCAF/176+38 T=REAL32" )
+	field(MDEL, "-1")
+	field(PREC, "2")
+	field(EGU, "C")
+	field(SIMS, "MINOR")
+	field(HHSV, "MAJOR")
+	field(HSV,  "MINOR")
+	field(LSV, "MINOR")
+	field(LLSV, "MAJOR")
+}
+
+record(longin, "$(PREFIX):RFS-Body-110:TT-VAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/176+42 T=INT16" )
+	field(MDEL, "-1")
+}
+
+#record(bi, "$(PREFIX):RFS-Body-120:TT")
+#{
+#        field(DESC, "Body water outlet temp")
+#}
+
+record(bi, "$(PREFIX):RFS-Body-120:TT-WRN-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/220+0 T=INT8 B=0" )
+	field(ZNAM, "OK")
+        field(ONAM, "WRN")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Body-120:TT-INT-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/220+0 T=INT8 B=1" )
+	field(ZNAM, "OK")
+        field(ONAM, "ITLCK")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MAJOR")
+}
+
+record(bi, "$(PREFIX):RFS-Body-120:TT-DIS-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/220+0 T=INT8 B=2" )
+	field(FLNK, "$(PREFIX):RFS-Body-120:TT-DIS-INT")
+	field(ZNAM, "ENA")
+        field(ONAM, "DIS")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Body-120:TT-FRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/220+0 T=INT8 B=3" )
+	field(FLNK, "$(PREFIX):RFS-Body-120:TT-FRC-INT")
+	field(ZNAM, "N-SIMM")
+        field(ONAM, "SIMM")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Body-120:TT-NFRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/220+0 T=INT8 B=4" )
+	field(ZNAM, "C-SIMM")
+        field(ONAM, "N-SIMM")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Body-120:TT-NLTCH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/220+0 T=INT8 B=5" )
+	field(ZNAM, "LTCHD")
+        field(ONAM, "N-LTCHD")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Body-120:TT-ISFRST-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/220+0 T=INT8 B=6" )
+}
+
+record(bi, "$(PREFIX):RFS-Body-120:TT-LOALR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/220+0 T=INT8 B=7" )
+}
+
+record(bi, "$(PREFIX):RFS-Body-120:TT-HIALR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/220+1 T=INT8 B=0" )
+}
+
+record(waveform, "$(PREFIX):RFS-Body-120:TT-TMSTMP-RB")
+{
+	field(SCAN, "I/O Intr")
+	field(DTYP, "S7plc")
+	field(INP, "@PLCAF/220+2 T=TIME")
+	field(FTVL, "CHAR")
+	field(NELM, "8")
+}
+
+#record(longin, "$(PREFIX):RFS-Body-120:TT-DTYP-RB")
+#{
+#	field(DTYP, "S7plc")
+#	field(SCAN, "I/O Intr")
+#	field(INP, "@PLCAF/220+10 T=BYTE" )
+#}
+
+record(mbbi, "$(PREFIX):RFS-Body-120:TT-DTYP-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/220+10 T=BYTE" )
+    	field(ZRVL, "0")
+	field(ZRST, "Unknow")
+	field(ONVL, "1")
+	field(ONST, "TSn")
+	field(TWVL, "2")
+	field(TWST, "PSn")
+	field(THVL, "3")
+	field(THST, "VSn_0_10v")
+	field(FRVL, "4")
+	field(FRST, "ISn_0_20mA")
+	field(SXVL, "5")
+	field(SXST, "ISn_4_20mA")
+	field(SVVL, "6")
+	field(SVST, "FSn_05_80_l_min")
+	field(EIVL, "7")
+	field(EIST, "FSn_8_1000_l_min")
+	field(NIVL, "8")
+	field(NIST, "PSn_0_10_bar")
+	field(TEVL, "9")
+	field(TEST, "TSn_0_50_C")
+	field(ELVL, "10")
+	field(ELST, "TSn_PT100")
+	field(TVVL, "11")
+	field(TVST, "TSn_TC")
+	field(TTVL, "12")
+	field(TTST, "COLL_DISP")
+	field(FTVL, "13")
+	field(FTST, "BODY_DISP")
+	field(SXVL, "27")
+	field(SXST, "ISn_IP")
+	field(NOBT, "8")
+	field(SHFT, "0")
+}
+
+record(longin, "$(PREFIX):RFS-Body-120:TT-ERR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/220+12 T=INT16" )
+}
+
+record(ai, "$(PREFIX):RFS-Body-120:TT-HIHI-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/220+14 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Body-120:TT-HIHI-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Body-120:TT-HIGH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/220+18 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Body-120:TT-HIGH-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Body-120:TT-LOW-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/220+22 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Body-120:TT-LOW-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Body-120:TT-LOLO-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/220+26 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Body-120:TT-LOLO-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Body-120:TT-AOFF-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/220+30 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Body-120:TT-AOFF-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Body-120:TT-SVAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/220+34 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Body-120:TT-SVAL-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Body-120:TT")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(DESC, "Body water outlet temp")
+	field(INP, "@PLCAF/220+38 T=REAL32" )
+	field(MDEL, "-1")
+	field(PREC, "2")
+	field(EGU, "C")
+	field(SIMS, "MINOR")
+	field(HHSV, "MAJOR")
+	field(HSV,  "MINOR")
+	field(LSV, "MINOR")
+	field(LLSV, "MAJOR")
+}
+
+record(longin, "$(PREFIX):RFS-Body-120:TT-VAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/220+42 T=INT16" )
+	field(MDEL, "-1")
+}
+
+#record(bi, "$(PREFIX):RFS-Win-110:TT")
+#{
+#        field(DESC, "Window outer sleeve temp")
+#}
+
+record(bi, "$(PREFIX):RFS-Win-110:TT-WRN-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/264+0 T=INT8 B=0" )
+	field(ZNAM, "OK")
+        field(ONAM, "WRN")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Win-110:TT-INT-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/264+0 T=INT8 B=1" )
+	field(ZNAM, "OK")
+        field(ONAM, "ITLCK")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MAJOR")
+}
+
+record(bi, "$(PREFIX):RFS-Win-110:TT-DIS-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/264+0 T=INT8 B=2" )
+	field(FLNK, "$(PREFIX):RFS-Win-110:TT-DIS-INT")
+	field(ZNAM, "ENA")
+        field(ONAM, "DIS")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Win-110:TT-FRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/264+0 T=INT8 B=3" )
+	field(FLNK, "$(PREFIX):RFS-Win-110:TT-FRC-INT")
+	field(ZNAM, "N-SIMM")
+        field(ONAM, "SIMM")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Win-110:TT-NFRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/264+0 T=INT8 B=4" )
+	field(ZNAM, "C-SIMM")
+        field(ONAM, "N-SIMM")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Win-110:TT-NLTCH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/264+0 T=INT8 B=5" )
+	field(ZNAM, "LTCHD")
+        field(ONAM, "N-LTCHD")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Win-110:TT-ISFRST-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/264+0 T=INT8 B=6" )
+}
+
+record(bi, "$(PREFIX):RFS-Win-110:TT-LOALR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/264+0 T=INT8 B=7" )
+}
+
+record(bi, "$(PREFIX):RFS-Win-110:TT-HIALR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/264+1 T=INT8 B=0" )
+}
+
+record(waveform, "$(PREFIX):RFS-Win-110:TT-TMSTMP-RB")
+{
+	field(SCAN, "I/O Intr")
+	field(DTYP, "S7plc")
+	field(INP, "@PLCAF/264+2 T=TIME")
+	field(FTVL, "CHAR")
+	field(NELM, "8")
+}
+
+#record(longin, "$(PREFIX):RFS-Win-110:TT-DTYP-RB")
+#{
+#	field(DTYP, "S7plc")
+#	field(SCAN, "I/O Intr")
+#	field(INP, "@PLCAF/264+10 T=BYTE" )
+#}
+
+record(mbbi, "$(PREFIX):RFS-Win-110:TT-DTYP-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/264+10 T=BYTE" )
+    	field(ZRVL, "0")
+	field(ZRST, "Unknow")
+	field(ONVL, "1")
+	field(ONST, "TSn")
+	field(TWVL, "2")
+	field(TWST, "PSn")
+	field(THVL, "3")
+	field(THST, "VSn_0_10v")
+	field(FRVL, "4")
+	field(FRST, "ISn_0_20mA")
+	field(SXVL, "5")
+	field(SXST, "ISn_4_20mA")
+	field(SVVL, "6")
+	field(SVST, "FSn_05_80_l_min")
+	field(EIVL, "7")
+	field(EIST, "FSn_8_1000_l_min")
+	field(NIVL, "8")
+	field(NIST, "PSn_0_10_bar")
+	field(TEVL, "9")
+	field(TEST, "TSn_0_50_C")
+	field(ELVL, "10")
+	field(ELST, "TSn_PT100")
+	field(TVVL, "11")
+	field(TVST, "TSn_TC")
+	field(TTVL, "12")
+	field(TTST, "COLL_DISP")
+	field(FTVL, "13")
+	field(FTST, "BODY_DISP")
+	field(SXVL, "27")
+	field(SXST, "ISn_IP")
+	field(NOBT, "8")
+	field(SHFT, "0")
+}
+
+record(longin, "$(PREFIX):RFS-Win-110:TT-ERR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/264+12 T=INT16" )
+}
+
+record(ai, "$(PREFIX):RFS-Win-110:TT-HIHI-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/264+14 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Win-110:TT-HIHI-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Win-110:TT-HIGH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/264+18 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Win-110:TT-HIGH-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Win-110:TT-LOW-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/264+22 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Win-110:TT-LOW-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Win-110:TT-LOLO-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/264+26 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Win-110:TT-LOLO-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Win-110:TT-AOFF-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/264+30 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Win-110:TT-AOFF-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Win-110:TT-SVAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/264+34 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Win-110:TT-SVAL-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Win-110:TT")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(DESC, "Window outer sleeve temp")
+	field(INP, "@PLCAF/264+38 T=REAL32" )
+	field(MDEL, "-1")
+	field(PREC, "2")
+	field(EGU, "C")
+	field(SIMS, "MINOR")
+	field(HHSV, "MAJOR")
+	field(HSV,  "MINOR")
+	field(LSV, "MINOR")
+	field(LLSV, "MAJOR")
+}
+
+record(longin, "$(PREFIX):RFS-Win-110:TT-VAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/264+42 T=INT16" )
+	field(MDEL, "-1")
+}
+
+#record(bi, "$(PREFIX):RFS-Win-120:TT")
+#{
+#        field(DESC, "Window outlet temp")
+#}
+
+record(bi, "$(PREFIX):RFS-Win-120:TT-WRN-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/308+0 T=INT8 B=0" )
+	field(ZNAM, "OK")
+        field(ONAM, "WRN")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Win-120:TT-INT-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/308+0 T=INT8 B=1" )
+	field(ZNAM, "OK")
+        field(ONAM, "ITLCK")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MAJOR")
+}
+
+record(bi, "$(PREFIX):RFS-Win-120:TT-DIS-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/308+0 T=INT8 B=2" )
+	field(FLNK, "$(PREFIX):RFS-Win-120:TT-DIS-INT")
+	field(ZNAM, "ENA")
+        field(ONAM, "DIS")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Win-120:TT-FRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/308+0 T=INT8 B=3" )
+	field(FLNK, "$(PREFIX):RFS-Win-120:TT-FRC-INT")
+	field(ZNAM, "N-SIMM")
+        field(ONAM, "SIMM")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Win-120:TT-NFRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/308+0 T=INT8 B=4" )
+	field(ZNAM, "C-SIMM")
+        field(ONAM, "N-SIMM")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Win-120:TT-NLTCH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/308+0 T=INT8 B=5" )
+	field(ZNAM, "LTCHD")
+        field(ONAM, "N-LTCHD")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Win-120:TT-ISFRST-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/308+0 T=INT8 B=6" )
+}
+
+record(bi, "$(PREFIX):RFS-Win-120:TT-LOALR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/308+0 T=INT8 B=7" )
+}
+
+record(bi, "$(PREFIX):RFS-Win-120:TT-HIALR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/308+1 T=INT8 B=0" )
+}
+
+record(waveform, "$(PREFIX):RFS-Win-120:TT-TMSTMP-RB")
+{
+	field(SCAN, "I/O Intr")
+	field(DTYP, "S7plc")
+	field(INP, "@PLCAF/308+2 T=TIME")
+	field(FTVL, "CHAR")
+	field(NELM, "8")
+}
+
+#record(longin, "$(PREFIX):RFS-Win-120:TT-DTYP-RB")
+#{
+#	field(DTYP, "S7plc")
+#	field(SCAN, "I/O Intr")
+#	field(INP, "@PLCAF/308+10 T=BYTE" )
+#}
+
+record(mbbi, "$(PREFIX):RFS-Win-120:TT-DTYP-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/308+10 T=BYTE" )
+    	field(ZRVL, "0")
+	field(ZRST, "Unknow")
+	field(ONVL, "1")
+	field(ONST, "TSn")
+	field(TWVL, "2")
+	field(TWST, "PSn")
+	field(THVL, "3")
+	field(THST, "VSn_0_10v")
+	field(FRVL, "4")
+	field(FRST, "ISn_0_20mA")
+	field(SXVL, "5")
+	field(SXST, "ISn_4_20mA")
+	field(SVVL, "6")
+	field(SVST, "FSn_05_80_l_min")
+	field(EIVL, "7")
+	field(EIST, "FSn_8_1000_l_min")
+	field(NIVL, "8")
+	field(NIST, "PSn_0_10_bar")
+	field(TEVL, "9")
+	field(TEST, "TSn_0_50_C")
+	field(ELVL, "10")
+	field(ELST, "TSn_PT100")
+	field(TVVL, "11")
+	field(TVST, "TSn_TC")
+	field(TTVL, "12")
+	field(TTST, "COLL_DISP")
+	field(FTVL, "13")
+	field(FTST, "BODY_DISP")
+	field(SXVL, "27")
+	field(SXST, "ISn_IP")
+	field(NOBT, "8")
+	field(SHFT, "0")
+}
+
+record(longin, "$(PREFIX):RFS-Win-120:TT-ERR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/308+12 T=INT16" )
+}
+
+record(ai, "$(PREFIX):RFS-Win-120:TT-HIHI-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/308+14 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Win-120:TT-HIHI-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Win-120:TT-HIGH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/308+18 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Win-120:TT-HIGH-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Win-120:TT-LOW-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/308+22 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Win-120:TT-LOW-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Win-120:TT-LOLO-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/308+26 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Win-120:TT-LOLO-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Win-120:TT-AOFF-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/308+30 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Win-120:TT-AOFF-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Win-120:TT-SVAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/308+34 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Win-120:TT-SVAL-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Win-120:TT")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(DESC, "Window outlet temp")
+	field(INP, "@PLCAF/308+38 T=REAL32" )
+	field(MDEL, "-1")
+	field(PREC, "2")
+	field(EGU, "C")
+	field(SIMS, "MINOR")
+	field(HHSV, "MAJOR")
+	field(HSV,  "MINOR")
+	field(LSV, "MINOR")
+	field(LLSV, "MAJOR")
+}
+
+record(longin, "$(PREFIX):RFS-Win-120:TT-VAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/308+42 T=INT16" )
+	field(MDEL, "-1")
+}
+
+#record(bi, "$(PREFIX):RFS-Sol-110:TT")
+#{
+#        field(DESC, "Solenoid water inlet temp")
+#}
+
+record(bi, "$(PREFIX):RFS-Sol-110:TT-WRN-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/352+0 T=INT8 B=0" )
+	field(ZNAM, "OK")
+        field(ONAM, "WRN")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Sol-110:TT-INT-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/352+0 T=INT8 B=1" )
+	field(ZNAM, "OK")
+        field(ONAM, "ITLCK")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MAJOR")
+}
+
+record(bi, "$(PREFIX):RFS-Sol-110:TT-DIS-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/352+0 T=INT8 B=2" )
+	field(FLNK, "$(PREFIX):RFS-Sol-110:TT-DIS-INT")
+	field(ZNAM, "ENA")
+        field(ONAM, "DIS")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Sol-110:TT-FRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/352+0 T=INT8 B=3" )
+	field(FLNK, "$(PREFIX):RFS-Sol-110:TT-FRC-INT")
+	field(ZNAM, "N-SIMM")
+        field(ONAM, "SIMM")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Sol-110:TT-NFRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/352+0 T=INT8 B=4" )
+	field(ZNAM, "C-SIMM")
+        field(ONAM, "N-SIMM")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Sol-110:TT-NLTCH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/352+0 T=INT8 B=5" )
+	field(ZNAM, "LTCHD")
+        field(ONAM, "N-LTCHD")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Sol-110:TT-ISFRST-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/352+0 T=INT8 B=6" )
+}
+
+record(bi, "$(PREFIX):RFS-Sol-110:TT-LOALR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/352+0 T=INT8 B=7" )
+}
+
+record(bi, "$(PREFIX):RFS-Sol-110:TT-HIALR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/352+1 T=INT8 B=0" )
+}
+
+record(waveform, "$(PREFIX):RFS-Sol-110:TT-TMSTMP-RB")
+{
+	field(SCAN, "I/O Intr")
+	field(DTYP, "S7plc")
+	field(INP, "@PLCAF/352+2 T=TIME")
+	field(FTVL, "CHAR")
+	field(NELM, "8")
+}
+
+#record(longin, "$(PREFIX):RFS-Sol-110:TT-DTYP-RB")
+#{
+#	field(DTYP, "S7plc")
+#	field(SCAN, "I/O Intr")
+#	field(INP, "@PLCAF/352+10 T=BYTE" )
+#}
+
+record(mbbi, "$(PREFIX):RFS-Sol-110:TT-DTYP-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/352+10 T=BYTE" )
+    	field(ZRVL, "0")
+	field(ZRST, "Unknow")
+	field(ONVL, "1")
+	field(ONST, "TSn")
+	field(TWVL, "2")
+	field(TWST, "PSn")
+	field(THVL, "3")
+	field(THST, "VSn_0_10v")
+	field(FRVL, "4")
+	field(FRST, "ISn_0_20mA")
+	field(SXVL, "5")
+	field(SXST, "ISn_4_20mA")
+	field(SVVL, "6")
+	field(SVST, "FSn_05_80_l_min")
+	field(EIVL, "7")
+	field(EIST, "FSn_8_1000_l_min")
+	field(NIVL, "8")
+	field(NIST, "PSn_0_10_bar")
+	field(TEVL, "9")
+	field(TEST, "TSn_0_50_C")
+	field(ELVL, "10")
+	field(ELST, "TSn_PT100")
+	field(TVVL, "11")
+	field(TVST, "TSn_TC")
+	field(TTVL, "12")
+	field(TTST, "COLL_DISP")
+	field(FTVL, "13")
+	field(FTST, "BODY_DISP")
+	field(SXVL, "27")
+	field(SXST, "ISn_IP")
+	field(NOBT, "8")
+	field(SHFT, "0")
+}
+
+record(longin, "$(PREFIX):RFS-Sol-110:TT-ERR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/352+12 T=INT16" )
+}
+
+record(ai, "$(PREFIX):RFS-Sol-110:TT-HIHI-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/352+14 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-110:TT-HIHI-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Sol-110:TT-HIGH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/352+18 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-110:TT-HIGH-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Sol-110:TT-LOW-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/352+22 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-110:TT-LOW-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Sol-110:TT-LOLO-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/352+26 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-110:TT-LOLO-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Sol-110:TT-AOFF-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/352+30 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-110:TT-AOFF-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Sol-110:TT-SVAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/352+34 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-110:TT-SVAL-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Sol-110:TT")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(DESC, "Solenoid water inlet temp")
+	field(INP, "@PLCAF/352+38 T=REAL32" )
+	field(MDEL, "-1")
+	field(PREC, "2")
+	field(EGU, "C")
+	field(SIMS, "MINOR")
+	field(HHSV, "MAJOR")
+	field(HSV,  "MINOR")
+	field(LSV, "MINOR")
+	field(LLSV, "MAJOR")
+}
+
+record(longin, "$(PREFIX):RFS-Sol-110:TT-VAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/352+42 T=INT16" )
+	field(MDEL, "-1")
+}
+
+#record(bi, "$(PREFIX):RFS-Sol-120:TT")
+#{
+#        field(DESC, "Solenoid water outlet temp")
+#}
+
+record(bi, "$(PREFIX):RFS-Sol-120:TT-WRN-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/396+0 T=INT8 B=0" )
+	field(ZNAM, "OK")
+        field(ONAM, "WRN")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Sol-120:TT-INT-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/396+0 T=INT8 B=1" )
+	field(ZNAM, "OK")
+        field(ONAM, "ITLCK")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MAJOR")
+}
+
+record(bi, "$(PREFIX):RFS-Sol-120:TT-DIS-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/396+0 T=INT8 B=2" )
+	field(FLNK, "$(PREFIX):RFS-Sol-120:TT-DIS-INT")
+	field(ZNAM, "ENA")
+        field(ONAM, "DIS")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Sol-120:TT-FRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/396+0 T=INT8 B=3" )
+	field(FLNK, "$(PREFIX):RFS-Sol-120:TT-FRC-INT")
+	field(ZNAM, "N-SIMM")
+        field(ONAM, "SIMM")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Sol-120:TT-NFRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/396+0 T=INT8 B=4" )
+	field(ZNAM, "C-SIMM")
+        field(ONAM, "N-SIMM")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Sol-120:TT-NLTCH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/396+0 T=INT8 B=5" )
+	field(ZNAM, "LTCHD")
+        field(ONAM, "N-LTCHD")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Sol-120:TT-ISFRST-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/396+0 T=INT8 B=6" )
+}
+
+record(bi, "$(PREFIX):RFS-Sol-120:TT-LOALR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/396+0 T=INT8 B=7" )
+}
+
+record(bi, "$(PREFIX):RFS-Sol-120:TT-HIALR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/396+1 T=INT8 B=0" )
+}
+
+record(waveform, "$(PREFIX):RFS-Sol-120:TT-TMSTMP-RB")
+{
+	field(SCAN, "I/O Intr")
+	field(DTYP, "S7plc")
+	field(INP, "@PLCAF/396+2 T=TIME")
+	field(FTVL, "CHAR")
+	field(NELM, "8")
+}
+
+#record(longin, "$(PREFIX):RFS-Sol-120:TT-DTYP-RB")
+#{
+#	field(DTYP, "S7plc")
+#	field(SCAN, "I/O Intr")
+#	field(INP, "@PLCAF/396+10 T=BYTE" )
+#}
+
+record(mbbi, "$(PREFIX):RFS-Sol-120:TT-DTYP-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/396+10 T=BYTE" )
+    	field(ZRVL, "0")
+	field(ZRST, "Unknow")
+	field(ONVL, "1")
+	field(ONST, "TSn")
+	field(TWVL, "2")
+	field(TWST, "PSn")
+	field(THVL, "3")
+	field(THST, "VSn_0_10v")
+	field(FRVL, "4")
+	field(FRST, "ISn_0_20mA")
+	field(SXVL, "5")
+	field(SXST, "ISn_4_20mA")
+	field(SVVL, "6")
+	field(SVST, "FSn_05_80_l_min")
+	field(EIVL, "7")
+	field(EIST, "FSn_8_1000_l_min")
+	field(NIVL, "8")
+	field(NIST, "PSn_0_10_bar")
+	field(TEVL, "9")
+	field(TEST, "TSn_0_50_C")
+	field(ELVL, "10")
+	field(ELST, "TSn_PT100")
+	field(TVVL, "11")
+	field(TVST, "TSn_TC")
+	field(TTVL, "12")
+	field(TTST, "COLL_DISP")
+	field(FTVL, "13")
+	field(FTST, "BODY_DISP")
+	field(SXVL, "27")
+	field(SXST, "ISn_IP")
+	field(NOBT, "8")
+	field(SHFT, "0")
+}
+
+record(longin, "$(PREFIX):RFS-Sol-120:TT-ERR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/396+12 T=INT16" )
+}
+
+record(ai, "$(PREFIX):RFS-Sol-120:TT-HIHI-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/396+14 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-120:TT-HIHI-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Sol-120:TT-HIGH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/396+18 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-120:TT-HIGH-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Sol-120:TT-LOW-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/396+22 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-120:TT-LOW-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Sol-120:TT-LOLO-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/396+26 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-120:TT-LOLO-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Sol-120:TT-AOFF-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/396+30 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-120:TT-AOFF-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Sol-120:TT-SVAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/396+34 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-120:TT-SVAL-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Sol-120:TT")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(DESC, "Solenoid water outlet temp")
+	field(INP, "@PLCAF/396+38 T=REAL32" )
+	field(MDEL, "-1")
+	field(PREC, "2")
+	field(EGU, "C")
+	field(SIMS, "MINOR")
+	field(HHSV, "MAJOR")
+	field(HSV,  "MINOR")
+	field(LSV, "MINOR")
+	field(LLSV, "MAJOR")
+}
+
+record(longin, "$(PREFIX):RFS-Sol-120:TT-VAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/396+42 T=INT16" )
+	field(MDEL, "-1")
+}
+
+#record(bi, "$(PREFIX):RFS-Sol-130:TT")
+#{
+#        field(DESC, "Solenoid coil temperature")
+#}
+
+record(bi, "$(PREFIX):RFS-Sol-130:TT-WRN-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/440+0 T=INT8 B=0" )
+	field(ZNAM, "OK")
+        field(ONAM, "WRN")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Sol-130:TT-INT-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/440+0 T=INT8 B=1" )
+	field(ZNAM, "OK")
+        field(ONAM, "ITLCK")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MAJOR")
+}
+
+record(bi, "$(PREFIX):RFS-Sol-130:TT-DIS-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/440+0 T=INT8 B=2" )
+	field(FLNK, "$(PREFIX):RFS-Sol-130:TT-DIS-INT")
+	field(ZNAM, "ENA")
+        field(ONAM, "DIS")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Sol-130:TT-FRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/440+0 T=INT8 B=3" )
+	field(FLNK, "$(PREFIX):RFS-Sol-130:TT-FRC-INT")
+	field(ZNAM, "N-SIMM")
+        field(ONAM, "SIMM")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Sol-130:TT-NFRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/440+0 T=INT8 B=4" )
+	field(ZNAM, "C-SIMM")
+        field(ONAM, "N-SIMM")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Sol-130:TT-NLTCH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/440+0 T=INT8 B=5" )
+	field(ZNAM, "LTCHD")
+        field(ONAM, "N-LTCHD")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Sol-130:TT-ISFRST-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/440+0 T=INT8 B=6" )
+}
+
+record(bi, "$(PREFIX):RFS-Sol-130:TT-LOALR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/440+0 T=INT8 B=7" )
+}
+
+record(bi, "$(PREFIX):RFS-Sol-130:TT-HIALR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/440+1 T=INT8 B=0" )
+}
+
+record(waveform, "$(PREFIX):RFS-Sol-130:TT-TMSTMP-RB")
+{
+	field(SCAN, "I/O Intr")
+	field(DTYP, "S7plc")
+	field(INP, "@PLCAF/440+2 T=TIME")
+	field(FTVL, "CHAR")
+	field(NELM, "8")
+}
+
+#record(longin, "$(PREFIX):RFS-Sol-130:TT-DTYP-RB")
+#{
+#	field(DTYP, "S7plc")
+#	field(SCAN, "I/O Intr")
+#	field(INP, "@PLCAF/440+10 T=BYTE" )
+#}
+
+record(mbbi, "$(PREFIX):RFS-Sol-130:TT-DTYP-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/440+10 T=BYTE" )
+    	field(ZRVL, "0")
+	field(ZRST, "Unknow")
+	field(ONVL, "1")
+	field(ONST, "TSn")
+	field(TWVL, "2")
+	field(TWST, "PSn")
+	field(THVL, "3")
+	field(THST, "VSn_0_10v")
+	field(FRVL, "4")
+	field(FRST, "ISn_0_20mA")
+	field(SXVL, "5")
+	field(SXST, "ISn_4_20mA")
+	field(SVVL, "6")
+	field(SVST, "FSn_05_80_l_min")
+	field(EIVL, "7")
+	field(EIST, "FSn_8_1000_l_min")
+	field(NIVL, "8")
+	field(NIST, "PSn_0_10_bar")
+	field(TEVL, "9")
+	field(TEST, "TSn_0_50_C")
+	field(ELVL, "10")
+	field(ELST, "TSn_PT100")
+	field(TVVL, "11")
+	field(TVST, "TSn_TC")
+	field(TTVL, "12")
+	field(TTST, "COLL_DISP")
+	field(FTVL, "13")
+	field(FTST, "BODY_DISP")
+	field(SXVL, "27")
+	field(SXST, "ISn_IP")
+	field(NOBT, "8")
+	field(SHFT, "0")
+}
+
+record(longin, "$(PREFIX):RFS-Sol-130:TT-ERR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/440+12 T=INT16" )
+}
+
+record(ai, "$(PREFIX):RFS-Sol-130:TT-HIHI-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/440+14 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-130:TT-HIHI-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Sol-130:TT-HIGH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/440+18 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-130:TT-HIGH-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Sol-130:TT-LOW-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/440+22 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-130:TT-LOW-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Sol-130:TT-LOLO-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/440+26 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-130:TT-LOLO-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Sol-130:TT-AOFF-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/440+30 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-130:TT-AOFF-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Sol-130:TT-SVAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/440+34 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-130:TT-SVAL-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Sol-130:TT")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(DESC, "Solenoid coil temperature")
+	field(INP, "@PLCAF/440+38 T=REAL32" )
+	field(MDEL, "-1")
+	field(PREC, "2")
+	field(EGU, "C")
+	field(SIMS, "MINOR")
+	field(HHSV, "MAJOR")
+	field(HSV,  "MINOR")
+	field(LSV, "MINOR")
+	field(LLSV, "MAJOR")
+}
+
+record(longin, "$(PREFIX):RFS-Sol-130:TT-VAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/440+42 T=INT16" )
+	field(MDEL, "-1")
+}
+
+#record(bi, "$(PREFIX):RFS-Oil-110:TT")
+#{
+#        field(DESC, "Oil tank temperature")
+#}
+
+record(bi, "$(PREFIX):RFS-Oil-110:TT-WRN-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/484+0 T=INT8 B=0" )
+	field(ZNAM, "OK")
+        field(ONAM, "WRN")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Oil-110:TT-INT-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/484+0 T=INT8 B=1" )
+	field(ZNAM, "OK")
+        field(ONAM, "ITLCK")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MAJOR")
+}
+
+record(bi, "$(PREFIX):RFS-Oil-110:TT-DIS-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/484+0 T=INT8 B=2" )
+	field(FLNK, "$(PREFIX):RFS-Oil-110:TT-DIS-INT")
+	field(ZNAM, "ENA")
+        field(ONAM, "DIS")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Oil-110:TT-FRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/484+0 T=INT8 B=3" )
+	field(FLNK, "$(PREFIX):RFS-Oil-110:TT-FRC-INT")
+	field(ZNAM, "N-SIMM")
+        field(ONAM, "SIMM")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Oil-110:TT-NFRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/484+0 T=INT8 B=4" )
+	field(ZNAM, "C-SIMM")
+        field(ONAM, "N-SIMM")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Oil-110:TT-NLTCH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/484+0 T=INT8 B=5" )
+	field(ZNAM, "LTCHD")
+        field(ONAM, "N-LTCHD")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):RFS-Oil-110:TT-ISFRST-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/484+0 T=INT8 B=6" )
+}
+
+record(bi, "$(PREFIX):RFS-Oil-110:TT-LOALR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/484+0 T=INT8 B=7" )
+}
+
+record(bi, "$(PREFIX):RFS-Oil-110:TT-HIALR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/484+1 T=INT8 B=0" )
+}
+
+record(waveform, "$(PREFIX):RFS-Oil-110:TT-TMSTMP-RB")
+{
+	field(SCAN, "I/O Intr")
+	field(DTYP, "S7plc")
+	field(INP, "@PLCAF/484+2 T=TIME")
+	field(FTVL, "CHAR")
+	field(NELM, "8")
+}
+
+#record(longin, "$(PREFIX):RFS-Oil-110:TT-DTYP-RB")
+#{
+#	field(DTYP, "S7plc")
+#	field(SCAN, "I/O Intr")
+#	field(INP, "@PLCAF/484+10 T=BYTE" )
+#}
+
+record(mbbi, "$(PREFIX):RFS-Oil-110:TT-DTYP-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/484+10 T=BYTE" )
+    	field(ZRVL, "0")
+	field(ZRST, "Unknow")
+	field(ONVL, "1")
+	field(ONST, "TSn")
+	field(TWVL, "2")
+	field(TWST, "PSn")
+	field(THVL, "3")
+	field(THST, "VSn_0_10v")
+	field(FRVL, "4")
+	field(FRST, "ISn_0_20mA")
+	field(SXVL, "5")
+	field(SXST, "ISn_4_20mA")
+	field(SVVL, "6")
+	field(SVST, "FSn_05_80_l_min")
+	field(EIVL, "7")
+	field(EIST, "FSn_8_1000_l_min")
+	field(NIVL, "8")
+	field(NIST, "PSn_0_10_bar")
+	field(TEVL, "9")
+	field(TEST, "TSn_0_50_C")
+	field(ELVL, "10")
+	field(ELST, "TSn_PT100")
+	field(TVVL, "11")
+	field(TVST, "TSn_TC")
+	field(TTVL, "12")
+	field(TTST, "COLL_DISP")
+	field(FTVL, "13")
+	field(FTST, "BODY_DISP")
+	field(SXVL, "27")
+	field(SXST, "ISn_IP")
+	field(NOBT, "8")
+	field(SHFT, "0")
+}
+
+record(longin, "$(PREFIX):RFS-Oil-110:TT-ERR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/484+12 T=INT16" )
+}
+
+record(ai, "$(PREFIX):RFS-Oil-110:TT-HIHI-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/484+14 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Oil-110:TT-HIHI-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Oil-110:TT-HIGH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/484+18 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Oil-110:TT-HIGH-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Oil-110:TT-LOW-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/484+22 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Oil-110:TT-LOW-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Oil-110:TT-LOLO-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/484+26 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Oil-110:TT-LOLO-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Oil-110:TT-AOFF-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/484+30 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Oil-110:TT-AOFF-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Oil-110:TT-SVAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/484+34 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Oil-110:TT-SVAL-INT")
+}
+
+record(ai, "$(PREFIX):RFS-Oil-110:TT")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(DESC, "Oil tank temperature")
+	field(INP, "@PLCAF/484+38 T=REAL32" )
+	field(MDEL, "-1")
+	field(PREC, "2")
+	field(EGU, "C")
+	field(SIMS, "MINOR")
+	field(HHSV, "MAJOR")
+	field(HSV,  "MINOR")
+	field(LSV, "MINOR")
+	field(LLSV, "MAJOR")
+}
+
+record(longin, "$(PREFIX):RFS-Oil-110:TT-VAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCAF/484+42 T=INT16" )
+	field(MDEL, "-1")
+}
+
+record(bo, "$(PREFIX):RFS-VacPS-110:I-DIS")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/0+0 T=INT8 B=0" )
+	field(DISP, "1")
+	field(ZNAM, "No")
+        field(ONAM, "Yes")
+}
+
+record(bo, "$(PREFIX):RFS-VacPS-110:I-FRC")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/0+0 T=INT8 B=1" )
+	field(DISP, "1")
+	field(ZNAM, "No")
+        field(ONAM, "Yes")
+	field(FLNK, "$(PREFIX):RFS-VacPS-110:I-FRC-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-VacPS-110:I-FRC-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-VacPS-110:I-FRC.VAL")
+        field(LNK1, "$(PREFIX):RFS-VacPS-110:I.SIMM PP")
+}
+
+record(ao, "$(PREFIX):RFS-VacPS-110:I-HIHI")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/0+2 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-VacPS-110:I-HIHI-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-VacPS-110:I-HIHI-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-VacPS-110:I-HIHI.VAL")
+        field(LNK1, "$(PREFIX):RFS-VacPS-110:I.HIHI PP")
+}
+
+record(ao, "$(PREFIX):RFS-VacPS-110:I-HIGH")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/0+6 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-VacPS-110:I-HIGH-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-VacPS-110:I-HIGH-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-VacPS-110:I-HIGH.VAL")
+        field(LNK1, "$(PREFIX):RFS-VacPS-110:I.HIGH PP")
+}
+
+record(ao, "$(PREFIX):RFS-VacPS-110:I-LOW")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/0+10 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-VacPS-110:I-LOW-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-VacPS-110:I-LOW-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-VacPS-110:I-LOW.VAL")
+        field(LNK1, "$(PREFIX):RFS-VacPS-110:I.LOW PP")
+}
+
+record(ao, "$(PREFIX):RFS-VacPS-110:I-LOLO")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/0+14 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-VacPS-110:I-LOLO-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-VacPS-110:I-LOLO-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-VacPS-110:I-LOLO.VAL")
+        field(LNK1, "$(PREFIX):RFS-VacPS-110:I.LOLO PP")
+}
+
+
+record(ao, "$(PREFIX):RFS-VacPS-110:I-AOFF")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/0+18 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):RFS-VacPS-110:I-SVAL")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/0+22 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-VacPS-110:I-SVAL-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-VacPS-110:I-SVAL-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-VacPS-110:I-SVAL.VAL")
+        field(LNK1, "$(PREFIX):RFS-VacPS-110:I.SVAL PP")
+}
+
+record(bo, "$(PREFIX):RFS-VacPS-120:I-DIS")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/26+0 T=INT8 B=0" )
+	field(DISP, "1")
+	field(ZNAM, "No")
+        field(ONAM, "Yes")
+}
+
+record(bo, "$(PREFIX):RFS-VacPS-120:I-FRC")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/26+0 T=INT8 B=1" )
+	field(DISP, "1")
+	field(ZNAM, "No")
+        field(ONAM, "Yes")
+	field(FLNK, "$(PREFIX):RFS-VacPS-120:I-FRC-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-VacPS-120:I-FRC-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-VacPS-120:I-FRC.VAL")
+        field(LNK1, "$(PREFIX):RFS-VacPS-120:I.SIMM PP")
+}
+
+record(ao, "$(PREFIX):RFS-VacPS-120:I-HIHI")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/26+2 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-VacPS-120:I-HIHI-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-VacPS-120:I-HIHI-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-VacPS-120:I-HIHI.VAL")
+        field(LNK1, "$(PREFIX):RFS-VacPS-120:I.HIHI PP")
+}
+
+record(ao, "$(PREFIX):RFS-VacPS-120:I-HIGH")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/26+6 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-VacPS-120:I-HIGH-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-VacPS-120:I-HIGH-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-VacPS-120:I-HIGH.VAL")
+        field(LNK1, "$(PREFIX):RFS-VacPS-120:I.HIGH PP")
+}
+
+record(ao, "$(PREFIX):RFS-VacPS-120:I-LOW")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/26+10 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-VacPS-120:I-LOW-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-VacPS-120:I-LOW-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-VacPS-120:I-LOW.VAL")
+        field(LNK1, "$(PREFIX):RFS-VacPS-120:I.LOW PP")
+}
+
+record(ao, "$(PREFIX):RFS-VacPS-120:I-LOLO")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/26+14 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-VacPS-120:I-LOLO-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-VacPS-120:I-LOLO-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-VacPS-120:I-LOLO.VAL")
+        field(LNK1, "$(PREFIX):RFS-VacPS-120:I.LOLO PP")
+}
+
+
+record(ao, "$(PREFIX):RFS-VacPS-120:I-AOFF")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/26+18 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):RFS-VacPS-120:I-SVAL")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/26+22 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-VacPS-120:I-SVAL-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-VacPS-120:I-SVAL-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-VacPS-120:I-SVAL.VAL")
+        field(LNK1, "$(PREFIX):RFS-VacPS-120:I.SVAL PP")
+}
+
+record(bo, "$(PREFIX):RFS-Coll-110:TC_TOP-DIS")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/52+0 T=INT8 B=0" )
+	field(DISP, "1")
+	field(ZNAM, "No")
+        field(ONAM, "Yes")
+}
+
+record(bo, "$(PREFIX):RFS-Coll-110:TC_TOP-FRC")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/52+0 T=INT8 B=1" )
+	field(DISP, "1")
+	field(ZNAM, "No")
+        field(ONAM, "Yes")
+	field(FLNK, "$(PREFIX):RFS-Coll-110:TC_TOP-FRC-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Coll-110:TC_TOP-FRC-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Coll-110:TC_TOP-FRC.VAL")
+        field(LNK1, "$(PREFIX):RFS-Coll-110:TC_TOP.SIMM PP")
+}
+
+record(ao, "$(PREFIX):RFS-Coll-110:TC_TOP-HIHI")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/52+2 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Coll-110:TC_TOP-HIHI-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Coll-110:TC_TOP-HIHI-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Coll-110:TC_TOP-HIHI.VAL")
+        field(LNK1, "$(PREFIX):RFS-Coll-110:TC_TOP.HIHI PP")
+}
+
+record(ao, "$(PREFIX):RFS-Coll-110:TC_TOP-HIGH")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/52+6 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Coll-110:TC_TOP-HIGH-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Coll-110:TC_TOP-HIGH-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Coll-110:TC_TOP-HIGH.VAL")
+        field(LNK1, "$(PREFIX):RFS-Coll-110:TC_TOP.HIGH PP")
+}
+
+record(ao, "$(PREFIX):RFS-Coll-110:TC_TOP-LOW")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/52+10 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Coll-110:TC_TOP-LOW-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Coll-110:TC_TOP-LOW-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Coll-110:TC_TOP-LOW.VAL")
+        field(LNK1, "$(PREFIX):RFS-Coll-110:TC_TOP.LOW PP")
+}
+
+record(ao, "$(PREFIX):RFS-Coll-110:TC_TOP-LOLO")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/52+14 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Coll-110:TC_TOP-LOLO-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Coll-110:TC_TOP-LOLO-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Coll-110:TC_TOP-LOLO.VAL")
+        field(LNK1, "$(PREFIX):RFS-Coll-110:TC_TOP.LOLO PP")
+}
+
+
+record(ao, "$(PREFIX):RFS-Coll-110:TC_TOP-AOFF")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/52+18 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):RFS-Coll-110:TC_TOP-SVAL")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/52+22 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Coll-110:TC_TOP-SVAL-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Coll-110:TC_TOP-SVAL-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Coll-110:TC_TOP-SVAL.VAL")
+        field(LNK1, "$(PREFIX):RFS-Coll-110:TC_TOP.SVAL PP")
+}
+
+record(bo, "$(PREFIX):RFS-Coll-120:TC_EDGE-DIS")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/78+0 T=INT8 B=0" )
+	field(DISP, "1")
+	field(ZNAM, "No")
+        field(ONAM, "Yes")
+}
+
+record(bo, "$(PREFIX):RFS-Coll-120:TC_EDGE-FRC")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/78+0 T=INT8 B=1" )
+	field(DISP, "1")
+	field(ZNAM, "No")
+        field(ONAM, "Yes")
+	field(FLNK, "$(PREFIX):RFS-Coll-120:TC_EDGE-FRC-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Coll-120:TC_EDGE-FRC-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Coll-120:TC_EDGE-FRC.VAL")
+        field(LNK1, "$(PREFIX):RFS-Coll-120:TC_EDGE.SIMM PP")
+}
+
+record(ao, "$(PREFIX):RFS-Coll-120:TC_EDGE-HIHI")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/78+2 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Coll-120:TC_EDGE-HIHI-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Coll-120:TC_EDGE-HIHI-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Coll-120:TC_EDGE-HIHI.VAL")
+        field(LNK1, "$(PREFIX):RFS-Coll-120:TC_EDGE.HIHI PP")
+}
+
+record(ao, "$(PREFIX):RFS-Coll-120:TC_EDGE-HIGH")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/78+6 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Coll-120:TC_EDGE-HIGH-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Coll-120:TC_EDGE-HIGH-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Coll-120:TC_EDGE-HIGH.VAL")
+        field(LNK1, "$(PREFIX):RFS-Coll-120:TC_EDGE.HIGH PP")
+}
+
+record(ao, "$(PREFIX):RFS-Coll-120:TC_EDGE-LOW")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/78+10 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Coll-120:TC_EDGE-LOW-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Coll-120:TC_EDGE-LOW-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Coll-120:TC_EDGE-LOW.VAL")
+        field(LNK1, "$(PREFIX):RFS-Coll-120:TC_EDGE.LOW PP")
+}
+
+record(ao, "$(PREFIX):RFS-Coll-120:TC_EDGE-LOLO")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/78+14 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Coll-120:TC_EDGE-LOLO-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Coll-120:TC_EDGE-LOLO-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Coll-120:TC_EDGE-LOLO.VAL")
+        field(LNK1, "$(PREFIX):RFS-Coll-120:TC_EDGE.LOLO PP")
+}
+
+
+record(ao, "$(PREFIX):RFS-Coll-120:TC_EDGE-AOFF")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/78+18 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):RFS-Coll-120:TC_EDGE-SVAL")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/78+22 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Coll-120:TC_EDGE-SVAL-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Coll-120:TC_EDGE-SVAL-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Coll-120:TC_EDGE-SVAL.VAL")
+        field(LNK1, "$(PREFIX):RFS-Coll-120:TC_EDGE.SVAL PP")
+}
+
+record(bo, "$(PREFIX):RFS-Body-110:TT-DIS")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/104+0 T=INT8 B=0" )
+	field(DISP, "1")
+	field(ZNAM, "No")
+        field(ONAM, "Yes")
+}
+
+record(bo, "$(PREFIX):RFS-Body-110:TT-FRC")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/104+0 T=INT8 B=1" )
+	field(DISP, "1")
+	field(ZNAM, "No")
+        field(ONAM, "Yes")
+	field(FLNK, "$(PREFIX):RFS-Body-110:TT-FRC-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Body-110:TT-FRC-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Body-110:TT-FRC.VAL")
+        field(LNK1, "$(PREFIX):RFS-Body-110:TT.SIMM PP")
+}
+
+record(ao, "$(PREFIX):RFS-Body-110:TT-HIHI")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/104+2 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Body-110:TT-HIHI-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Body-110:TT-HIHI-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Body-110:TT-HIHI.VAL")
+        field(LNK1, "$(PREFIX):RFS-Body-110:TT.HIHI PP")
+}
+
+record(ao, "$(PREFIX):RFS-Body-110:TT-HIGH")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/104+6 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Body-110:TT-HIGH-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Body-110:TT-HIGH-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Body-110:TT-HIGH.VAL")
+        field(LNK1, "$(PREFIX):RFS-Body-110:TT.HIGH PP")
+}
+
+record(ao, "$(PREFIX):RFS-Body-110:TT-LOW")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/104+10 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Body-110:TT-LOW-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Body-110:TT-LOW-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Body-110:TT-LOW.VAL")
+        field(LNK1, "$(PREFIX):RFS-Body-110:TT.LOW PP")
+}
+
+record(ao, "$(PREFIX):RFS-Body-110:TT-LOLO")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/104+14 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Body-110:TT-LOLO-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Body-110:TT-LOLO-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Body-110:TT-LOLO.VAL")
+        field(LNK1, "$(PREFIX):RFS-Body-110:TT.LOLO PP")
+}
+
+
+record(ao, "$(PREFIX):RFS-Body-110:TT-AOFF")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/104+18 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):RFS-Body-110:TT-SVAL")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/104+22 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Body-110:TT-SVAL-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Body-110:TT-SVAL-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Body-110:TT-SVAL.VAL")
+        field(LNK1, "$(PREFIX):RFS-Body-110:TT.SVAL PP")
+}
+
+record(bo, "$(PREFIX):RFS-Body-120:TT-DIS")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/130+0 T=INT8 B=0" )
+	field(DISP, "1")
+	field(ZNAM, "No")
+        field(ONAM, "Yes")
+}
+
+record(bo, "$(PREFIX):RFS-Body-120:TT-FRC")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/130+0 T=INT8 B=1" )
+	field(DISP, "1")
+	field(ZNAM, "No")
+        field(ONAM, "Yes")
+	field(FLNK, "$(PREFIX):RFS-Body-120:TT-FRC-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Body-120:TT-FRC-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Body-120:TT-FRC.VAL")
+        field(LNK1, "$(PREFIX):RFS-Body-120:TT.SIMM PP")
+}
+
+record(ao, "$(PREFIX):RFS-Body-120:TT-HIHI")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/130+2 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Body-120:TT-HIHI-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Body-120:TT-HIHI-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Body-120:TT-HIHI.VAL")
+        field(LNK1, "$(PREFIX):RFS-Body-120:TT.HIHI PP")
+}
+
+record(ao, "$(PREFIX):RFS-Body-120:TT-HIGH")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/130+6 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Body-120:TT-HIGH-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Body-120:TT-HIGH-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Body-120:TT-HIGH.VAL")
+        field(LNK1, "$(PREFIX):RFS-Body-120:TT.HIGH PP")
+}
+
+record(ao, "$(PREFIX):RFS-Body-120:TT-LOW")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/130+10 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Body-120:TT-LOW-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Body-120:TT-LOW-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Body-120:TT-LOW.VAL")
+        field(LNK1, "$(PREFIX):RFS-Body-120:TT.LOW PP")
+}
+
+record(ao, "$(PREFIX):RFS-Body-120:TT-LOLO")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/130+14 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Body-120:TT-LOLO-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Body-120:TT-LOLO-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Body-120:TT-LOLO.VAL")
+        field(LNK1, "$(PREFIX):RFS-Body-120:TT.LOLO PP")
+}
+
+
+record(ao, "$(PREFIX):RFS-Body-120:TT-AOFF")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/130+18 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):RFS-Body-120:TT-SVAL")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/130+22 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Body-120:TT-SVAL-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Body-120:TT-SVAL-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Body-120:TT-SVAL.VAL")
+        field(LNK1, "$(PREFIX):RFS-Body-120:TT.SVAL PP")
+}
+
+record(bo, "$(PREFIX):RFS-Win-110:TT-DIS")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/156+0 T=INT8 B=0" )
+	field(DISP, "1")
+	field(ZNAM, "No")
+        field(ONAM, "Yes")
+}
+
+record(bo, "$(PREFIX):RFS-Win-110:TT-FRC")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/156+0 T=INT8 B=1" )
+	field(DISP, "1")
+	field(ZNAM, "No")
+        field(ONAM, "Yes")
+	field(FLNK, "$(PREFIX):RFS-Win-110:TT-FRC-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Win-110:TT-FRC-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Win-110:TT-FRC.VAL")
+        field(LNK1, "$(PREFIX):RFS-Win-110:TT.SIMM PP")
+}
+
+record(ao, "$(PREFIX):RFS-Win-110:TT-HIHI")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/156+2 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Win-110:TT-HIHI-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Win-110:TT-HIHI-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Win-110:TT-HIHI.VAL")
+        field(LNK1, "$(PREFIX):RFS-Win-110:TT.HIHI PP")
+}
+
+record(ao, "$(PREFIX):RFS-Win-110:TT-HIGH")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/156+6 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Win-110:TT-HIGH-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Win-110:TT-HIGH-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Win-110:TT-HIGH.VAL")
+        field(LNK1, "$(PREFIX):RFS-Win-110:TT.HIGH PP")
+}
+
+record(ao, "$(PREFIX):RFS-Win-110:TT-LOW")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/156+10 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Win-110:TT-LOW-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Win-110:TT-LOW-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Win-110:TT-LOW.VAL")
+        field(LNK1, "$(PREFIX):RFS-Win-110:TT.LOW PP")
+}
+
+record(ao, "$(PREFIX):RFS-Win-110:TT-LOLO")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/156+14 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Win-110:TT-LOLO-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Win-110:TT-LOLO-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Win-110:TT-LOLO.VAL")
+        field(LNK1, "$(PREFIX):RFS-Win-110:TT.LOLO PP")
+}
+
+
+record(ao, "$(PREFIX):RFS-Win-110:TT-AOFF")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/156+18 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):RFS-Win-110:TT-SVAL")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/156+22 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Win-110:TT-SVAL-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Win-110:TT-SVAL-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Win-110:TT-SVAL.VAL")
+        field(LNK1, "$(PREFIX):RFS-Win-110:TT.SVAL PP")
+}
+
+record(bo, "$(PREFIX):RFS-Win-120:TT-DIS")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/182+0 T=INT8 B=0" )
+	field(DISP, "1")
+	field(ZNAM, "No")
+        field(ONAM, "Yes")
+}
+
+record(bo, "$(PREFIX):RFS-Win-120:TT-FRC")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/182+0 T=INT8 B=1" )
+	field(DISP, "1")
+	field(ZNAM, "No")
+        field(ONAM, "Yes")
+	field(FLNK, "$(PREFIX):RFS-Win-120:TT-FRC-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Win-120:TT-FRC-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Win-120:TT-FRC.VAL")
+        field(LNK1, "$(PREFIX):RFS-Win-120:TT.SIMM PP")
+}
+
+record(ao, "$(PREFIX):RFS-Win-120:TT-HIHI")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/182+2 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Win-120:TT-HIHI-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Win-120:TT-HIHI-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Win-120:TT-HIHI.VAL")
+        field(LNK1, "$(PREFIX):RFS-Win-120:TT.HIHI PP")
+}
+
+record(ao, "$(PREFIX):RFS-Win-120:TT-HIGH")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/182+6 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Win-120:TT-HIGH-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Win-120:TT-HIGH-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Win-120:TT-HIGH.VAL")
+        field(LNK1, "$(PREFIX):RFS-Win-120:TT.HIGH PP")
+}
+
+record(ao, "$(PREFIX):RFS-Win-120:TT-LOW")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/182+10 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Win-120:TT-LOW-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Win-120:TT-LOW-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Win-120:TT-LOW.VAL")
+        field(LNK1, "$(PREFIX):RFS-Win-120:TT.LOW PP")
+}
+
+record(ao, "$(PREFIX):RFS-Win-120:TT-LOLO")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/182+14 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Win-120:TT-LOLO-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Win-120:TT-LOLO-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Win-120:TT-LOLO.VAL")
+        field(LNK1, "$(PREFIX):RFS-Win-120:TT.LOLO PP")
+}
+
+
+record(ao, "$(PREFIX):RFS-Win-120:TT-AOFF")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/182+18 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):RFS-Win-120:TT-SVAL")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/182+22 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Win-120:TT-SVAL-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Win-120:TT-SVAL-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Win-120:TT-SVAL.VAL")
+        field(LNK1, "$(PREFIX):RFS-Win-120:TT.SVAL PP")
+}
+
+record(bo, "$(PREFIX):RFS-Sol-110:TT-DIS")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/208+0 T=INT8 B=0" )
+	field(DISP, "1")
+	field(ZNAM, "No")
+        field(ONAM, "Yes")
+}
+
+record(bo, "$(PREFIX):RFS-Sol-110:TT-FRC")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/208+0 T=INT8 B=1" )
+	field(DISP, "1")
+	field(ZNAM, "No")
+        field(ONAM, "Yes")
+	field(FLNK, "$(PREFIX):RFS-Sol-110:TT-FRC-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-110:TT-FRC-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Sol-110:TT-FRC.VAL")
+        field(LNK1, "$(PREFIX):RFS-Sol-110:TT.SIMM PP")
+}
+
+record(ao, "$(PREFIX):RFS-Sol-110:TT-HIHI")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/208+2 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-110:TT-HIHI-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-110:TT-HIHI-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Sol-110:TT-HIHI.VAL")
+        field(LNK1, "$(PREFIX):RFS-Sol-110:TT.HIHI PP")
+}
+
+record(ao, "$(PREFIX):RFS-Sol-110:TT-HIGH")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/208+6 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-110:TT-HIGH-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-110:TT-HIGH-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Sol-110:TT-HIGH.VAL")
+        field(LNK1, "$(PREFIX):RFS-Sol-110:TT.HIGH PP")
+}
+
+record(ao, "$(PREFIX):RFS-Sol-110:TT-LOW")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/208+10 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-110:TT-LOW-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-110:TT-LOW-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Sol-110:TT-LOW.VAL")
+        field(LNK1, "$(PREFIX):RFS-Sol-110:TT.LOW PP")
+}
+
+record(ao, "$(PREFIX):RFS-Sol-110:TT-LOLO")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/208+14 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-110:TT-LOLO-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-110:TT-LOLO-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Sol-110:TT-LOLO.VAL")
+        field(LNK1, "$(PREFIX):RFS-Sol-110:TT.LOLO PP")
+}
+
+
+record(ao, "$(PREFIX):RFS-Sol-110:TT-AOFF")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/208+18 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):RFS-Sol-110:TT-SVAL")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/208+22 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-110:TT-SVAL-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-110:TT-SVAL-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Sol-110:TT-SVAL.VAL")
+        field(LNK1, "$(PREFIX):RFS-Sol-110:TT.SVAL PP")
+}
+
+record(bo, "$(PREFIX):RFS-Sol-120:TT-DIS")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/234+0 T=INT8 B=0" )
+	field(DISP, "1")
+	field(ZNAM, "No")
+        field(ONAM, "Yes")
+}
+
+record(bo, "$(PREFIX):RFS-Sol-120:TT-FRC")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/234+0 T=INT8 B=1" )
+	field(DISP, "1")
+	field(ZNAM, "No")
+        field(ONAM, "Yes")
+	field(FLNK, "$(PREFIX):RFS-Sol-120:TT-FRC-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-120:TT-FRC-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Sol-120:TT-FRC.VAL")
+        field(LNK1, "$(PREFIX):RFS-Sol-120:TT.SIMM PP")
+}
+
+record(ao, "$(PREFIX):RFS-Sol-120:TT-HIHI")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/234+2 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-120:TT-HIHI-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-120:TT-HIHI-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Sol-120:TT-HIHI.VAL")
+        field(LNK1, "$(PREFIX):RFS-Sol-120:TT.HIHI PP")
+}
+
+record(ao, "$(PREFIX):RFS-Sol-120:TT-HIGH")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/234+6 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-120:TT-HIGH-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-120:TT-HIGH-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Sol-120:TT-HIGH.VAL")
+        field(LNK1, "$(PREFIX):RFS-Sol-120:TT.HIGH PP")
+}
+
+record(ao, "$(PREFIX):RFS-Sol-120:TT-LOW")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/234+10 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-120:TT-LOW-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-120:TT-LOW-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Sol-120:TT-LOW.VAL")
+        field(LNK1, "$(PREFIX):RFS-Sol-120:TT.LOW PP")
+}
+
+record(ao, "$(PREFIX):RFS-Sol-120:TT-LOLO")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/234+14 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-120:TT-LOLO-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-120:TT-LOLO-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Sol-120:TT-LOLO.VAL")
+        field(LNK1, "$(PREFIX):RFS-Sol-120:TT.LOLO PP")
+}
+
+
+record(ao, "$(PREFIX):RFS-Sol-120:TT-AOFF")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/234+18 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):RFS-Sol-120:TT-SVAL")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/234+22 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-120:TT-SVAL-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-120:TT-SVAL-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Sol-120:TT-SVAL.VAL")
+        field(LNK1, "$(PREFIX):RFS-Sol-120:TT.SVAL PP")
+}
+
+record(bo, "$(PREFIX):RFS-Sol-130:TT-DIS")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/260+0 T=INT8 B=0" )
+	field(DISP, "1")
+	field(ZNAM, "No")
+        field(ONAM, "Yes")
+}
+
+record(bo, "$(PREFIX):RFS-Sol-130:TT-FRC")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/260+0 T=INT8 B=1" )
+	field(DISP, "1")
+	field(ZNAM, "No")
+        field(ONAM, "Yes")
+	field(FLNK, "$(PREFIX):RFS-Sol-130:TT-FRC-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-130:TT-FRC-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Sol-130:TT-FRC.VAL")
+        field(LNK1, "$(PREFIX):RFS-Sol-130:TT.SIMM PP")
+}
+
+record(ao, "$(PREFIX):RFS-Sol-130:TT-HIHI")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/260+2 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-130:TT-HIHI-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-130:TT-HIHI-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Sol-130:TT-HIHI.VAL")
+        field(LNK1, "$(PREFIX):RFS-Sol-130:TT.HIHI PP")
+}
+
+record(ao, "$(PREFIX):RFS-Sol-130:TT-HIGH")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/260+6 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-130:TT-HIGH-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-130:TT-HIGH-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Sol-130:TT-HIGH.VAL")
+        field(LNK1, "$(PREFIX):RFS-Sol-130:TT.HIGH PP")
+}
+
+record(ao, "$(PREFIX):RFS-Sol-130:TT-LOW")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/260+10 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-130:TT-LOW-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-130:TT-LOW-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Sol-130:TT-LOW.VAL")
+        field(LNK1, "$(PREFIX):RFS-Sol-130:TT.LOW PP")
+}
+
+record(ao, "$(PREFIX):RFS-Sol-130:TT-LOLO")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/260+14 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-130:TT-LOLO-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-130:TT-LOLO-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Sol-130:TT-LOLO.VAL")
+        field(LNK1, "$(PREFIX):RFS-Sol-130:TT.LOLO PP")
+}
+
+
+record(ao, "$(PREFIX):RFS-Sol-130:TT-AOFF")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/260+18 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):RFS-Sol-130:TT-SVAL")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/260+22 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Sol-130:TT-SVAL-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-130:TT-SVAL-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Sol-130:TT-SVAL.VAL")
+        field(LNK1, "$(PREFIX):RFS-Sol-130:TT.SVAL PP")
+}
+
+record(bo, "$(PREFIX):RFS-Oil-110:TT-DIS")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/286+0 T=INT8 B=0" )
+	field(DISP, "1")
+	field(ZNAM, "No")
+        field(ONAM, "Yes")
+}
+
+record(bo, "$(PREFIX):RFS-Oil-110:TT-FRC")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/286+0 T=INT8 B=1" )
+	field(DISP, "1")
+	field(ZNAM, "No")
+        field(ONAM, "Yes")
+	field(FLNK, "$(PREFIX):RFS-Oil-110:TT-FRC-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Oil-110:TT-FRC-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Oil-110:TT-FRC.VAL")
+        field(LNK1, "$(PREFIX):RFS-Oil-110:TT.SIMM PP")
+}
+
+record(ao, "$(PREFIX):RFS-Oil-110:TT-HIHI")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/286+2 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Oil-110:TT-HIHI-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Oil-110:TT-HIHI-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Oil-110:TT-HIHI.VAL")
+        field(LNK1, "$(PREFIX):RFS-Oil-110:TT.HIHI PP")
+}
+
+record(ao, "$(PREFIX):RFS-Oil-110:TT-HIGH")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/286+6 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Oil-110:TT-HIGH-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Oil-110:TT-HIGH-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Oil-110:TT-HIGH.VAL")
+        field(LNK1, "$(PREFIX):RFS-Oil-110:TT.HIGH PP")
+}
+
+record(ao, "$(PREFIX):RFS-Oil-110:TT-LOW")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/286+10 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Oil-110:TT-LOW-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Oil-110:TT-LOW-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Oil-110:TT-LOW.VAL")
+        field(LNK1, "$(PREFIX):RFS-Oil-110:TT.LOW PP")
+}
+
+record(ao, "$(PREFIX):RFS-Oil-110:TT-LOLO")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/286+14 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Oil-110:TT-LOLO-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Oil-110:TT-LOLO-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Oil-110:TT-LOLO.VAL")
+        field(LNK1, "$(PREFIX):RFS-Oil-110:TT.LOLO PP")
+}
+
+
+record(ao, "$(PREFIX):RFS-Oil-110:TT-AOFF")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/286+18 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):RFS-Oil-110:TT-SVAL")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCAF/286+22 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):RFS-Oil-110:TT-SVAL-SEQ")
+}
+
+record(seq, "$(PREFIX):RFS-Oil-110:TT-SVAL-SEQ")
+{
+        field(DOL1, "$(PREFIX):RFS-Oil-110:TT-SVAL.VAL")
+        field(LNK1, "$(PREFIX):RFS-Oil-110:TT.SVAL PP")
+}
+
+record(seq, "$(PREFIX):RFS-VacPS-110:I-DIS-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-VacPS-110:I-DIS-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-VacPS-110:I-DIS.DISP")
+	field(LNK1, "$(PREFIX):RFS-VacPS-110:I-DIS PP")
+	field(LNK3, "$(PREFIX):RFS-VacPS-110:I-DIS-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-VacPS-110:I-FRC-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-VacPS-110:I-FRC-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-VacPS-110:I-FRC.DISP")
+	field(LNK1, "$(PREFIX):RFS-VacPS-110:I-FRC PP")
+	field(LNK3, "$(PREFIX):RFS-VacPS-110:I-FRC-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-VacPS-110:I-HIHI-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-VacPS-110:I-HIHI-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-VacPS-110:I-HIHI.DISP")
+	field(LNK1, "$(PREFIX):RFS-VacPS-110:I-HIHI PP")
+	field(LNK3, "$(PREFIX):RFS-VacPS-110:I-HIHI-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-VacPS-110:I-HIGH-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-VacPS-110:I-HIGH-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-VacPS-110:I-HIGH-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-VacPS-110:I-HIGH.DISP")
+	field(LNK1, "$(PREFIX):RFS-VacPS-110:I-HIGH PP")
+	field(LNK3, "$(PREFIX):RFS-VacPS-110:I-HIGH-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-VacPS-110:I-EGU-RB.HIGH")
+}
+
+record(seq, "$(PREFIX):RFS-VacPS-110:I-LOW-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-VacPS-110:I-LOW-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-VacPS-110:I-LOW-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-VacPS-110:I-LOW.DISP")
+	field(LNK1, "$(PREFIX):RFS-VacPS-110:I-LOW PP")
+	field(LNK3, "$(PREFIX):RFS-VacPS-110:I-LOW-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-VacPS-110:I-EGU-RB.LOW")
+}
+
+record(seq, "$(PREFIX):RFS-VacPS-110:I-LOLO-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-VacPS-110:I-LOLO-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-VacPS-110:I-LOLO-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-VacPS-110:I-LOLO.DISP")
+	field(LNK1, "$(PREFIX):RFS-VacPS-110:I-LOLO PP")
+	field(LNK3, "$(PREFIX):RFS-VacPS-110:I-LOLO-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-VacPS-110:I-EGU-RB.LOLO")
+}
+
+record(seq, "$(PREFIX):RFS-VacPS-110:I-AOFF-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-VacPS-110:I-AOFF-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-VacPS-110:I-AOFF.DISP")
+	field(LNK1, "$(PREFIX):RFS-VacPS-110:I-AOFF PP")
+	field(LNK3, "$(PREFIX):RFS-VacPS-110:I-AOFF-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-VacPS-110:I-SVAL-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-VacPS-110:I-SVAL-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-VacPS-110:I-SVAL.DISP")
+	field(LNK1, "$(PREFIX):RFS-VacPS-110:I-SVAL PP")
+	field(LNK3, "$(PREFIX):RFS-VacPS-110:I-SVAL-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-VacPS-120:I-DIS-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-VacPS-120:I-DIS-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-VacPS-120:I-DIS.DISP")
+	field(LNK1, "$(PREFIX):RFS-VacPS-120:I-DIS PP")
+	field(LNK3, "$(PREFIX):RFS-VacPS-120:I-DIS-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-VacPS-120:I-FRC-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-VacPS-120:I-FRC-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-VacPS-120:I-FRC.DISP")
+	field(LNK1, "$(PREFIX):RFS-VacPS-120:I-FRC PP")
+	field(LNK3, "$(PREFIX):RFS-VacPS-120:I-FRC-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-VacPS-120:I-HIHI-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-VacPS-120:I-HIHI-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-VacPS-120:I-HIHI.DISP")
+	field(LNK1, "$(PREFIX):RFS-VacPS-120:I-HIHI PP")
+	field(LNK3, "$(PREFIX):RFS-VacPS-120:I-HIHI-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-VacPS-120:I-HIGH-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-VacPS-120:I-HIGH-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-VacPS-120:I-HIGH-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-VacPS-120:I-HIGH.DISP")
+	field(LNK1, "$(PREFIX):RFS-VacPS-120:I-HIGH PP")
+	field(LNK3, "$(PREFIX):RFS-VacPS-120:I-HIGH-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-VacPS-120:I-EGU-RB.HIGH")
+}
+
+record(seq, "$(PREFIX):RFS-VacPS-120:I-LOW-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-VacPS-120:I-LOW-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-VacPS-120:I-LOW-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-VacPS-120:I-LOW.DISP")
+	field(LNK1, "$(PREFIX):RFS-VacPS-120:I-LOW PP")
+	field(LNK3, "$(PREFIX):RFS-VacPS-120:I-LOW-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-VacPS-120:I-EGU-RB.LOW")
+}
+
+record(seq, "$(PREFIX):RFS-VacPS-120:I-LOLO-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-VacPS-120:I-LOLO-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-VacPS-120:I-LOLO-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-VacPS-120:I-LOLO.DISP")
+	field(LNK1, "$(PREFIX):RFS-VacPS-120:I-LOLO PP")
+	field(LNK3, "$(PREFIX):RFS-VacPS-120:I-LOLO-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-VacPS-120:I-EGU-RB.LOLO")
+}
+
+record(seq, "$(PREFIX):RFS-VacPS-120:I-AOFF-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-VacPS-120:I-AOFF-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-VacPS-120:I-AOFF.DISP")
+	field(LNK1, "$(PREFIX):RFS-VacPS-120:I-AOFF PP")
+	field(LNK3, "$(PREFIX):RFS-VacPS-120:I-AOFF-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-VacPS-120:I-SVAL-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-VacPS-120:I-SVAL-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-VacPS-120:I-SVAL.DISP")
+	field(LNK1, "$(PREFIX):RFS-VacPS-120:I-SVAL PP")
+	field(LNK3, "$(PREFIX):RFS-VacPS-120:I-SVAL-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Coll-110:TC_TOP-DIS-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Coll-110:TC_TOP-DIS-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Coll-110:TC_TOP-DIS.DISP")
+	field(LNK1, "$(PREFIX):RFS-Coll-110:TC_TOP-DIS PP")
+	field(LNK3, "$(PREFIX):RFS-Coll-110:TC_TOP-DIS-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Coll-110:TC_TOP-FRC-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Coll-110:TC_TOP-FRC-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Coll-110:TC_TOP-FRC.DISP")
+	field(LNK1, "$(PREFIX):RFS-Coll-110:TC_TOP-FRC PP")
+	field(LNK3, "$(PREFIX):RFS-Coll-110:TC_TOP-FRC-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Coll-110:TC_TOP-HIHI-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Coll-110:TC_TOP-HIHI-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Coll-110:TC_TOP-HIHI.DISP")
+	field(LNK1, "$(PREFIX):RFS-Coll-110:TC_TOP-HIHI PP")
+	field(LNK3, "$(PREFIX):RFS-Coll-110:TC_TOP-HIHI-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Coll-110:TC_TOP-HIGH-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Coll-110:TC_TOP-HIGH-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-Coll-110:TC_TOP-HIGH-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-Coll-110:TC_TOP-HIGH.DISP")
+	field(LNK1, "$(PREFIX):RFS-Coll-110:TC_TOP-HIGH PP")
+	field(LNK3, "$(PREFIX):RFS-Coll-110:TC_TOP-HIGH-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-Coll-110:TC_TOP-EGU-RB.HIGH")
+}
+
+record(seq, "$(PREFIX):RFS-Coll-110:TC_TOP-LOW-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Coll-110:TC_TOP-LOW-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-Coll-110:TC_TOP-LOW-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-Coll-110:TC_TOP-LOW.DISP")
+	field(LNK1, "$(PREFIX):RFS-Coll-110:TC_TOP-LOW PP")
+	field(LNK3, "$(PREFIX):RFS-Coll-110:TC_TOP-LOW-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-Coll-110:TC_TOP-EGU-RB.LOW")
+}
+
+record(seq, "$(PREFIX):RFS-Coll-110:TC_TOP-LOLO-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Coll-110:TC_TOP-LOLO-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-Coll-110:TC_TOP-LOLO-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-Coll-110:TC_TOP-LOLO.DISP")
+	field(LNK1, "$(PREFIX):RFS-Coll-110:TC_TOP-LOLO PP")
+	field(LNK3, "$(PREFIX):RFS-Coll-110:TC_TOP-LOLO-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-Coll-110:TC_TOP-EGU-RB.LOLO")
+}
+
+record(seq, "$(PREFIX):RFS-Coll-110:TC_TOP-AOFF-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Coll-110:TC_TOP-AOFF-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Coll-110:TC_TOP-AOFF.DISP")
+	field(LNK1, "$(PREFIX):RFS-Coll-110:TC_TOP-AOFF PP")
+	field(LNK3, "$(PREFIX):RFS-Coll-110:TC_TOP-AOFF-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Coll-110:TC_TOP-SVAL-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Coll-110:TC_TOP-SVAL-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Coll-110:TC_TOP-SVAL.DISP")
+	field(LNK1, "$(PREFIX):RFS-Coll-110:TC_TOP-SVAL PP")
+	field(LNK3, "$(PREFIX):RFS-Coll-110:TC_TOP-SVAL-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Coll-120:TC_EDGE-DIS-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Coll-120:TC_EDGE-DIS-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Coll-120:TC_EDGE-DIS.DISP")
+	field(LNK1, "$(PREFIX):RFS-Coll-120:TC_EDGE-DIS PP")
+	field(LNK3, "$(PREFIX):RFS-Coll-120:TC_EDGE-DIS-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Coll-120:TC_EDGE-FRC-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Coll-120:TC_EDGE-FRC-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Coll-120:TC_EDGE-FRC.DISP")
+	field(LNK1, "$(PREFIX):RFS-Coll-120:TC_EDGE-FRC PP")
+	field(LNK3, "$(PREFIX):RFS-Coll-120:TC_EDGE-FRC-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Coll-120:TC_EDGE-HIHI-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Coll-120:TC_EDGE-HIHI-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Coll-120:TC_EDGE-HIHI.DISP")
+	field(LNK1, "$(PREFIX):RFS-Coll-120:TC_EDGE-HIHI PP")
+	field(LNK3, "$(PREFIX):RFS-Coll-120:TC_EDGE-HIHI-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Coll-120:TC_EDGE-HIGH-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Coll-120:TC_EDGE-HIGH-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-Coll-120:TC_EDGE-HIGH-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-Coll-120:TC_EDGE-HIGH.DISP")
+	field(LNK1, "$(PREFIX):RFS-Coll-120:TC_EDGE-HIGH PP")
+	field(LNK3, "$(PREFIX):RFS-Coll-120:TC_EDGE-HIGH-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-Coll-120:TC_EDGE-EGU-RB.HIGH")
+}
+
+record(seq, "$(PREFIX):RFS-Coll-120:TC_EDGE-LOW-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Coll-120:TC_EDGE-LOW-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-Coll-120:TC_EDGE-LOW-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-Coll-120:TC_EDGE-LOW.DISP")
+	field(LNK1, "$(PREFIX):RFS-Coll-120:TC_EDGE-LOW PP")
+	field(LNK3, "$(PREFIX):RFS-Coll-120:TC_EDGE-LOW-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-Coll-120:TC_EDGE-EGU-RB.LOW")
+}
+
+record(seq, "$(PREFIX):RFS-Coll-120:TC_EDGE-LOLO-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Coll-120:TC_EDGE-LOLO-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-Coll-120:TC_EDGE-LOLO-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-Coll-120:TC_EDGE-LOLO.DISP")
+	field(LNK1, "$(PREFIX):RFS-Coll-120:TC_EDGE-LOLO PP")
+	field(LNK3, "$(PREFIX):RFS-Coll-120:TC_EDGE-LOLO-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-Coll-120:TC_EDGE-EGU-RB.LOLO")
+}
+
+record(seq, "$(PREFIX):RFS-Coll-120:TC_EDGE-AOFF-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Coll-120:TC_EDGE-AOFF-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Coll-120:TC_EDGE-AOFF.DISP")
+	field(LNK1, "$(PREFIX):RFS-Coll-120:TC_EDGE-AOFF PP")
+	field(LNK3, "$(PREFIX):RFS-Coll-120:TC_EDGE-AOFF-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Coll-120:TC_EDGE-SVAL-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Coll-120:TC_EDGE-SVAL-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Coll-120:TC_EDGE-SVAL.DISP")
+	field(LNK1, "$(PREFIX):RFS-Coll-120:TC_EDGE-SVAL PP")
+	field(LNK3, "$(PREFIX):RFS-Coll-120:TC_EDGE-SVAL-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Body-110:TT-DIS-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Body-110:TT-DIS-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Body-110:TT-DIS.DISP")
+	field(LNK1, "$(PREFIX):RFS-Body-110:TT-DIS PP")
+	field(LNK3, "$(PREFIX):RFS-Body-110:TT-DIS-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Body-110:TT-FRC-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Body-110:TT-FRC-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Body-110:TT-FRC.DISP")
+	field(LNK1, "$(PREFIX):RFS-Body-110:TT-FRC PP")
+	field(LNK3, "$(PREFIX):RFS-Body-110:TT-FRC-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Body-110:TT-HIHI-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Body-110:TT-HIHI-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Body-110:TT-HIHI.DISP")
+	field(LNK1, "$(PREFIX):RFS-Body-110:TT-HIHI PP")
+	field(LNK3, "$(PREFIX):RFS-Body-110:TT-HIHI-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Body-110:TT-HIGH-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Body-110:TT-HIGH-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-Body-110:TT-HIGH-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-Body-110:TT-HIGH.DISP")
+	field(LNK1, "$(PREFIX):RFS-Body-110:TT-HIGH PP")
+	field(LNK3, "$(PREFIX):RFS-Body-110:TT-HIGH-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-Body-110:TT-EGU-RB.HIGH")
+}
+
+record(seq, "$(PREFIX):RFS-Body-110:TT-LOW-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Body-110:TT-LOW-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-Body-110:TT-LOW-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-Body-110:TT-LOW.DISP")
+	field(LNK1, "$(PREFIX):RFS-Body-110:TT-LOW PP")
+	field(LNK3, "$(PREFIX):RFS-Body-110:TT-LOW-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-Body-110:TT-EGU-RB.LOW")
+}
+
+record(seq, "$(PREFIX):RFS-Body-110:TT-LOLO-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Body-110:TT-LOLO-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-Body-110:TT-LOLO-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-Body-110:TT-LOLO.DISP")
+	field(LNK1, "$(PREFIX):RFS-Body-110:TT-LOLO PP")
+	field(LNK3, "$(PREFIX):RFS-Body-110:TT-LOLO-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-Body-110:TT-EGU-RB.LOLO")
+}
+
+record(seq, "$(PREFIX):RFS-Body-110:TT-AOFF-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Body-110:TT-AOFF-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Body-110:TT-AOFF.DISP")
+	field(LNK1, "$(PREFIX):RFS-Body-110:TT-AOFF PP")
+	field(LNK3, "$(PREFIX):RFS-Body-110:TT-AOFF-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Body-110:TT-SVAL-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Body-110:TT-SVAL-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Body-110:TT-SVAL.DISP")
+	field(LNK1, "$(PREFIX):RFS-Body-110:TT-SVAL PP")
+	field(LNK3, "$(PREFIX):RFS-Body-110:TT-SVAL-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Body-120:TT-DIS-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Body-120:TT-DIS-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Body-120:TT-DIS.DISP")
+	field(LNK1, "$(PREFIX):RFS-Body-120:TT-DIS PP")
+	field(LNK3, "$(PREFIX):RFS-Body-120:TT-DIS-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Body-120:TT-FRC-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Body-120:TT-FRC-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Body-120:TT-FRC.DISP")
+	field(LNK1, "$(PREFIX):RFS-Body-120:TT-FRC PP")
+	field(LNK3, "$(PREFIX):RFS-Body-120:TT-FRC-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Body-120:TT-HIHI-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Body-120:TT-HIHI-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Body-120:TT-HIHI.DISP")
+	field(LNK1, "$(PREFIX):RFS-Body-120:TT-HIHI PP")
+	field(LNK3, "$(PREFIX):RFS-Body-120:TT-HIHI-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Body-120:TT-HIGH-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Body-120:TT-HIGH-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-Body-120:TT-HIGH-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-Body-120:TT-HIGH.DISP")
+	field(LNK1, "$(PREFIX):RFS-Body-120:TT-HIGH PP")
+	field(LNK3, "$(PREFIX):RFS-Body-120:TT-HIGH-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-Body-120:TT-EGU-RB.HIGH")
+}
+
+record(seq, "$(PREFIX):RFS-Body-120:TT-LOW-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Body-120:TT-LOW-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-Body-120:TT-LOW-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-Body-120:TT-LOW.DISP")
+	field(LNK1, "$(PREFIX):RFS-Body-120:TT-LOW PP")
+	field(LNK3, "$(PREFIX):RFS-Body-120:TT-LOW-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-Body-120:TT-EGU-RB.LOW")
+}
+
+record(seq, "$(PREFIX):RFS-Body-120:TT-LOLO-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Body-120:TT-LOLO-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-Body-120:TT-LOLO-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-Body-120:TT-LOLO.DISP")
+	field(LNK1, "$(PREFIX):RFS-Body-120:TT-LOLO PP")
+	field(LNK3, "$(PREFIX):RFS-Body-120:TT-LOLO-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-Body-120:TT-EGU-RB.LOLO")
+}
+
+record(seq, "$(PREFIX):RFS-Body-120:TT-AOFF-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Body-120:TT-AOFF-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Body-120:TT-AOFF.DISP")
+	field(LNK1, "$(PREFIX):RFS-Body-120:TT-AOFF PP")
+	field(LNK3, "$(PREFIX):RFS-Body-120:TT-AOFF-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Body-120:TT-SVAL-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Body-120:TT-SVAL-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Body-120:TT-SVAL.DISP")
+	field(LNK1, "$(PREFIX):RFS-Body-120:TT-SVAL PP")
+	field(LNK3, "$(PREFIX):RFS-Body-120:TT-SVAL-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Win-110:TT-DIS-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Win-110:TT-DIS-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Win-110:TT-DIS.DISP")
+	field(LNK1, "$(PREFIX):RFS-Win-110:TT-DIS PP")
+	field(LNK3, "$(PREFIX):RFS-Win-110:TT-DIS-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Win-110:TT-FRC-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Win-110:TT-FRC-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Win-110:TT-FRC.DISP")
+	field(LNK1, "$(PREFIX):RFS-Win-110:TT-FRC PP")
+	field(LNK3, "$(PREFIX):RFS-Win-110:TT-FRC-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Win-110:TT-HIHI-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Win-110:TT-HIHI-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Win-110:TT-HIHI.DISP")
+	field(LNK1, "$(PREFIX):RFS-Win-110:TT-HIHI PP")
+	field(LNK3, "$(PREFIX):RFS-Win-110:TT-HIHI-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Win-110:TT-HIGH-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Win-110:TT-HIGH-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-Win-110:TT-HIGH-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-Win-110:TT-HIGH.DISP")
+	field(LNK1, "$(PREFIX):RFS-Win-110:TT-HIGH PP")
+	field(LNK3, "$(PREFIX):RFS-Win-110:TT-HIGH-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-Win-110:TT-EGU-RB.HIGH")
+}
+
+record(seq, "$(PREFIX):RFS-Win-110:TT-LOW-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Win-110:TT-LOW-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-Win-110:TT-LOW-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-Win-110:TT-LOW.DISP")
+	field(LNK1, "$(PREFIX):RFS-Win-110:TT-LOW PP")
+	field(LNK3, "$(PREFIX):RFS-Win-110:TT-LOW-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-Win-110:TT-EGU-RB.LOW")
+}
+
+record(seq, "$(PREFIX):RFS-Win-110:TT-LOLO-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Win-110:TT-LOLO-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-Win-110:TT-LOLO-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-Win-110:TT-LOLO.DISP")
+	field(LNK1, "$(PREFIX):RFS-Win-110:TT-LOLO PP")
+	field(LNK3, "$(PREFIX):RFS-Win-110:TT-LOLO-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-Win-110:TT-EGU-RB.LOLO")
+}
+
+record(seq, "$(PREFIX):RFS-Win-110:TT-AOFF-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Win-110:TT-AOFF-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Win-110:TT-AOFF.DISP")
+	field(LNK1, "$(PREFIX):RFS-Win-110:TT-AOFF PP")
+	field(LNK3, "$(PREFIX):RFS-Win-110:TT-AOFF-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Win-110:TT-SVAL-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Win-110:TT-SVAL-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Win-110:TT-SVAL.DISP")
+	field(LNK1, "$(PREFIX):RFS-Win-110:TT-SVAL PP")
+	field(LNK3, "$(PREFIX):RFS-Win-110:TT-SVAL-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Win-120:TT-DIS-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Win-120:TT-DIS-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Win-120:TT-DIS.DISP")
+	field(LNK1, "$(PREFIX):RFS-Win-120:TT-DIS PP")
+	field(LNK3, "$(PREFIX):RFS-Win-120:TT-DIS-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Win-120:TT-FRC-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Win-120:TT-FRC-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Win-120:TT-FRC.DISP")
+	field(LNK1, "$(PREFIX):RFS-Win-120:TT-FRC PP")
+	field(LNK3, "$(PREFIX):RFS-Win-120:TT-FRC-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Win-120:TT-HIHI-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Win-120:TT-HIHI-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Win-120:TT-HIHI.DISP")
+	field(LNK1, "$(PREFIX):RFS-Win-120:TT-HIHI PP")
+	field(LNK3, "$(PREFIX):RFS-Win-120:TT-HIHI-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Win-120:TT-HIGH-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Win-120:TT-HIGH-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-Win-120:TT-HIGH-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-Win-120:TT-HIGH.DISP")
+	field(LNK1, "$(PREFIX):RFS-Win-120:TT-HIGH PP")
+	field(LNK3, "$(PREFIX):RFS-Win-120:TT-HIGH-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-Win-120:TT-EGU-RB.HIGH")
+}
+
+record(seq, "$(PREFIX):RFS-Win-120:TT-LOW-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Win-120:TT-LOW-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-Win-120:TT-LOW-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-Win-120:TT-LOW.DISP")
+	field(LNK1, "$(PREFIX):RFS-Win-120:TT-LOW PP")
+	field(LNK3, "$(PREFIX):RFS-Win-120:TT-LOW-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-Win-120:TT-EGU-RB.LOW")
+}
+
+record(seq, "$(PREFIX):RFS-Win-120:TT-LOLO-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Win-120:TT-LOLO-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-Win-120:TT-LOLO-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-Win-120:TT-LOLO.DISP")
+	field(LNK1, "$(PREFIX):RFS-Win-120:TT-LOLO PP")
+	field(LNK3, "$(PREFIX):RFS-Win-120:TT-LOLO-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-Win-120:TT-EGU-RB.LOLO")
+}
+
+record(seq, "$(PREFIX):RFS-Win-120:TT-AOFF-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Win-120:TT-AOFF-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Win-120:TT-AOFF.DISP")
+	field(LNK1, "$(PREFIX):RFS-Win-120:TT-AOFF PP")
+	field(LNK3, "$(PREFIX):RFS-Win-120:TT-AOFF-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Win-120:TT-SVAL-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Win-120:TT-SVAL-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Win-120:TT-SVAL.DISP")
+	field(LNK1, "$(PREFIX):RFS-Win-120:TT-SVAL PP")
+	field(LNK3, "$(PREFIX):RFS-Win-120:TT-SVAL-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-110:TT-DIS-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Sol-110:TT-DIS-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Sol-110:TT-DIS.DISP")
+	field(LNK1, "$(PREFIX):RFS-Sol-110:TT-DIS PP")
+	field(LNK3, "$(PREFIX):RFS-Sol-110:TT-DIS-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-110:TT-FRC-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Sol-110:TT-FRC-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Sol-110:TT-FRC.DISP")
+	field(LNK1, "$(PREFIX):RFS-Sol-110:TT-FRC PP")
+	field(LNK3, "$(PREFIX):RFS-Sol-110:TT-FRC-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-110:TT-HIHI-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Sol-110:TT-HIHI-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Sol-110:TT-HIHI.DISP")
+	field(LNK1, "$(PREFIX):RFS-Sol-110:TT-HIHI PP")
+	field(LNK3, "$(PREFIX):RFS-Sol-110:TT-HIHI-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-110:TT-HIGH-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Sol-110:TT-HIGH-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-Sol-110:TT-HIGH-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-Sol-110:TT-HIGH.DISP")
+	field(LNK1, "$(PREFIX):RFS-Sol-110:TT-HIGH PP")
+	field(LNK3, "$(PREFIX):RFS-Sol-110:TT-HIGH-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-Sol-110:TT-EGU-RB.HIGH")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-110:TT-LOW-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Sol-110:TT-LOW-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-Sol-110:TT-LOW-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-Sol-110:TT-LOW.DISP")
+	field(LNK1, "$(PREFIX):RFS-Sol-110:TT-LOW PP")
+	field(LNK3, "$(PREFIX):RFS-Sol-110:TT-LOW-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-Sol-110:TT-EGU-RB.LOW")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-110:TT-LOLO-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Sol-110:TT-LOLO-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-Sol-110:TT-LOLO-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-Sol-110:TT-LOLO.DISP")
+	field(LNK1, "$(PREFIX):RFS-Sol-110:TT-LOLO PP")
+	field(LNK3, "$(PREFIX):RFS-Sol-110:TT-LOLO-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-Sol-110:TT-EGU-RB.LOLO")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-110:TT-AOFF-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Sol-110:TT-AOFF-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Sol-110:TT-AOFF.DISP")
+	field(LNK1, "$(PREFIX):RFS-Sol-110:TT-AOFF PP")
+	field(LNK3, "$(PREFIX):RFS-Sol-110:TT-AOFF-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-110:TT-SVAL-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Sol-110:TT-SVAL-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Sol-110:TT-SVAL.DISP")
+	field(LNK1, "$(PREFIX):RFS-Sol-110:TT-SVAL PP")
+	field(LNK3, "$(PREFIX):RFS-Sol-110:TT-SVAL-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-120:TT-DIS-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Sol-120:TT-DIS-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Sol-120:TT-DIS.DISP")
+	field(LNK1, "$(PREFIX):RFS-Sol-120:TT-DIS PP")
+	field(LNK3, "$(PREFIX):RFS-Sol-120:TT-DIS-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-120:TT-FRC-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Sol-120:TT-FRC-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Sol-120:TT-FRC.DISP")
+	field(LNK1, "$(PREFIX):RFS-Sol-120:TT-FRC PP")
+	field(LNK3, "$(PREFIX):RFS-Sol-120:TT-FRC-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-120:TT-HIHI-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Sol-120:TT-HIHI-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Sol-120:TT-HIHI.DISP")
+	field(LNK1, "$(PREFIX):RFS-Sol-120:TT-HIHI PP")
+	field(LNK3, "$(PREFIX):RFS-Sol-120:TT-HIHI-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-120:TT-HIGH-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Sol-120:TT-HIGH-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-Sol-120:TT-HIGH-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-Sol-120:TT-HIGH.DISP")
+	field(LNK1, "$(PREFIX):RFS-Sol-120:TT-HIGH PP")
+	field(LNK3, "$(PREFIX):RFS-Sol-120:TT-HIGH-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-Sol-120:TT-EGU-RB.HIGH")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-120:TT-LOW-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Sol-120:TT-LOW-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-Sol-120:TT-LOW-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-Sol-120:TT-LOW.DISP")
+	field(LNK1, "$(PREFIX):RFS-Sol-120:TT-LOW PP")
+	field(LNK3, "$(PREFIX):RFS-Sol-120:TT-LOW-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-Sol-120:TT-EGU-RB.LOW")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-120:TT-LOLO-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Sol-120:TT-LOLO-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-Sol-120:TT-LOLO-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-Sol-120:TT-LOLO.DISP")
+	field(LNK1, "$(PREFIX):RFS-Sol-120:TT-LOLO PP")
+	field(LNK3, "$(PREFIX):RFS-Sol-120:TT-LOLO-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-Sol-120:TT-EGU-RB.LOLO")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-120:TT-AOFF-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Sol-120:TT-AOFF-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Sol-120:TT-AOFF.DISP")
+	field(LNK1, "$(PREFIX):RFS-Sol-120:TT-AOFF PP")
+	field(LNK3, "$(PREFIX):RFS-Sol-120:TT-AOFF-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-120:TT-SVAL-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Sol-120:TT-SVAL-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Sol-120:TT-SVAL.DISP")
+	field(LNK1, "$(PREFIX):RFS-Sol-120:TT-SVAL PP")
+	field(LNK3, "$(PREFIX):RFS-Sol-120:TT-SVAL-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-130:TT-DIS-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Sol-130:TT-DIS-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Sol-130:TT-DIS.DISP")
+	field(LNK1, "$(PREFIX):RFS-Sol-130:TT-DIS PP")
+	field(LNK3, "$(PREFIX):RFS-Sol-130:TT-DIS-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-130:TT-FRC-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Sol-130:TT-FRC-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Sol-130:TT-FRC.DISP")
+	field(LNK1, "$(PREFIX):RFS-Sol-130:TT-FRC PP")
+	field(LNK3, "$(PREFIX):RFS-Sol-130:TT-FRC-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-130:TT-HIHI-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Sol-130:TT-HIHI-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Sol-130:TT-HIHI.DISP")
+	field(LNK1, "$(PREFIX):RFS-Sol-130:TT-HIHI PP")
+	field(LNK3, "$(PREFIX):RFS-Sol-130:TT-HIHI-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-130:TT-HIGH-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Sol-130:TT-HIGH-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-Sol-130:TT-HIGH-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-Sol-130:TT-HIGH.DISP")
+	field(LNK1, "$(PREFIX):RFS-Sol-130:TT-HIGH PP")
+	field(LNK3, "$(PREFIX):RFS-Sol-130:TT-HIGH-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-Sol-130:TT-EGU-RB.HIGH")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-130:TT-LOW-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Sol-130:TT-LOW-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-Sol-130:TT-LOW-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-Sol-130:TT-LOW.DISP")
+	field(LNK1, "$(PREFIX):RFS-Sol-130:TT-LOW PP")
+	field(LNK3, "$(PREFIX):RFS-Sol-130:TT-LOW-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-Sol-130:TT-EGU-RB.LOW")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-130:TT-LOLO-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Sol-130:TT-LOLO-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-Sol-130:TT-LOLO-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-Sol-130:TT-LOLO.DISP")
+	field(LNK1, "$(PREFIX):RFS-Sol-130:TT-LOLO PP")
+	field(LNK3, "$(PREFIX):RFS-Sol-130:TT-LOLO-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-Sol-130:TT-EGU-RB.LOLO")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-130:TT-AOFF-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Sol-130:TT-AOFF-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Sol-130:TT-AOFF.DISP")
+	field(LNK1, "$(PREFIX):RFS-Sol-130:TT-AOFF PP")
+	field(LNK3, "$(PREFIX):RFS-Sol-130:TT-AOFF-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Sol-130:TT-SVAL-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Sol-130:TT-SVAL-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Sol-130:TT-SVAL.DISP")
+	field(LNK1, "$(PREFIX):RFS-Sol-130:TT-SVAL PP")
+	field(LNK3, "$(PREFIX):RFS-Sol-130:TT-SVAL-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Oil-110:TT-DIS-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Oil-110:TT-DIS-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Oil-110:TT-DIS.DISP")
+	field(LNK1, "$(PREFIX):RFS-Oil-110:TT-DIS PP")
+	field(LNK3, "$(PREFIX):RFS-Oil-110:TT-DIS-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Oil-110:TT-FRC-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Oil-110:TT-FRC-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Oil-110:TT-FRC.DISP")
+	field(LNK1, "$(PREFIX):RFS-Oil-110:TT-FRC PP")
+	field(LNK3, "$(PREFIX):RFS-Oil-110:TT-FRC-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Oil-110:TT-HIHI-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Oil-110:TT-HIHI-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Oil-110:TT-HIHI.DISP")
+	field(LNK1, "$(PREFIX):RFS-Oil-110:TT-HIHI PP")
+	field(LNK3, "$(PREFIX):RFS-Oil-110:TT-HIHI-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Oil-110:TT-HIGH-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Oil-110:TT-HIGH-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-Oil-110:TT-HIGH-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-Oil-110:TT-HIGH.DISP")
+	field(LNK1, "$(PREFIX):RFS-Oil-110:TT-HIGH PP")
+	field(LNK3, "$(PREFIX):RFS-Oil-110:TT-HIGH-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-Oil-110:TT-EGU-RB.HIGH")
+}
+
+record(seq, "$(PREFIX):RFS-Oil-110:TT-LOW-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Oil-110:TT-LOW-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-Oil-110:TT-LOW-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-Oil-110:TT-LOW.DISP")
+	field(LNK1, "$(PREFIX):RFS-Oil-110:TT-LOW PP")
+	field(LNK3, "$(PREFIX):RFS-Oil-110:TT-LOW-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-Oil-110:TT-EGU-RB.LOW")
+}
+
+record(seq, "$(PREFIX):RFS-Oil-110:TT-LOLO-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Oil-110:TT-LOLO-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX):RFS-Oil-110:TT-LOLO-RB.VAL")
+
+	field(LNK2, "$(PREFIX):RFS-Oil-110:TT-LOLO.DISP")
+	field(LNK1, "$(PREFIX):RFS-Oil-110:TT-LOLO PP")
+	field(LNK3, "$(PREFIX):RFS-Oil-110:TT-LOLO-INT.DISA")
+	field(LNK4, "$(PREFIX):RFS-Oil-110:TT-EGU-RB.LOLO")
+}
+
+record(seq, "$(PREFIX):RFS-Oil-110:TT-AOFF-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Oil-110:TT-AOFF-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Oil-110:TT-AOFF.DISP")
+	field(LNK1, "$(PREFIX):RFS-Oil-110:TT-AOFF PP")
+	field(LNK3, "$(PREFIX):RFS-Oil-110:TT-AOFF-INT.DISA")
+}
+
+record(seq, "$(PREFIX):RFS-Oil-110:TT-SVAL-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):RFS-Oil-110:TT-SVAL-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):RFS-Oil-110:TT-SVAL.DISP")
+	field(LNK1, "$(PREFIX):RFS-Oil-110:TT-SVAL PP")
+	field(LNK3, "$(PREFIX):RFS-Oil-110:TT-SVAL-INT.DISA")
+}
+

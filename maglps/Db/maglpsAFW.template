@@ -1,0 +1,109 @@
+record(bo, "$(PREFIX):$(SGNL)-DIS")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=0" )
+	field(DISP, "1")
+	field(ZNAM, "No")
+        field(ONAM, "Yes")
+}
+
+record(bo, "$(PREFIX):$(SGNL)-FRC")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=1" )
+	field(DISP, "1")
+	field(ZNAM, "No")
+        field(ONAM, "Yes")
+	field(FLNK, "$(PREFIX):$(SGNL)-FRC-SEQ")
+}
+
+record(seq, "$(PREFIX):$(SGNL)-FRC-SEQ")
+{
+        field(DOL1, "$(PREFIX):$(SGNL)-FRC.VAL")
+        field(LNK1, "$(PREFIX):$(SGNL).SIMM PP")
+}
+
+record(ao, "$(PREFIX):$(SGNL)-HIHI")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+2 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):$(SGNL)-HIHI-SEQ")
+}
+
+record(seq, "$(PREFIX):$(SGNL)-HIHI-SEQ")
+{
+        field(DOL1, "$(PREFIX):$(SGNL)-HIHI.VAL")
+        field(LNK1, "$(PREFIX):$(SGNL).HIHI PP")
+}
+
+record(ao, "$(PREFIX):$(SGNL)-HIGH")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+6 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):$(SGNL)-HIGH-SEQ")
+}
+
+record(seq, "$(PREFIX):$(SGNL)-HIGH-SEQ")
+{
+        field(DOL1, "$(PREFIX):$(SGNL)-HIGH.VAL")
+        field(LNK1, "$(PREFIX):$(SGNL).HIGH PP")
+}
+
+record(ao, "$(PREFIX):$(SGNL)-LOW")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+10 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):$(SGNL)-LOW-SEQ")
+}
+
+record(seq, "$(PREFIX):$(SGNL)-LOW-SEQ")
+{
+        field(DOL1, "$(PREFIX):$(SGNL)-LOW.VAL")
+        field(LNK1, "$(PREFIX):$(SGNL).LOW PP")
+}
+
+record(ao, "$(PREFIX):$(SGNL)-LOLO")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+14 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):$(SGNL)-LOLO-SEQ")
+}
+
+record(seq, "$(PREFIX):$(SGNL)-LOLO-SEQ")
+{
+        field(DOL1, "$(PREFIX):$(SGNL)-LOLO.VAL")
+        field(LNK1, "$(PREFIX):$(SGNL).LOLO PP")
+}
+
+
+record(ao, "$(PREFIX):$(SGNL)-AOFF")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+18 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):$(SGNL)-SVAL")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+22 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):$(SGNL)-SVAL-SEQ")
+}
+
+record(seq, "$(PREFIX):$(SGNL)-SVAL-SEQ")
+{
+        field(DOL1, "$(PREFIX):$(SGNL)-SVAL.VAL")
+        field(LNK1, "$(PREFIX):$(SGNL).SVAL PP")
+}
+
