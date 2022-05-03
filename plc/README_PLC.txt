@@ -198,3 +198,10 @@ END_IF;
     ("DIO_RDATA".POLSW_2_POS2.INTERLOCK AND "DIO_RDATA".POLSW_DIR_POS2_RQ.INTERLOCK));
     "CPU_RDATA".CPU_CONF.POLSW_2_MTR_ON := "POLSW_2_MTR_ON_RQ";
     
+=============================================================================================
+MAGNET_ITLK_V15.1_20220503_1512 - Changed condition for powering HV On lamp (added when
+	SQ4 is active - HV tests)
+
+    "CPU_RDATA".CPU_CONF.FLSHBX_HV := "DIO_RDATA".PC_1_EXT_OUT.INTERLOCK OR "DIO_RDATA".PC_2_EXT_OUT.INTERLOCK OR
+    "Data_from_Gersemi".HV_test_ON;
+"FLSHBX_HVOLT" := "CPU_RDATA".CPU_CONF.FLSHBX_HV;
