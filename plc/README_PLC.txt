@@ -205,3 +205,11 @@ MAGNET_ITLK_V15.1_20220503_1512 - Changed condition for powering HV On lamp (add
     "CPU_RDATA".CPU_CONF.FLSHBX_HV := "DIO_RDATA".PC_1_EXT_OUT.INTERLOCK OR "DIO_RDATA".PC_2_EXT_OUT.INTERLOCK OR
     "Data_from_Gersemi".HV_test_ON;
 "FLSHBX_HVOLT" := "CPU_RDATA".CPU_CONF.FLSHBX_HV;
+
+MAGNET_ITLK_V15.1_20220524_1449- Changed the time-out for the polarity switch from 5 to 10 s.
+    "IEC_Timer_MTR_1_DB".TP(IN:=#mtr_1_trig,
+                            PT:=t#10s,
+                            Q => #mtr_1_on_rq);
+    "IEC_Timer_MTR_2_DB".TP(IN:=#mtr_2_trig,
+                            PT:=t#10s,
+                            Q => #mtr_2_on_rq);
